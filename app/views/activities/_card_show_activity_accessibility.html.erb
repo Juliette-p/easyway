@@ -1,0 +1,25 @@
+<%# carte détails sur l'accessibilité de l'activité %>
+  <div class="card-activity-accessibility">
+    <%# public transport %>
+    <% if @activity.public_transport  %>
+      <i class="fa-solid fa-bus-simple" style="color: #00ff00;"></i>
+    <% else %>
+      <i class="fa-solid fa-bus-simple" style="color: #ff0000;"></i>
+    <% end %>
+    <%= @activity.public_transport_detail if @activity.public_transport%>
+
+    <%# car park %>
+    <% if @activity.public_transport  %>
+      <i class="fa-solid fa-car" style="color: #00ff00;"></i>
+    <% else %>
+      <i class="fa-solid fa-car" style="color: #ff0000;"></i>
+    <% end %>
+    <%= @activity.car_park_detail if @activity.car_park_detail%>
+
+    <%# bike park%>
+    <% if @activity.bike_park  %>
+      <i class="fa-solid fa-person-biking" style="color: #00ff00;"></i>
+    <% else %>
+      <i class="fa-solid fa-person-biking" style="color: #ff0000;"></i>
+    <% end %>
+  </div>

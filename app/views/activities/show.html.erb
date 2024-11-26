@@ -1,73 +1,15 @@
 <div class="container">
 
   <%# carte présentation de l'activité : nom, icones, ... %>
-  <div class="card-activity">
-  <%= @activity.photo.attached? ? cl_image_path(@activity.photo.key) : asset_path('image_par_defaut.png') %>
-
-  <div class="card-product-infos">
-    <h2>@activity.name</h2>
-    <%= @activity.high_chair ? asset_path('high_chair_ok.png') : asset_path('high_chair_nok.png') %>
-    <%= @activity.changing_table ? asset_path('changing_table_ok.png') : asset_path('changing_table__nok.png') %>
-    <%= @activity.stroller ? asset_path('stroller_ok.png') : asset_path('stroller_nok.png') %>
-    <%= @activity.kids_friendly ? asset_path('kids_friendly_ok.png') : asset_path('kids_friendly_nok.png') %>
-  </div>
-</div>
+  <%= render "activities/card_show_activity_name", activity: @activity %>
 
   <%# carte avec boutons "j'y vais", "ajout favoris", ... %>
-  <div class="card-btn-list">
-
-    <%# icone "favoris" %>
-    <% if Favourite.find(user: current_user && activity: @activity) %>
-      <%= link_to <i class="fa-solid fa-heart-circle-plus" style="color: #000000;"></i>,
-        activity_path(@activity),
-        data: {turbo_method: :delete}
-      %>
-    <% else %>
-      <%= link_to <i class="fa-regular fa-heart" style="color: #000000;"></i>,
-        activity_path(@activity),
-        data: {turbo_method: :create}
-      %>
-    <% end %>
-
-    <%# icone "j'y suis allé : ouverture formulaire" %>
-    <%= link_to <i class="fa-solid fa-check" style="color: #000000;"></i>, activity_path(@activity) %>
-
-    <%# icone "ajouter au calendrier" %>
-    <%= link_to <i class="fa-regular fa-calendar-plus" style="color: #000000;"></i>, activity_path(@activity)h %>
-
-    <%# icone "y aller : ouverture GPS" %>
-    <%= link_to <i class="fa-solid fa-location-crosshairs" style="color: #000000;"></i>, activity_path(@activity) %>
-  </div>
+  <%= render "activities/card_show_activity_btn_list", activity: @activity %>
 
   <%# carte détails de l'activité : addresse, téléphone, website, ... %>
-  <div class="card-activity-details">
-    <%# addresse %>
-    <p>
-    <i class="fa-solid fa-location-dot" style="color: #000000;"></i> : @activity.address
-    </p>
-
-    <%# téléphone %>
-    <p>
-    <i class="fa-solid fa-phone" style="color: #000000;"></i> : @activity.phone_number
-    </p>
-
-    <%# url site web %>
-    <p>
-    <i class="fa-solid fa-globe" style="color: #000000;"></i> : @activity.url
-    </p>
-    </div>
-  </div>
+  <%= render "activities/card_show_activity_details", activity: @activity %>
 
   <%# carte détails sur l'accessibilité de l'activité %>
-  <div class="card-activity-accessibility">
-    <%# public transport %>
-    <%= @activity.public_transport ? <i class="fa-solid fa-bus-simple" style="color: #00ff00;"></i> : <i class="fa-solid fa-bus-simple" style="color: #ff0000;"></i> %>
-    <%= @activity.public_transport_detail if @activity.public_transport%>
-    <%# car park %>
-    <%= @activity.car_park ? <i class="fa-solid fa-car" style="color: #00ff00;"></i> : <i class="fa-solid fa-car" style="color: #ff0000;"></i> %>
-    <%= @activity.cark_park_detail if @activity.car_park%>
-    <%# bike park%>
-    <%= @activity.bike_park ? <i class="fa-solid fa-person-biking" style="color: #00ff00;"></i> : <i class="fa-solid fa-person-biking" style="color: #ff0000;"></i> %>
+  <%= render "activities/card_show_activity_accessibility", activity: @activity %>
 
-  </div>
 </div>

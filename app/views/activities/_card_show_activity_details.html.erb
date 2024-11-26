@@ -1,0 +1,17 @@
+<%# carte détails de l'activité : addresse, téléphone, website, ... %>
+  <div class="card-activity-details">
+    <%# addresse %>
+    <p>
+    <i class="fa-solid fa-location-dot" style="color: #000000;"></i> :<%= @activity.address %>
+    </p>
+
+    <%# téléphone %>
+    <p>
+    <i class="fa-solid fa-phone" style="color: #000000;"></i> :<%= @activity.phone_number %>
+    </p>
+
+    <%# url site web %>
+    <p>
+    <i class="fa-solid fa-globe" style="color: #000000;"></i> :<%= @activity.url %>
+    </p>
+  </div>
