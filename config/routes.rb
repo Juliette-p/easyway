@@ -9,12 +9,13 @@ Rails.application.routes.draw do
 
   resources :activities do
     resources :ratings, only: %i[new create]
+    resources :favourites, only: %i[create]
   end
+  resources :favourites, only: %i[index]
 
-  resources :favourites, only: %i[index create]
   resources :users, only: %i[show edit update]
 
-  # resources :pages, :faq A REVOIR
+  get '/faq', to: "pages#faq"
 
   # Defines the root path route ("/")
   # root "posts#index"
