@@ -11,6 +11,7 @@
     <%= @activity.stroller ? asset_path('stroller_ok.png') : asset_path('stroller_nok.png') %>
     <%= @activity.kids_friendly ? asset_path('kids_friendly_ok.png') : asset_path('kids_friendly_nok.png') %>
   </div>
+
 </div>
 
   <%# carte avec boutons "j'y vais", "ajout favoris", ... %>
@@ -68,6 +69,6 @@
     <%= @activity.cark_park_detail if @activity.car_park%>
     <%# bike park%>
     <%= @activity.bike_park ? <i class="fa-solid fa-person-biking" style="color: #00ff00;"></i> : <i class="fa-solid fa-person-biking" style="color: #ff0000;"></i> %>
-
   </div>
+
 </div>
