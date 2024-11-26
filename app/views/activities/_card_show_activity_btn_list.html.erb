@@ -1,0 +1,32 @@
+<%# carte avec boutons "j'y vais", "ajout favoris", ... %>
+  <div class="card-btn-list">
+
+    <%# icone "favoris" %>
+    <i class="fa-solid fa-heart-circle-plus" style="color: #000000;"></i>
+    <%# if Favourite.find(user == current_user && activity == @activity) %>
+      <%#= link_to <i class="fa-solid fa-heart-circle-plus" style="color: #000000;"></i>,
+        favourite_path(@activity),
+        data: {turbo_method: :delete}
+      %>
+    <%# else %>
+      <%#= link_to <i class="fa-regular fa-heart" style="color: #000000;"></i>,
+        favourite_path(@activity),
+        data: {turbo_method: :create}
+      %>
+    <%# end %>
+
+    <%# icone "j'y suis allé : ouverture formulaire" %>
+    <%= link_to activity_path(@activity) do %>
+      <i class="fa-solid fa-check" style="color: #000000;"></i>
+    <% end %>
+
+    <%# icone "ajouter au calendrier" %>
+    <%= link_to activity_path(@activity) do %>
+      <i class="fa-regular fa-calendar-plus" style="color: #000000;"></i>
+    <% end %>
+
+    <%# icone "y aller : ouverture GPS" %>
+    <%= link_to activity_path(@activity) do %>
+      <i class="fa-solid fa-location-crosshairs" style="color: #000000;"></i>
+    <% end %>
+  </div>

@@ -1,0 +1,15 @@
+<%# carte présentation de l'activité : nom, icones, ... %>
+  <div class="card-activity-name">
+    <div class="photo">
+      <%= activity.photo.attached? ? cl_image_path(activity.photo.key) : image_tag('image_par_defaut.png') %>
+    </div>
+
+  <div class="card-product-infos">
+    <h2><%= activity.name %></h2>
+    <%= activity.high_chair ? image_tag('high_chair_ok.png', height: 30) : image_tag('high_chair_nok.png', height: 30) %>
+    <%= activity.changing_table ? image_tag('changing_table_ok.png', height: 30) : image_tag('changing_table__nok.png', height: 30) %>
+    <%= activity.stroller ? image_tag('stroller_ok.png', height: 30) : image_tag('stroller_nok.png', height: 30) %>
+    <%= activity.kids_friendly ? image_tag('kids_friendly_ok.png', height: 30) : image_tag('kids_friendly_nok.png', height: 30) %>
+  </div>
+
+</div>
