@@ -8,5 +8,5 @@ class Activity < ApplicationRecord
   validates :category, presence: true, inclusion: { in: ACTIVITY_CATEGORY }
   validates :address, presence: true
 
-  # has_one_attached :photo
+  has_one_attached :photo
 end
