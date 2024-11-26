@@ -1,17 +1,28 @@
+
+
 <%# carte détails de l'activité : addresse, téléphone, website, ... %>
-  <div class="card-activity-details">
+  <div class="card-activity-details"
+  data-controller="copy-to-clipboard"
+  data-copy-to-clipboard-address-text-value="Address copied!"
+  data-copy-to-clipboard-phone-text-value="Phone number copied!">
+
     <%# addresse %>
-    <p>
-    <i class="fa-solid fa-location-dot" style="color: #000000;"></i> :<%= @activity.address %>
-    </p>
+    <div class="container-info"
+      data-action="click->copy-to-clipboard#copyAddress">
+      <i class="fa-solid fa-location-dot" style="color: #000000;"></i>
+      <p data-copy-to-clipboard-target="address"><%= @activity.address %></p>
+    </div>
 
     <%# téléphone %>
-    <p>
-    <i class="fa-solid fa-phone" style="color: #000000;"></i> :<%= @activity.phone_number %>
-    </p>
+    <div class="container-info"
+    data-action="click->copy-to-clipboard#copyPhoneNumber">
+      <i class="fa-solid fa-phone" style="color: #000000;"></i>
+      <p data-copy-to-clipboard-target="phone"><%= @activity.phone_number %></p>
+    </div>
 
     <%# url site web %>
     <p>
     <i class="fa-solid fa-globe" style="color: #000000;"></i> :<%= @activity.url %>
     </p>
+
   </div>
