@@ -1,7 +1,17 @@
+<%# titre de la page %>
 <h1>Liste des activités proposées</h1>
-<% @activities.each do |activity|%>
-<%# affichage de la card activity %>
-<div>
-  <%= render "activities/activity_card", activity: activity %>
+
+<%# map %>
+<div id="map-container"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
+
+<%# liste des activités %>
+<% @activities.each do |activity|%>
+  <%# affichage de la card activity %>
+  <div>
+    <%= render "activities/activity_card", activity: activity %>
+  </div>
 <% end %>

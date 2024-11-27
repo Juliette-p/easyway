@@ -6,8 +6,14 @@
 // External libraries
 @import "bootstrap";
 @import "font-awesome";
+@import url("https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css");
 
 // Your CSS partials
 @import "components/index";
-@import "pages/index";
 @import "components/QAbox_faq";
+@import "pages/index";
+
+.container-body {
+  display: flex;
+  flex-direction: column;
+}
