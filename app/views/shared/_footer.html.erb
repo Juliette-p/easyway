@@ -25,9 +25,15 @@
   <% end %>
 
   <%# icone "profil" %>
-  <%= link_to user_path(current_user), class: "icone-box" do %>
-    <i class="fa-solid fa-user" style="color: #000000;", alt="Profil"></i>
-    <p class="subtitle">Mon profil</p>
+  <% if current_user %>
+    <%= link_to user_path(current_user), class: "icone-box" do %>
+      <i class="fa-solid fa-user" style="color: #000000;", alt="Profil"></i>
+      <p class="subtitle">Mon profil</p>
+    <% end %>
+  <% else %>
+    <%= link_to new_user_session_path, class: "icone-box" do %>
+      <i class="fa-solid fa-user" style="color: #000000;", alt="Profil"></i>
+      <p class="subtitle">Mon profil</p>
+    <% end %>
   <% end %>
-
 </div>
