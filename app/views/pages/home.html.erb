@@ -3,15 +3,26 @@
     <h1>Easyway</h1>
     <h3>L'appli baby & kids friendly!</h3>
     <p>Trouver des lieux baby & kids friendly n'a jamais été aussi facile !</p>
-    <%= link_to "> Découvrir Easyway", activities_path, id:"btn-banner" %>
+    <%= link_to "Trouver une activité", activities_path, id:"btn-banner" %>
 </div>
 
 <div class="home-card">
-  <p>Mes Cool kids places préférées</p>
+  <div class="home-card-line">
+    <p>Mes Cool kids places préférées</p>
+    <i class="fa-solid fa-heart" style="color: #FF8351;"></i>
+  </div>
   <%= render "home_card_carousel", activities: @fav_activities, category: "favourites" %>
 </div>
 
 <div class="home-card">
-  <p>Les Cool kids places du moment</p>
+  <div class="home-card-line">
+    <p>Les Cool kids places du moment</p>
+    <i class="fa-solid fa-star" style="color: #FFCC67;"></i>
+  </div>
   <%= render "home_card_carousel", activities: @activities, category: "activities"  %>
+</div>
+
+<div class="btn-faq">
+  <%= link_to "Découvrir Easyway - FAQ", faq_path, class: "btn-faq-link-txt" %>
+  <p class="btn-faq-link-arrow">▶</p>
 </div>

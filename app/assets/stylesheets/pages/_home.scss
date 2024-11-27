@@ -18,23 +18,24 @@
 
 .banner h1 {
   margin: 0;
-  color: black;
+  color: $darkgreen;
   // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .banner h3 {
   margin: 0;
-  color: black;
+  color: $darkgreen;
   // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .banner p {
   font-size: 14px;
-  color: black;
+  color: $darkgreen;
+  font-weight: 200;
   // opacity: .7;
   // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
@@ -44,10 +45,13 @@
 }
 
 #btn-banner {
-  color: black;
-  background-color: yellow;
-  border-radius: 10px;
+  color: $darkgreen;
+  background-color: $yellow;
+  border-radius: 50px;
   padding: 5px 10px 5px 10px ;
+  text-align: center;
+  margin: 0;
+  width: 100%;
 }
 
 // ****************** CSS POUR LES CARDS ACTIVITIES ******************
@@ -65,11 +69,64 @@
   border-radius: 10px;
 }
 
+.home-card-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  p {
+    color: $darkgreen;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+  }
+}
 .home-card-activity {
   gap: 10px;
-  display: inline;
+  display: flex;
+  flex-direction: row;
 }
 
 .carousel-control-prev-icon {
   color: black;
+}
+
+.carousel-item-img {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+// ****************** CSS POUR LE BOUTON VERS LA FAQ ******************
+.btn-faq {
+  background-color: $white;
+  color: $darkgreen;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 10px;
+  width: 100%;
+}
+
+.btn-faq-link-txt {
+  text-decoration: none;
+  color: $darkgreen;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.btn-faq-link-txt:hover {
+  text-decoration: underline;
+}
+
+.btn-faq-link-arrow {
+  color: $darkgreen;
+  font-size: 20px;
+  align-items: center;
+  padding: 0px;
+  margin: 0px
 }
