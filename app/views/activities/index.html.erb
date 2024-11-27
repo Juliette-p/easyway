@@ -1,7 +1,17 @@
-<%= cl_image_tag "cld-sample-5" , height: 300, width: 400, crop: :fill %>
+<%# titre de la page %>
+<h1>Liste des activités proposées</h1>
 
+<%# map %>
 <div id="map-container"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
+
+<%# liste des activités %>
+<% @activities.each do |activity|%>
+  <%# affichage de la card activity %>
+  <div>
+    <%= render "activities/activity_card", activity: activity %>
+  </div>
+<% end %>

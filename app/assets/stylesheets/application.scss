@@ -10,5 +10,10 @@
 
 // Your CSS partials
 @import "components/index";
-@import "pages/index";
 @import "components/QAbox_faq";
+@import "pages/index";
+
+.container-body {
+  display: flex;
+  flex-direction: column;
+}
