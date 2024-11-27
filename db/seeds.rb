@@ -24,7 +24,12 @@ puts "end creating users"
 # ################création activities#################
 puts "creating activities"
 musee_art_nantes = Activity.create!(name: "musée d'arts",
-  description: ""
+  description: "Au Musée d’arts de Nantes, neuf siècles d’arts visuels, 
+                du Moyen Âge à aujourd’hui, dialoguent au fil de ses espaces. Les collections représentent 
+                un fonds de plus de 14 000 œuvres, dont près de la moitié en art moderne et contemporain. 
+                Dans une architecture mariant celle d’hier à celle d’aujourd’hui, le musée offre aux visiteurs 
+                un point de vue unique sur l’art occidental et d’audacieuses expositions temporaires qui font 
+                la renommée de ce grand musée de l’Ouest. Dimanche: visite guidée en famille, venez avec vos enfants"
   category: "Lieux culturels",
   address: "10 rue Georges-Clemenceau, Nantes",
   phone_number: "02 51 17 45 00",
@@ -34,10 +39,16 @@ musee_art_nantes = Activity.create!(name: "musée d'arts",
   high_chair: false,
   kids_friendly: true,
   public_transport: true,
-  public_transport_detail: "",
+  public_transport_detail: "Tram :Ligne 1, arrêt « Duchesse-Anne » puis 6 minutes de marche
+                            Ligne 2, arrêt « St-Mihiel » puis 10 minutes de marche
+                            Bus: Lignes C1, C6, 11, 12 et Busway 4. Arrêt « Foch-Cathédrale » puis 4 minutes de marche.",
   car_park: true,
-  car_park_detail: "",
-  bike_park: true)
+  car_park_detail: "Parking couvert : Cathédrale (rue Sully, 44000 Nantes)",
+  bike_park: true,
+  bike_park_detail: "Appuis-vélos à proximité (rue Delaunay et rue Clemenceau).
+                    Le Musée d’arts de Nantes, labellisé “Accueil vélo”, met à disposition de ses visiteurs 
+                    un kit de dépannage (pompe, chambre à air standard, clés universelles) disponible gratuitement 
+                    sur demande à l’accueil du musée.")
 
 musee_hist_nat_nantes = Activity.create!(name: "musée d'histoire naturelle",
   category: "Lieux culturels",
