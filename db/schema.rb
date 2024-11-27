@@ -49,7 +49,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_26_165321) do
     t.string "phone_number"
     t.string "url"
     t.boolean "stroller"
-    t.boolean "changing_table" 
+    t.boolean "changing_table"
     t.boolean "high_chair"
     t.boolean "kids_friendly"
     t.boolean "public_transport"
