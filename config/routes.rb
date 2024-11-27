@@ -15,6 +15,10 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[show edit update]
 
+  namespace :user do
+    resources :agendas, only: ["create"]
+  end
+
   get '/faq', to: "pages#faq"
 
   # Defines the root path route ("/")
