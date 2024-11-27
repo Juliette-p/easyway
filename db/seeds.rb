@@ -17,7 +17,7 @@ puts "end destroy all"
 
 puts "creating users"
 camille = User.create!(first_name: "camille", last_name: "dupont", email: "camille.dupont@mail.com", password: "pass12C")
-manu = User.create!(first_name: "manu", last_name: "martin", email: "camille.martin@mail.com", password: "pass12C")
+manu = User.create!(first_name: "manu", last_name: "martin", email: "manu.martin@mail.com", password: "pass12M")
 puts "end creating users"
 # ###############################################
 
@@ -25,7 +25,7 @@ puts "end creating users"
 puts "creating activities"
 musee_art_nantes = Activity.create!(name: "musée d'arts",
   category: "Lieux culturels",
-  address: "10, rue Georges-Clemenceau, 44000 Nantes",
+  address: "10 rue Georges-Clemenceau, Nantes",
   phone_number: "02 51 17 45 00",
   url: "https://museedartsdenantes.nantesmetropole.fr/",
   stroller: true,
@@ -40,7 +40,7 @@ musee_art_nantes = Activity.create!(name: "musée d'arts",
 
 musee_hist_nat_nantes = Activity.create!(name: "musée d'histoire naturelle",
   category: "Lieux culturels",
-  address: "12 rue Voltaire, 44000 Nantes",
+  address: "12 rue Voltaire, Nantes",
   phone_number: "02 40 41 55 00",
   url: "https://museum.nantesmetropole.fr/home.html",
   stroller: true,
