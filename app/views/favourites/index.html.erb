@@ -1,3 +1,7 @@
-<%= @activities.each do |a| %>
-  <%= render "activities/activity_card", activity: a %>
+<%# liste des activités %>
+<% @activities.each do |activity|%>
+  <%# affichage de la card activity %>
+  <div>
+    <%= render "activities/activity_card", activity: activity %>
+  </div>
 <% end %>
