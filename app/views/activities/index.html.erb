@@ -1,1 +1,7 @@
-<%= cl_image_tag "cld-sample-5" , height: 300, width: 400, crop: :fill %>
+<h1>Liste des activités proposées</h1>
+<% @activities.each do |activity|%>
+<%# affichage de la card activity %>
+<div>
+  <%= render "activities/activity_card", activity: activity %>
+</div>
+<% end %>

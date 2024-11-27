@@ -1,0 +1,31 @@
+<div class="user-show-content">
+
+      <div class="user-profile">
+        <% if current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, crop: :fill, alt: "profil-picture", class: "user-profile-picture" %>
+        <% else %>
+          <%= image_tag "image_user_par_defaut.png", alt: "default-profil-picture", class: "user-profile-picture" %>
+        <% end  %>
+
+        <h1 class="user-txt-info"><%= current_user.first_name %><%= current_user.last_name %></h1>
+
+        <h5 class="user-txt-info"><i class="fa-regular fa-envelope" style="color: #1A4944;"></i> <%= current_user.email %></h5>
+        <p class="bp-user-modif">Changer mon email</p>
+        <h5 class="user-txt-info"><i class="fa-solid fa-lock" style="color: #1A4944;"></i> ********</h5>
+        <p class="bp-user-modif">Changer mon mot de passe</p>
+      </div>
+
+  <div class="user-btn">
+
+    <div class="lightgreen_link">
+        <%= link_to "Mes lieux favoris", favourites_path, class: "profile_link_txt" %>
+        <p class="profile_link_arrow">▶</p>
+    </div>
+
+    <div class="lightpink_link">
+      <%= link_to "Rechercher un nouveau lieu", activities_path, class: "profile_link_txt" %>
+      <p class="profile_link_arrow">▶</p>
+    </div>
+
+  </div>
+</div>
