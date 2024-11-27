@@ -1,0 +1,33 @@
+<div class="container-footer">
+
+  <%# icone "rechercher" %>
+  <%= link_to activities_path, class: "icone-box" do %>
+    <i class="fa-solid fa-magnifying-glass-location" style="color: #000000;"></i>
+    <p class="subtitle">Rechercher</p>
+  <% end %>
+
+  <%# icone "favoris" %>
+  <%= link_to favourites_path, class: "icone-box" do %>
+    <i class="fa-solid fa-heart" style="color: #000000;"></i>
+    <p class="subtitle">Mes Favoris</p>
+  <% end %>
+
+  <%# icone "home page" %>
+  <%= link_to root_path, class: "icone-box" do %>
+    <i class="fa-solid fa-check" style="color: #000000;"></i>
+    <p class="subtitle">Page d'accueil</p>
+  <% end %>
+
+  <%# icone "aide / FAQ" %>
+  <%= link_to faq_path, class: "icone-box" do %>
+    <i class="fa-solid fa-question" style="color: #000000;"></i>
+    <p class="subtitle">Aide</p>
+  <% end %>
+
+  <%# icone "profil" %>
+  <%= link_to user_path(current_user), class: "icone-box" do %>
+    <i class="fa-solid fa-user" style="color: #000000;"></i>
+    <p class="subtitle">Mon profil</p>
+  <% end %>
+
+</div>

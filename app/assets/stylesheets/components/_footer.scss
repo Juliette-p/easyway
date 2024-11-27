@@ -1,0 +1,23 @@
+.container-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  padding: 5px;
+
+  .icone-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subtitle {
+    color: gray;
+    font-size: 10px;
+    text-align: center;
+  }
+}
