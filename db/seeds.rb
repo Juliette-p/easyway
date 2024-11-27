@@ -24,6 +24,7 @@ puts "end creating users"
 # ################création activities#################
 puts "creating activities"
 musee_art_nantes = Activity.create!(name: "musée d'arts",
+  description: ""
   category: "Lieux culturels",
   address: "10, rue Georges-Clemenceau, 44000 Nantes",
   phone_number: "02 51 17 45 00",
@@ -40,6 +41,7 @@ musee_art_nantes = Activity.create!(name: "musée d'arts",
 
 musee_hist_nat_nantes = Activity.create!(name: "musée d'histoire naturelle",
   category: "Lieux culturels",
+  description:""
   address: "12 rue Voltaire, 44000 Nantes",
   phone_number: "02 40 41 55 00",
   url: "https://museum.nantesmetropole.fr/home.html",
