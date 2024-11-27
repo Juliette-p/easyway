@@ -1,5 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
-import mapboxgl from 'mapbox-gl' // Don't forget this!
+import mapboxgl from 'mapbox-gl' // Don't forget this! pour afficher mapbox
+import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder" // pour la recherche dans la map
 
 // Connects to data-controller="map"
 export default class extends Controller {
@@ -18,6 +19,9 @@ export default class extends Controller {
 
     this.#addMarkersToMap();
     this.#fitMapToMarkers();
+
+    this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
+      mapboxgl: mapboxgl }))
   }
 
   // private :
