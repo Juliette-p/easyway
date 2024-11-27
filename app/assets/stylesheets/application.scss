@@ -11,3 +11,8 @@
 @import "components/index";
 @import "pages/index";
 @import "components/QAbox_faq";
+
+.container-body {
+  display: flex;
+  flex-direction: column;
+}

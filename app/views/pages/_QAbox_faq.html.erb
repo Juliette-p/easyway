@@ -1,6 +1,13 @@
-<div class="dropdown">
-  <button class="dropbtn"><%= question %></button>
-  <div class="dropdown-content">
-    <p><%= answer %></p>
-  </div>
+<%# <div class="dropdown"> %>
+  <%# <button class="dropbtn"><%= question %>
+  <%# </button> %>
+  <%# <div class="dropdown-content"> %>
+    <%# <p><%= answer %>
+    <%# </p> %>
+  <%# </div> %>
+<%# </div> %>
+
+<div class="QAbox_faq">
+  <button data-bs-toggle="collapse" data-bs-target="#demo-<%= index %>"><%= question %></button>
+  <div id="demo-<%= index %>" class="collapse"><%= answer %></div>
 </div>
