@@ -1,7 +1,7 @@
 <%# carte présentation de l'activité : nom, icones, ... %>
   <div class="card-activity-name">
     <div class="photo">
-      <%= activity.photo.attached? ? cl_image_path(activity.photo.key) : image_tag('image_par_defaut.png') %>
+      <%= activity.photo.attached? ? cl_image_tag(activity.photo.key) : image_tag('image_par_defaut.png') %>
     </div>
 
   <div class="card-product-infos">
