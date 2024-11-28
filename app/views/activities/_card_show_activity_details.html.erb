@@ -6,6 +6,12 @@
   data-copy-to-clipboard-address-text-value="Address copied!"
   data-copy-to-clipboard-phone-text-value="Phone number copied!">
 
+    <%# description %>
+      <div class="container-info"
+        data-action="click->copy-to-clipboard#copydescription">
+        <i class= "fa-solid fa-circle-info" style="color: #000000;"></i>
+        <p data-copy-to-clipboard-target="description"><%= @activity.description %></p>
+
     <%# addresse %>
     <div class="container-info"
       data-action="click->copy-to-clipboard#copyAddress">

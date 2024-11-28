@@ -11,13 +11,19 @@
     <%= link_to "Trouver une activité", activities_path, class: "yellowbtn"  %>
 </div>
 
-<div class="basic-card home-card">
-  <div class="home-card-line">
-    <p>Mes Cool kids places préférées</p>
-    <i class="fa-solid fa-heart" style="color: #FF8351;"></i>
+<% if current_user %>
+  <div class="basic-card home-card">
+    <div class="home-card-line">
+      <p>Mes Cool kids places préférées</p>
+      <i class="fa-solid fa-heart" style="color: #FF8351;"></i>
+    </div>
+    <% if Favourite.where(user: current_user) %>
+      <%= render "home_card_carousel", activities: @fav_activities, category: "favourites" %>
+    <% else %>
+      <p>Vous n'avez pas encore enregistré de favoris.</p>
+    <% end %>
   </div>
-  <%= render "home_card_carousel", activities: @fav_activities, category: "favourites" %>
-</div>
+<% end %>
 
 <div class="basic-card home-card">
   <div class="home-card-line">
