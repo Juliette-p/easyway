@@ -1,0 +1,39 @@
+<div class="container-footer">
+
+  <%# icone "rechercher" %>
+  <%= link_to activities_path, class: "icone-box" do %>
+    <i class="fa-solid fa-magnifying-glass-location" style="color: #000000;", alt="Rechercher"></i>
+    <p class="subtitle">Rechercher</p>
+  <% end %>
+
+  <%# icone "favoris" %>
+  <%= link_to favourites_path, class: "icone-box" do %>
+    <i class="fa-solid fa-heart" style="color: #000000;", alt="Favoris"></i>
+    <p class="subtitle">Mes Favoris</p>
+  <% end %>
+
+  <%# icone "home page" %>
+  <%= link_to root_path, class: "icone-box" do %>
+    <%= image_tag "logo.png", height: 15, width: 30, alt: "Pas d'accueil" %>
+    <p class="subtitle">Page d'accueil</p>
+  <% end %>
+
+  <%# icone "aide / FAQ" %>
+  <%= link_to faq_path, class: "icone-box" do %>
+    <i class="fa-solid fa-question" style="color: #000000;", alt="Aide"></i>
+    <p class="subtitle">Aide</p>
+  <% end %>
+
+  <%# icone "profil" %>
+  <% if current_user %>
+    <%= link_to user_path(current_user), class: "icone-box" do %>
+      <i class="fa-solid fa-user" style="color: #000000;", alt="Profil"></i>
+      <p class="subtitle">Mon profil</p>
+    <% end %>
+  <% else %>
+    <%= link_to new_user_session_path, class: "icone-box" do %>
+      <i class="fa-solid fa-user" style="color: #000000;", alt="Profil"></i>
+      <p class="subtitle">Mon profil</p>
+    <% end %>
+  <% end %>
+</div>

@@ -1,10 +1,10 @@
-<div class= "card">
+<div class= "card-art col-12 col-sm-3">
 
-  <div class="card-activity"
+  <div class="card-activity-img"
        style="background-image: url(<%= activity.photo.attached? ? cl_image_path(activity.photo.key) : asset_path('image_par_defaut.png') %>)">
   </div>
 
-  <div class="card-activity-infos">
+  <div class="card-activity-content">
     <h1><%= activity.name %></h1>
     <p><%= activity.category %></p>
   </div>

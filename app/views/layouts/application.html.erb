@@ -10,10 +10,19 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body><%= render "shared/navbar" %>
+  <body>
+    <%# pas besoin de navbar %>
+    <%# <%= render "shared/navbar" %>
+
+    <%# pour les notifications %>
     <%= render "shared/flashes" %>
+
+    <%# contenu des pages à afficher %>
     <div class="container-body">
       <%= yield %>
     </div>
+
+    <%# footer : barre de navigation %>
+    <%= render "shared/footer" %>
   </body>
 </html>

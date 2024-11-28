@@ -1,9 +1,28 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1>Bienvenue sur Easyway !</h1>
-    <p>le meilleur chemin pour trouver des lieux de sorties adaptés et accessibles en poussette.</p>
-    <p>Baby & kids friendly!</p>
-    <%= link_to "> Découvrir tous les lieux kids friendly !", activities_path %>
-    <%= image_tag "logo.png", alt: "logo Easyway", width: 200 %>
+<div class="banner">
+    <%= image_tag "logo.png", alt: "logo Easyway", height: 100 %>
+    <h1>Easyway</h1>
+    <h3>L'appli baby & kids friendly!</h3>
+    <p>Trouver des lieux baby & kids friendly n'a jamais été aussi facile !</p>
+    <%= link_to "Trouver une activité", activities_path, id:"btn-banner" %>
+</div>
+
+<div class="home-card">
+  <div class="home-card-line">
+    <p>Mes Cool kids places préférées</p>
+    <i class="fa-solid fa-heart" style="color: #FF8351;"></i>
   </div>
+  <%= render "home_card_carousel", activities: @fav_activities, category: "favourites" %>
+</div>
+
+<div class="home-card">
+  <div class="home-card-line">
+    <p>Les Cool kids places du moment</p>
+    <i class="fa-solid fa-star" style="color: #FFCC67;"></i>
+  </div>
+  <%= render "home_card_carousel", activities: @activities, category: "activities"  %>
+</div>
+
+<div class="btn-faq">
+  <%= link_to "Découvrir Easyway - FAQ", faq_path, class: "btn-faq-link-txt" %>
+  <p class="btn-faq-link-arrow">▶</p>
 </div>

@@ -1,21 +1,132 @@
 // Specific CSS for your home-page
+
+// ****************** CSS POUR LA BANNER ******************
 .banner {
+  background-color: white;
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 10px;
 }
 
 .banner h1 {
   margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
+  color: $darkgreen;
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.banner h3 {
+  margin: 0;
+  color: $darkgreen;
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .banner p {
+  font-size: 14px;
+  color: $darkgreen;
+  font-weight: 200;
+  // opacity: .7;
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner a {
+  text-decoration: none;
+}
+
+#btn-banner {
+  color: $darkgreen;
+  background-color: $yellow;
+  border-radius: 50px;
+  padding: 5px 10px 5px 10px ;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+}
+
+// ****************** CSS POUR LES CARDS ACTIVITIES ******************
+.home-card {
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  text-align: left;
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.home-card-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  p {
+    color: $darkgreen;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+.home-card-activity {
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel-control-prev-icon {
+  color: black;
+}
+
+.carousel-item-img {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+// ****************** CSS POUR LE BOUTON VERS LA FAQ ******************
+.btn-faq {
+  background-color: $white;
+  color: $darkgreen;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 10px;
+  width: 100%;
+}
+
+.btn-faq-link-txt {
+  text-decoration: none;
+  color: $darkgreen;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.btn-faq-link-txt:hover {
+  text-decoration: underline;
+}
+
+.btn-faq-link-arrow {
+  color: $darkgreen;
   font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  align-items: center;
+  padding: 0px;
+  margin: 0px
 }

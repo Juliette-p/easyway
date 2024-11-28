@@ -26,39 +26,25 @@
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
+  border: 1px solid lightgray;
 }
 
-.lightgreen_link {
-  background-color: lightgrey;
-  border-radius: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin: 10px;
-  width: 300px;
-}
+.user-name {
+  color: green;
+  font-weight: 600;
+  font-size: 20px;
 
-.lightpink_link {
-  background-color: lightgrey;
-  border-radius: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin: 10px;
-  width: 300px;
 }
 
 .profile_link_txt {
   text-decoration: none;
   color: black;
   font-weight: 600;
-  font-size: 15px;
-  padding: 0px;
+  font-size: 10px;
+  padding: 5px 10px 5px 10px;
   align-items: center;
+  background-color: green;
+  border-radius: 10px;
 }
 
 .profile_link_txt:hover {
@@ -86,6 +72,7 @@
 .user-txt-info {
   color: black;
   margin: none;
+  font-size: 10px;
 }
 
 #user-info-card {
@@ -94,4 +81,11 @@
   width: auto;
   border: 1px lightgrey solid; /* Pas de bordure */
   border-radius: 30px; /* Coins arrondis */
+}
+
+#btn-user-edit {
+  margin: 10px 0px 10px 0px;
+  text-decoration: none;
+  color: black;
+  font-size: 10px;
 }
