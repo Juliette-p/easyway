@@ -1,0 +1,29 @@
+// ****************** CSS POUR LE BOUTON VERS LA FAQ ******************
+.btn-faq {
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 0px;
+  width: 100%;
+}
+
+.btn-faq-link-txt {
+  text-decoration: none;
+  color: $darkgreen;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.btn-faq-link-txt:hover {
+  text-decoration: underline;
+}
+
+// .btn-faq-link-arrow {
+//   color: $darkgreen;
+//   font-size: 20px;
+//   align-items: center;
+//   padding: 0px;
+//   margin: 0px
+// }
