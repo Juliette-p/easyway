@@ -2,23 +2,18 @@
 .card-activity-link {
   text-decoration: none;
   color: $darkgreen;
+  width: 100%;
+
 }
 
 // div représentant la card activity
 .card-activity {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 0 5px grey;
-  border: 1px solid lightgrey;
-
   display: flex;
   justify-content: space-between;
   padding: 0;
 
   overflow: hidden;
-  height: 120px;
-  margin: 10px;
-  width: 100%;
+  margin: 10px 0px;
 
   // &:hover {
   //   transform: translate(0px, -5px);
@@ -28,29 +23,41 @@
 
 // div contenant l'image du lieu/activité
 .card-activity-image {
-  height: 100%;
-  width: 100px;
+  width: 120px;
   background-position: center;
   background-size: cover;
 }
 
 // div contenant les informations du lieu/activité (nom, catégorie et icônes d'accessibilité
 .card-activity-content {
-  padding: 16px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: left;
   text-align: left;
   margin: 0;
+  width: 100%;
+
+  .card-activity-title-type {
+    display: flex;
+    justify-content: space-between;
+  }
 
   h3 {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
-    text-align: right;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
   }
 
   p {
-    font-size: 15px;
+    font-size: 10px;
+    text-align: right;
+
+    padding: 0px;
+    margin: 0px;
+    width: 80px;
   }
 
   // div contenant les icônes d'accessibilité
@@ -59,14 +66,18 @@
     flex-direction: row;
     justify-content: left;
     align-items: center;
+    margin-top: 10px;
+  }
+
+  .card-activity-description {
+    margin: 5px 0px;
   }
 }
 
 // icones d'accessibilité
 .activity-icone {
-  width: 20px;
-  height: 20px;
-  border: solid, 2px, grey;
-  border-radius: 50px;
+  width: 30px;
+  height: 30px;
   object-fit: cover;
+  padding: 2px;
 }
