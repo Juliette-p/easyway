@@ -78,3 +78,6 @@ end
 
 # ajout gem pour geocoder (map)
 gem "geocoder"
+
+# ajout gem pour la barre de recherche (pg-search
+gem "pg_search"

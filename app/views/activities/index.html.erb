@@ -2,7 +2,74 @@
 <h1>Trouver une activité</h1>
 
 <%# search tab %>
+<div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: activities_path, method: :get, class: "d-flex flex-column" do %>
+      <%# champs texte pour sélectionner une addresse %>
+      <div class="search-tab-field">
+        <%= text_field_tag :address,
+          params[:address],
+          class: "form-control",
+          placeholder: "Ville ou addresse..."
+        %>
+      </div>
 
+      <%# champs checkbox (booléen) pour sélectionner le filtre accès poussette %>
+      <div class="search-tab-field">
+        <%= check_box_tag :stroller,
+          "1",
+          params[:stroller],
+          class: "form-check-input",
+          label_tag: "stroller"
+        %>
+      </div>
+
+      <%# champs checkbox (booléen) pour sélectionner le filtre table à langer %>
+      <div class="search-tab-field">
+        <%= check_box_tag :changing_table,
+          "1",
+          params[:changing_table],
+          class: "form-check-input",
+          label_tag: "Table à langer"
+        %>
+      </div>
+
+      <%# champs checkbox (booléen) pour sélectionner le filtre chaise haute %>
+      <div class="search-tab-field">
+        <%= check_box_tag :high_chair,
+          "1",
+          params[:high_chair],
+          class: "form-check-input",
+          label_tag: "Chaise haute"
+        %>
+      </div>
+
+      <%# champs checkbox (booléen) pour sélectionner le filtre kids friendly %>
+      <div class="search-tab-field">
+        <%= check_box_tag :kids_friendly,
+          "1",
+          params[:kids_friendly],
+          class: "form-check-input",
+          label_tag: "Kids friendly"
+        %>
+      </div>
+
+      <%# champs collection pour sélectionner la catégorie %>
+      <%# <%= f.input :artist, :collection => Artist.all, prompt: "Choose a category" %>
+      <div class="search-tab-field">
+        <%= select_tag :category,
+          options_for_select(Activity::ACTIVITY_CATEGORY),
+          # params[:category],
+          class: 'form-control',
+          prompt: "A REPRENDRE CAR NOK"
+        %>
+      </div>
+
+      <%# bouton de recherche %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
 
 <%# map %>
 <div id="map-container"
@@ -12,6 +79,7 @@
 </div>
 
 <%# liste des activités %>
+<p><%= @activities.size %> résultats correspondent à votre recherche</p>
 <% @activities.each do |activity|%>
   <%# affichage de la card activity %>
   <div>
