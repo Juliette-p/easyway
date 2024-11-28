@@ -1,32 +1,39 @@
 <%# carte avec boutons "j'y vais", "ajout favoris", ... %>
-  <div class="card-btn-list">
+<div class="basic-card card-activity-btn-list">
 
-    <%# icone "favoris" %>
-    <i class="fa-solid fa-heart-circle-plus" style="color: #000000;"></i>
-    <%# if Favourite.find(user == current_user && activity == @activity) %>
-      <%#= link_to <i class="fa-solid fa-heart-circle-plus" style="color: #000000;"></i>,
-        favourite_path(@activity),
-        data: {turbo_method: :delete}
-      %>
-    <%# else %>
-      <%#= link_to <i class="fa-regular fa-heart" style="color: #000000;"></i>,
-        favourite_path(@activity),
-        data: {turbo_method: :create}
-      %>
-    <%# end %>
+  <%# icone "favoris" %>
+  <%= link_to activity_path(@activity), class: "card-activity-btn" do %>
+    <i class="fa-solid fa-heart" style="color: #FF8351;"></i>
+    <p>Favoris</p>
+  <% end %>
 
-    <%# icone "j'y suis allé : ouverture formulaire" %>
-    <%= link_to activity_path(@activity) do %>
-      <i class="fa-solid fa-check" style="color: #000000;"></i>
-    <% end %>
+  <%# if Favourite.find(user == current_user && activity == @activity) %>
+    <%#= link_to <i class="fa-solid fa-heart-circle-plus" style="color: #000000;"></i>,
+      favourite_path(@activity),
+      data: {turbo_method: :delete}
+    %>
+  <%# else %>
+    <%#= link_to <i class="fa-regular fa-heart" style="color: #000000;"></i>,
+      favourite_path(@activity),
+      data: {turbo_method: :create}
+    %>
+  <%# end %>
 
-    <%# icone "ajouter au calendrier" %>
-    <%= link_to activity_path(@activity) do %>
-      <i class="fa-regular fa-calendar-plus" style="color: #000000;"></i>
-    <% end %>
+  <%# icone "ajouter un commentaire" %>
+  <%= link_to activity_path(@activity), class: "card-activity-btn"  do %>
+    <i class="icone fa-solid fa-star" style="color: #FFCC51;"></i>
+    <p>Laisser un avis</p>
+  <% end %>
 
-    <%# icone "y aller : ouverture GPS" %>
-    <%= link_to activity_path(@activity) do %>
-      <i class="fa-solid fa-location-crosshairs" style="color: #000000;"></i>
-    <% end %>
-  </div>
+  <%# icone "ajouter au calendrier" %>
+  <%= link_to activity_path(@activity), class: "card-activity-btn" do %>
+    <i class="icone fa-regular fa-calendar-plus" style="color: #000000;"></i>
+    <p>Planifier</p>
+  <% end %>
+
+  <%# icone "y aller : ouverture GPS" %>
+  <%= link_to activity_path(@activity), class: "card-activity-btn" do %>
+    <i class="fa-solid fa-location-dot" style="color: #3D5555;"></i>
+    <p>Itineraire</p>
+  <% end %>
+</div>

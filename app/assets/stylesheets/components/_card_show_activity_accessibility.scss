@@ -1,0 +1,17 @@
+.card-activity-accessibility {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: $black;
+  background-color: $light-gray;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.card-activity-accessibility-category {
+  p {
+    font-size: 12px;
+  }
+}

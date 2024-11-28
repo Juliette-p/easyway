@@ -1,0 +1,26 @@
+.card-activity-details-text {
+  color: $black;
+  font-size: 12px;
+  padding: 10px;
+  text-align: justify;
+}
+
+.card-activity-details {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  margin-inline: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.container-info {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: left;
+
+  p {
+    font-size: 12px;
+  }
+}
