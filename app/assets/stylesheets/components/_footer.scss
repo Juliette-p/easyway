@@ -2,17 +2,27 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: white;
-  padding: 5px;
+  padding: 10px 20px;
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
+  border: 1px solid rgba(203, 203, 203, 0.304);
+
+  .icone-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .icone-box {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
   }
 
   .subtitle {

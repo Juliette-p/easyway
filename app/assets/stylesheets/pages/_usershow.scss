@@ -1,9 +1,5 @@
 .user-show-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  width: 100%;
 }
 
 .user-profile {
@@ -12,43 +8,17 @@
   vertical-align: middle;
   justify-content: center;
   align-items: center;
-
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 0 5px grey;
-  border: 1px solid lightgrey;
+  margin: 0;
   padding: 25px;
-  width: 300px;
 }
 
 .user-profile-picture {
   width: 100px;
   height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 1px solid lightgray;
 }
 
 .user-name {
-  color: green;
-  font-weight: 600;
-  font-size: 20px;
-
-}
-
-.profile_link_txt {
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-  font-size: 10px;
-  padding: 5px 10px 5px 10px;
-  align-items: center;
-  background-color: green;
-  border-radius: 10px;
-}
-
-.profile_link_txt:hover {
-  text-decoration: underline;
+  margin: 15px 0px;
 }
 
 .profile_link_arrow {
@@ -56,17 +26,7 @@
   font-size: 20px;
   align-items: center;
   padding: 0px;
-  margin: 0px
-}
-
-.bp-user-modif {
-  color: grey; /* Couleur du texte */
-  text-decoration: none;
-  border: none; /* Pas de bordure */
-  border-radius: 30px; /* Coins arrondis */
-  font-size: 16px; /* Taille de police */
-  font-family: barlow;
-  margin: none;
+  margin: 0px;
 }
 
 .user-txt-info {
@@ -75,17 +35,33 @@
   font-size: 10px;
 }
 
-#user-info-card {
-  margin-left: 10px;
-  margin-right: 10px;
-  width: auto;
-  border: 1px lightgrey solid; /* Pas de bordure */
-  border-radius: 30px; /* Coins arrondis */
-}
-
 #btn-user-edit {
-  margin: 10px 0px 10px 0px;
-  text-decoration: none;
-  color: black;
+  margin-bottom: 30px;
+  color: rgb(73, 73, 73);
   font-size: 10px;
 }
+
+// .bp-user-modif {
+//   color: grey; /* Couleur du texte */
+//   text-decoration: none;
+//   border: none; /* Pas de bordure */
+//   border-radius: 30px; /* Coins arrondis */
+//   font-size: 16px; /* Taille de police */
+//   font-family: barlow;
+// }
+
+// #user-info-card {
+//   margin-left: 10px;
+//   margin-right: 10px;
+//   width: auto;
+//   border: 1px lightgrey solid; /* Pas de bordure */
+//   border-radius: 30px; /* Coins arrondis */
+// }
+
+// .user-show-content {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   padding-top: 50px;
+//   padding-bottom: 50px;
+// }
