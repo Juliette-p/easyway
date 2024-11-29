@@ -7,5 +7,20 @@
 
   .collapse {
     border: 1px grey solid;
+    color: $darkgreen;
   }
+}
+
+.box1 {
+  color: $darkgreen;
+  font-size: 10px;
+  border: $lightgreen, 1px solid;
+  background-color: $light-gray;
+  border-radius: 15px;
+  text-align: center;
+  padding-bottom: 10px;
+  }
+
+h2 {
+  color: $darkgreen
 }
