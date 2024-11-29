@@ -1,27 +1,39 @@
-<%= render "pages/QAbox_faq",
+<h1>la FAQ Easyway</h1>
+  <div class= "box1"><h2>Qu'est-ce Easyway?</h2>
+  <p>Une application pour trouver des lieux de sortie adaptés aux familles avec enfants 
+  en bas âges qui répondent à leur besoin d'accessibilité en poussette.</p>
+  </div>
+
+  <h2>Que veulent dire les icones?</h2>
+  <ul><p>Afin de répondre à vos envies, chaque lieu proposé est classée par catégorie:</p></ul>
+    <li>"Lieux culturels,"</li>
+    <li>"Cafés et Restos,"</li>
+    <li>"Parcs,"</li>
+    <li>"les espaces de jeux,"</li>
+  <p>Nous avons ensuite attribuer à chaque lieu des icônes afin de vous permettre d'organiser votre sortie. 
+    L'icône est collorée cela signifie que le service est présent sur le lieu de sortie
+    L'icône est grisé cela signifie que le service n'est pas présent sur le lieu de sortie</p>
+
+  <%= image_tag('stroller_ok.png', class: "taille-icone") %>
+  <%= image_tag('high_chair_ok.png', class: "taille-icone") %>
+  <%= image_tag('changing_table_ok.png', class: "taille-icone") %>
+  <%= image_tag('kids_friendly_ok.png', class: "taille-icone") %>
+
+<%# <%= render "pages/QAbox_faq",
   question: "Qu'est-ce Easyway ?",
   answer: "Une application pour trouver des lieux de sortie adaptés aux familles avec enfants en bas âges 
            qui répondent à leur besoin d'accessibilité en poussette. ",
   index: "1"
 %>
 
-<%= render "QAbox_faq",
+<%# <%= render "pages/QAbox_faq",
   question: "Que signifie les îcones ?",
-  answer: "Chaque activité proposée est classée par catégorie: 
-  Lieux culturels, 
-  Cafés et Restos, 
-  Parcs et les espaces de jeux, 
-  afin de répondre à vos envies. Nous avons ensuite attribuer à chaque lieu des icônes de services 
-  afin de vous permettre d'organiser votre sortie. 
-  Lorsque l'icône est collorée cela signifie que le service est présent sur le lieu de sortie
-  Lorsque l'icône est grisé cela signifie que le service n'est pas présent sur le lieu de sortie",
+  answer: ".....reponse.....",
   index: "2"
 %>
 
-<%= image_tag('kids_friendly_ok.png', class:'activity-icone') %>
-
-<%= render "QAbox_faq",
+<%# <%= render "pages/QAbox_faq",
   question: "Comment faire une recherche sur l'appli ?",
-  answer: "......a COMPLETER............ ",
+  answer: "....reponse......",
   index: "3"
-%>
+%> 
