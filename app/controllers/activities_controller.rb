@@ -16,6 +16,9 @@ class ActivitiesController < ApplicationController
     if params[:kids_friendly].present?
       @activities = @activities.where(kids_friendly: true) if params[:kids_friendly] == "1"
     end
+    if params[:category].present?
+      @activities = @activities.where(category: params[:category])
+    end
     # raise
 
     # mise à jour des marqueurs sur la map
