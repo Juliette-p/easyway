@@ -7,24 +7,123 @@
 
 .sub-card-search {
   // padding: 20px;
-  margin: 10px;
+  margin-inline: 10px;
+  margin-block: 0;
+  padding: 0;
 
   .form-control {
-    border: 1px solid $light-gray;
+    border: 1px solid $shadow-gray;
     border-radius: 20px;
     // box-shadow: -1px -1px -3px rgba(0,0,0,0.2);
     background-color: $white;
     color: black;
+    margin: 0;
+    padding-block: 0;
   }
 
   .form-check-input {
-    color: black;
+    // color: black;
+    display:none;
+    // position: absolute;
+    // transform: scale(0);
   }
 
-  .form-check-label {
-    color: black;
-    font-size: 12px;
+  #checkbox1 + label{
+    background-image: asset-url('stroller_nok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
   }
+
+  #checkbox1:checked + label{
+    background-image: asset-url('stroller_ok_30px.png');
+    object-fit: cover;
+    // background:url('stroller_ok.png') no-repeat;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox2 + label{
+    background-image: asset-url('changing_table_nok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox2:checked + label{
+    background-image: asset-url('changing_table_ok_30px.png');
+    object-fit: cover;
+    // background:url('stroller_ok.png') no-repeat;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox3 + label{
+    background-image: asset-url('high_chair_nok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox3:checked + label{
+    background-image: asset-url('high_chair_ok_30px.png');
+    object-fit: cover;
+    // background:url('stroller_ok.png') no-repeat;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox4 + label{
+    background-image: asset-url('kids_friendly_nok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox4:checked + label{
+    background-image: asset-url('kids_friendly_ok_30px.png');
+    object-fit: cover;
+    // background:url('stroller_ok.png') no-repeat;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  // .form-check-label {
+  //   color: black;
+  //   font-size: 12px;
+  // }
 }
 
 .form-control::placeholder { /* Most modern browsers support this now. */
@@ -33,5 +132,12 @@
 }
 
 .search-tab-field {
-  margin-block: 10px;
+  margin-block: 3px;
+}
+
+.checkbox-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-block: 0;
 }

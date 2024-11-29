@@ -1,0 +1,22 @@
+<h1>Ajouter un avis</h1>
+
+<%= simple_form_for [@activity, @rating] do |f| %>
+
+  <%= f.input :visit_date,
+            label: "Quand y êtes vous allés ?",
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
+
+
+    <%= f.input :rating, label: "Note globale", as: :range, input_html: { class: "form-range", min: 0, max: 5, step: 1 } %>
+
+      <%# CUSTOM CHECKBOXES https://stackoverflow.com/questions/38308799/changing-checkbox-icon-with-simple-form %>
+      <%= f.input :stroller, type: "checkbox"%>
+      <%= f.input :changing_table, type: "checkbox"%>
+      <%= f.input :high_chair, type: "checkbox"%>
+      <%= f.input :kids_friendly, type: "checkbox"%>
+
+    <%= f.input :comment, label: "Ajouter un commentaire", placeholder: "Partagez votre expérience :)", input_html: { "data-target": "character-count.text", "data-action": "keyup->character-count#updateCounter" } %>
+
+  <%= f.submit "Publier" %>
+<% end %>
