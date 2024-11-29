@@ -1,7 +1,8 @@
 <%# titre de la page %>
-<h1>Liste des activités proposées</h1>
+<h1>Trouver une activité</h1>
 
 <%# search tab %>
+<%= render "activities/search_card" %>
 
 
 <%# map %>
@@ -10,6 +11,9 @@
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
+
+<%# affichage du nb de résultats %>
+<p style="color: <%= $darkgreen %>"><%= @activities.size %> résultats correspondent à votre recherche.</p>
 
 <%# liste des activités %>
 <% @activities.each do |activity|%>

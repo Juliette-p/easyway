@@ -1,0 +1,20 @@
+.activity-show-photo {
+  margin: 0;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 20px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+}
+
+p {
+  color: black;
+  font-size: 12px;
+  // margin-block: 10px;
+  text-align: left;
+}

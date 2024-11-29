@@ -1,14 +1,16 @@
 <%# ajout d'un lien vers la page de l'activité quand on clique sur la card %>
 <%= link_to activity_path(activity), class: "card-activity-link" do %>
-  <div class= "card-activity">
+  <div class= "basic-card card-activity">
 
     <div class="card-activity-image"
         style="background-image: url(<%= activity.photo.attached? ? cl_image_path(activity.photo.key) : asset_path('image_par_defaut.png') %>)">
     </div>
 
     <div class="card-activity-content">
+      <div class="card-activity-title-type">
       <h3><%= activity.name.capitalize %></h3>
       <p><%= activity.category %></p>
+      </div>
 
       <div class="card-activity-icones">
         <%= activity.stroller? ? image_tag('stroller_ok.png', class:'activity-icone') : image_tag('stroller_nok.png', class:'activity-icone') %>
@@ -16,6 +18,11 @@
         <%= activity.high_chair? ? image_tag('high_chair_ok.png', class:'activity-icone') : image_tag('high_chair_nok.png', class:'activity-icone') %>
         <%= activity.changing_table? ? image_tag('changing_table_ok.png', class:'activity-icone') : image_tag('changing_table_nok.png', class:'activity-icone') %>
       </div>
+
+      <div class="card-activity-description">
+      <%= truncate activity.description, length: 80 %>
+      </div>
+
     </div>
 
   </div>
