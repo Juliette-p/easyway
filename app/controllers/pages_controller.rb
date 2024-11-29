@@ -12,5 +12,7 @@ class PagesController < ApplicationController
     # calcul des onglets les mieux notés
     # CALCUL A FAIRE PLUS TARD : trier par rating décroissant ou sélectionner les ratings qui > 4.0
     @activities = Activity.all
+
+    # raise
   end
 end
