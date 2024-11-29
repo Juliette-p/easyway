@@ -1,2 +1,18 @@
 <h1>formulaire ajouter une nouvelle activité</h1>
-<p>TO DO</p>
+<%= simple_form_for(@activity) do |f| %>
+  <%= f.input :name, label: "Nom du lieu", placeholder: "Ajouter un nom..." %>
+  <%= f.input :address, label: "Adresse", placeholder: "Ajouter une adresse..." %>
+  <%= f.input :category, collection: Activity::ACTIVITY_CATEGORY, prompt: "Sélectionner une catégorie" %>
+  <%= f.input :url, label: "Site web", placeholder: "Ajouter un lien vers un site web..." %>
+  <%= f.input :stroller, label: "Accès poussette facile" %>
+  <%= f.input :changing_table, label: "Table à langer disponible" %>
+  <%= f.input :high_chair, label: "Chaise haute disponible" %>
+  <%= f.input :kids_friendly, label: "Activité ou espace kids friendly disponibles" %>
+  <%= f.input :public_transport, label: "Accessible en transport en commun" %>
+  <%= f.input :public_transport_detail, label: "Détails sur les accès en transport en commun", placeholder: "Ajouter un commentaire..." %>
+  <%= f.input :car_park, label: "Accessible en voiture (parkings disponibles aux alentours)" %>
+  <%= f.input :car_park_detail, label: "Détails sur les parkings disponibles aux alentours)", placeholder: "Ajouter un commentaire..." %>
+  <%= f.input :bike_park, label: "Accessible en vélo (parkings vélo disponibles aux alentours)" %>
+  <%= f.input :photo, label: "Ajouter une photo" %>
+  <%= f.submit %>
+<% end %>
