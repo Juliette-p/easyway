@@ -10,11 +10,20 @@
 
     <%= f.input :rating, label: "Note globale", as: :range, input_html: { class: "form-range", min: 0, max: 5, step: 1 } %>
 
+
+<div>
+  <input id="custom-checkbox" class="custom-check-box" type="checkbox" />
+  <label for="custom-checkbox"></label>
+</div>
+
       <%# CUSTOM CHECKBOXES https://stackoverflow.com/questions/38308799/changing-checkbox-icon-with-simple-form %>
-      <%= f.input :stroller, type: "checkbox"%>
-      <%= f.input :changing_table, type: "checkbox"%>
-      <%= f.input :high_chair, type: "checkbox"%>
-      <%= f.input :kids_friendly, type: "checkbox"%>
+      <%= f.input :stroller, type: "checkbox", id: "checkbox-stroller"%>
+
+      <%= f.input :changing_table, type: "checkbox", id: "checkbox-changingtable"%>
+
+      <%= f.input :high_chair, type: "checkbox", id: "checkbox-highchair"%>
+
+      <%= f.input :kids_friendly, type: "checkbox", id: "checkbox-kidsfriendy"%>
 
     <%= f.input :comment, label: "Ajouter un commentaire", placeholder: "Partagez votre expérience :)", input_html: { "data-target": "character-count.text", "data-action": "keyup->character-count#updateCounter" } %>
 
