@@ -1,0 +1,44 @@
+.empty-rating-card {
+  display: flex;
+  height: 170px;
+  margin-top: 10px;
+  padding-block: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-inner {
+  display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  height: 170px;
+  margin-top: 10px;
+  padding-block: 10px;
+  // gap: 15px;
+}
+
+.carousel-item {
+  color: black;
+  padding-inline: 40px;
+
+  p {
+    color: black;
+    font-size: 12px;
+    margin-block: 5px;
+  }
+}
+
+.carousel-item-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  font-size: 12px;
+  gap: 5px;
+  align-items: center;
+  // margin-block: 5px;
+
+  p {
+    margin: 0;
+  }
+}
