@@ -13,3 +13,12 @@
 
 <%# carte détails sur l'accessibilité de l'activité %>
 <%= render "activities/card_show_activity_accessibility", activity: @activity %>
+
+<%# liste des commentaires %>
+<% if @activity.ratings.size >= 1 %>
+  <%= render "ratings/ratings_card_carousel", ratings: @activity.ratings %>
+<% else %>
+  <div class="basic-card empty-rating-card">
+    <p>Pas de commentaire sur cette activité.</p>
+  </div>
+<% end %>
