@@ -12,14 +12,6 @@ class RatingsController < ApplicationController
     @rating.user = current_user
     @rating.activity_id = @activity.id
 
-    # Parametrer la date
-    # @rating.visit_date = params[:rating][:visit_date]
-    # @rating.rating = params[:rating][:rating].to_i
-
-    # @rating.stroller = params[:rating][:stroller] == "1" ?
-    # @rating.changing_table = params[:rating][:stroller] == "1" ?
-    # @rating.high_chair = params[:rating][:stroller] == "1" ?
-    # @rating.kids_friendly = params[:rating][:stroller] == "1" ?
     if @rating.save!
 
       @activity.stroller = @rating.stroller
