@@ -10,57 +10,62 @@
         %>
       </div>
 
-      <%# champs checkbox (booléen) pour sélectionner le filtre accès poussette %>
-      <div class="search-tab-field">
-        <%= check_box_tag :stroller,
-          "1",
-          params[:stroller],
-          class: "form-check-input",
-          label: "stroller"
-        %>
-        <%= label_tag :stroller,
-          "Done",
-          class: "form-check-label"
-        %>
-      </div>
+      <div class="checkbox-row">
+        <%# champs checkbox (booléen) pour sélectionner le filtre accès poussette %>
+        <div class="search-tab-field">
+          <%= check_box_tag :stroller,
+            "1",
+            params[:stroller],
+            class: "form-check-input",
+            id: "checkbox1"
+          %>
+          <%= label_tag :stroller,
+            "",
+            for: "checkbox1"
+          %>
+        </div>
 
-      <%# champs checkbox (booléen) pour sélectionner le filtre table à langer %>
-      <div class="search-tab-field">
-        <%= check_box_tag :changing_table,
-          "1",
-          params[:changing_table],
-          class: "form-check-input"
-        %>
-        <%= label_tag :changing_table,
-          "Table à langer",
-          class: "form-check-label"
-        %>
-      </div>
+        <%# champs checkbox (booléen) pour sélectionner le filtre table à langer %>
+        <div class="search-tab-field">
+          <%= check_box_tag :changing_table,
+            "1",
+            params[:changing_table],
+            class: "form-check-input",
+            id: "checkbox2"
+          %>
+          <%= label_tag :changing_table,
+            "",
+            for: "checkbox2"
+          %>
+        </div>
 
-      <%# champs checkbox (booléen) pour sélectionner le filtre chaise haute %>
-      <div class="search-tab-field">
-        <%= check_box_tag :high_chair,
-          "1",
-          params[:high_chair],
-          class: "form-check-input"
-        %>
-        <%= label_tag :high_chair,
-          "Chaise haute",
-          class: "form-check-label"
-        %>
-      </div>
+        <%# champs checkbox (booléen) pour sélectionner le filtre chaise haute %>
+        <div class="search-tab-field">
+          <%= check_box_tag :high_chair,
+            "1",
+            params[:high_chair],
+            class: "form-check-input",
+            id: "checkbox3"
+          %>
+          <%= label_tag :high_chair,
+            "",
+            for: "checkbox3"
+          %>
+        </div>
 
-      <%# champs checkbox (booléen) pour sélectionner le filtre kids friendly %>
-      <div class="search-tab-field">
-        <%= check_box_tag :kids_friendly,
-          "1",
-          params[:kids_friendly],
-          class: "form-check-input"
-        %>
-        <%= label_tag :kids_friendly,
-          "Activités ou espaces kids friendly",
-          class: "form-check-label"
-        %>
+        <%# champs checkbox (booléen) pour sélectionner le filtre kids friendly %>
+        <div class="search-tab-field">
+          <%= check_box_tag :kids_friendly,
+            "1",
+            params[:kids_friendly],
+            class: "form-check-input",
+            id: "checkbox4"
+          %>
+          <%= label_tag :kids_friendly,
+            "",
+            for: "checkbox4"
+          %>
+        </div>
       </div>
 
       <%# champs collection pour sélectionner la catégorie %>
@@ -74,7 +79,7 @@
       </div>
 
       <%# bouton de recherche %>
-      <%= submit_tag "Search", name: "Rechercher", class: "yellowbtn" %>
+      <%= submit_tag "Search", name: "Rechercher", class: "yellow_small_btn mt-2" %>
     <% end %>
   </div>
 </div>
