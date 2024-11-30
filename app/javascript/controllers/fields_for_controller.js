@@ -9,30 +9,32 @@ export default class extends Controller {
     // console.log(this.fieldTarget.checked);
   }
 
+  // acces transports en commun
   hide_checkbox5() {
     console.log("hide fields_for ok");
     // console.log(this.checkbox6Target.checked);
-    // e.target.closest("[data-target='fields-for.fields']").style = "display: none;"
     if (this.checkbox5Target.checked) {
       this.field5Target.style = "display: initial;"
     } else {
       this.field5Target.style = "display: none;"
     }
   }
+
+  // acces voiture
   hide_checkbox6() {
     console.log("hide fields_for ok");
     // console.log(this.checkbox6Target.checked);
-    // e.target.closest("[data-target='fields-for.fields']").style = "display: none;"
     if (this.checkbox6Target.checked) {
       this.field6Target.style = "display: initial;"
     } else {
       this.field6Target.style = "display: none;"
     }
   }
+
+  // acces vélo
   hide_checkbox7() {
     console.log("hide fields_for ok");
     // console.log(this.checkbox7Target.checked);
-    // e.target.closest("[data-target='fields-for.fields']").style = "display: none;"
     if (this.checkbox7Target.checked) {
       this.field7Target.style = "display: initial;"
     } else {

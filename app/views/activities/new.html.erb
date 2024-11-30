@@ -174,7 +174,6 @@
       </div>
 
       <%# champs texte pour enregistrer des détails sur l'accès en voiture %>
-      <%# en stimulus, soit placer type="hidden" dans le input, soit mettre d-none dans la div %>
         <div class="new-activity-tab-field">
           <%= text_field_tag :car_park_detail,
             params[:car_park_detail],
@@ -195,6 +194,7 @@
           style: "display: none"
         %>
       </div>
+      
       <%# bouton de validation %>
       <%# <%= submit_tag "Ajouter cette activité", name: "Ajouter cette activité", class: "yellow_small_btn mt-2" %>
       <%= submit_tag "Ajouter cette activité", class: "yellow_small_btn mt-2" %>
