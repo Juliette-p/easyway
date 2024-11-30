@@ -20,7 +20,7 @@
 
 <div class="basic-card card-new-activity">
   <div class="sub-card-new-activity col-sm-8 my-3">
-    <%= form_with url: activities_path, method: :get, class: "d-flex flex-column" do %>
+    <%= form_with url: activities_path, method: :get, class: "d-flex flex-column", data: { controller: "fields-for" } do %>
       <%# champs texte pour enregistrer un nom %>
       <div class="new-activity-tab-field">
         <%= text_field_tag :name,
@@ -122,7 +122,8 @@
             "1",
             params[:public_transport],
             class: "form-check-input",
-            id: "checkbox5"
+            id: "checkbox5",
+            data: {action: "click->fields-for#hide_checkbox5", target: "fields-for.checkbox5"}
           %>
           <%= label_tag :public_transport,
             "",
@@ -136,7 +137,8 @@
             "1",
             params[:car_park],
             class: "form-check-input",
-            id: "checkbox6"
+            id: "checkbox6",
+            data: {action: "click->fields-for#hide_checkbox6", target: "fields-for.checkbox6"}
           %>
           <%= label_tag :car_park,
             "",
@@ -150,7 +152,8 @@
             "1",
             params[:bike_park],
             class: "form-check-input",
-            id: "checkbox7"
+            id: "checkbox7",
+            data: {action: "click->fields-for#hide_checkbox7", target: "fields-for.checkbox7"}
           %>
           <%= label_tag :bike_park,
             "",
@@ -164,7 +167,9 @@
         <%= text_field_tag :public_transport_detail,
           params[:public_transport_detail],
           class: "form-control",
-          placeholder: "Infos transports..."
+          placeholder: "Infos transports...",
+          data: {target: "fields-for.field5"},
+          style: "display: none"
         %>
       </div>
 
@@ -174,8 +179,9 @@
           <%= text_field_tag :car_park_detail,
             params[:car_park_detail],
             class: "form-control",
-            placeholder: "Infos voiture..."
-            # type: :hidden
+            placeholder: "Infos voiture...",
+            data: {target: "fields-for.field6"},
+            style: "display: none"
           %>
         </div>
 
@@ -184,7 +190,9 @@
         <%= text_field_tag :bike_park_detail,
           params[:bike_park_detail],
           class: "form-control",
-          placeholder: "Infos vélo..."
+          placeholder: "Infos vélo...",
+          data: {target: "fields-for.field7"},
+          style: "display: none"
         %>
       </div>
       <%# bouton de validation %>
