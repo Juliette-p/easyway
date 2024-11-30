@@ -1,7 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["field5", "field6", "field7", "checkbox5", "checkbox6", "checkbox7"]
+  static targets = ["fieldUrl", "fieldPhone", "field5", "field6", "field7",
+                    "checkboxUrl", "checkboxPhone", "checkbox5", "checkbox6", "checkbox7"]
 
   connect() {
     console.log("connect fields_for ok");
@@ -9,9 +10,29 @@ export default class extends Controller {
     // console.log(this.fieldTarget.checked);
   }
 
+  // url site web
+  hide_checkboxUrl() {
+    console.log("hide_checkboxUrl fields_for ok");
+    if (this.checkboxUrlTarget.checked) {
+      this.fieldUrlTarget.style = "display: initial;"
+    } else {
+      this.fieldUrlTarget.style = "display: none;"
+    }
+  }
+
+  // téléphone
+  hide_checkboxPhone() {
+    console.log("hide_checkboxPhone fields_for ok");
+    if (this.checkboxPhoneTarget.checked) {
+      this.fieldPhoneTarget.style = "display: initial;"
+    } else {
+      this.fieldPhoneTarget.style = "display: none;"
+    }
+  }
+
   // acces transports en commun
   hide_checkbox5() {
-    console.log("hide fields_for ok");
+    console.log("hide_checkbox5 fields_for ok");
     // console.log(this.checkbox6Target.checked);
     if (this.checkbox5Target.checked) {
       this.field5Target.style = "display: initial;"
@@ -22,7 +43,7 @@ export default class extends Controller {
 
   // acces voiture
   hide_checkbox6() {
-    console.log("hide fields_for ok");
+    console.log("hide_checkbox6 fields_for ok");
     // console.log(this.checkbox6Target.checked);
     if (this.checkbox6Target.checked) {
       this.field6Target.style = "display: initial;"
@@ -33,7 +54,7 @@ export default class extends Controller {
 
   // acces vélo
   hide_checkbox7() {
-    console.log("hide fields_for ok");
+    console.log("hide_checkbox7 fields_for ok");
     // console.log(this.checkbox7Target.checked);
     if (this.checkbox7Target.checked) {
       this.field7Target.style = "display: initial;"
