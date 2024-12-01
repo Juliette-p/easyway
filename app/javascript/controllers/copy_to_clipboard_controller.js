@@ -10,7 +10,7 @@ export default class extends Controller {
 
   connect() {
     // TODO: console.log something!
-    console.log("connect ok");
+    console.log("connect copy_to_clipboard ok");
     // console.log(this.addressTarget.innerText);
   }
 

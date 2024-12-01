@@ -1,3 +1,36 @@
+.wrapper {
+  position: relative;
+}
+
+.activity-show-main-page {
+  position: relative;
+  z-index: 1;
+  // border: dashed;
+  // height: 8em;
+  // margin-bottom: 1em;
+  // margin-top: 2em;
+}
+
+.activity-show-agenda {
+  position: fixed;
+  z-index: 3; /* place .boite-doree au-dessus de .activity-show-transparence et .activity-show-main-page */
+  background: white;
+  left: 0px;
+  top: 400px;
+  width: 100%;
+  height: 500px;
+}
+.activity-show-transparence {
+  position: absolute;
+  z-index: 2; /* place .boite-verte au-dessus de activity-show-main-page */
+  background: gray;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  opacity: 0.5;
+}
+
 .activity-show-photo {
   margin: 0;
   width: 100%;
