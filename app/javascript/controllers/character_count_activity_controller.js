@@ -10,13 +10,13 @@ export default class extends Controller {
 
   connect() {
     // TODO: console.log something!
-    // console.log("connect character count rating ok");
+    // console.log("connect character count activity ok");
     this.counterTarget.innerText = `0 caractères.`;
     // console.log(this.nbValue);
   }
 
   updateCounter() {
-    // console.log("updateCounter");
+    // console.log("updateCounter description activity");
     // console.log(this.textTarget.value);
     // console.log(this.counterTarget.value);
     if ((this.textTarget.value.length > 1) && (this.textTarget.value.length <= this.nbValue)) {
