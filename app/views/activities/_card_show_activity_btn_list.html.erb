@@ -2,22 +2,22 @@
 <div class="basic-card card-activity-btn-list">
 
   <%# icone "favoris" %>
-  <%= link_to activity_path(@activity), class: "card-activity-btn" do %>
-    <i class="fa-solid fa-heart" style="color: #FF8351;"></i>
-    <p>Favoris</p>
-  <% end %>
-
-  <%# if Favourite.find(user == current_user && activity == @activity) %>
-    <%#= link_to <i class="fa-solid fa-heart-circle-plus" style="color: #000000;"></i>,
-      favourite_path(@activity),
-      data: {turbo_method: :delete}
-    %>
-  <%# else %>
-    <%#= link_to <i class="fa-regular fa-heart" style="color: #000000;"></i>,
-      favourite_path(@activity),
-      data: {turbo_method: :create}
-    %>
+  <%#= link_to activity_path(@activity), class: "card-activity-btn" do %>
+    <%# <i class="fa-solid fa-heart" style="color: #FF8351;"></i> %>
+    <%# <p>Favoris</p> %>
   <%# end %>
+
+  <% if Favourite.where(activity: @activity, user: current_user).size > 0 %>
+    <%= link_to activity_favourite_path(@activity), data: {turbo_method: :delete}, class: "card-activity-btn" do %>
+      <i class="fa-solid fa-heart" style="color: #FF8351;"></i>
+      <p>Favoris</p>
+    <% end %>
+  <% else %>
+    <%= link_to activity_favourites_path(@activity), data: {turbo_method: :post}, class: "card-activity-btn" do %>
+      <i class="fa-regular fa-heart" style="color: #FF8351;"></i>
+      <p>Favoris</p>
+    <% end %>
+  <% end %>
 
   <%# icone "ajouter un commentaire" %>
   <%= link_to new_activity_rating_path(@activity), class: "card-activity-btn"  do %>
