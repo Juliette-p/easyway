@@ -17,18 +17,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    text-decoration: none;
   }
 
-  .icone-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  .icone-link {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: space-between;
+    text-decoration: none;
+   }
+
+  .icone-size-left {
+    color: #3D5555;
+    font-size: 30px;
+  }
+
+  .icone-size {
+    color: #3D5555;
+    font-size: 25px;
   }
 
   .subtitle {
     color: gray;
     font-size: 10px;
     text-align: center;
+    text-decoration: none;
   }
 }
