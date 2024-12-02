@@ -1,0 +1,375 @@
+.card-new-activity {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-inline: 0;
+  width: 100%;
+  // row justify-content-center
+}
+
+.sub-card-new-activity {
+  margin-inline: 20px;
+  margin-block: 0;
+  padding: 0;
+  width: 100%;
+
+  .form-control {
+    border: 1px solid $shadow-gray;
+    border-radius: 20px;
+    // box-shadow: -1px -1px -3px rgba(0,0,0,0.2);
+    background-color: $white;
+    color: black;
+    margin: 0;
+    width: 100%;
+    padding-block: 0;
+  }
+
+  #activity_category {
+    border: 1px solid $shadow-gray;
+    border-radius: 20px;
+    // box-shadow: -1px -1px -3px rgba(0,0,0,0.2);
+    background-color: $white;
+    color: black;
+    margin: 0;
+    width: 100%;
+    padding-block: 0;
+  }
+
+  .form-check-input {
+    // color: black;
+    display:none;
+    // position: absolute;
+    // transform: scale(0);
+  }
+
+  #checkbox1 + label{
+    background-image: asset-url('stroller_nok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox1:checked + label{
+    background-image: asset-url('stroller_ok_30px.png');
+    object-fit: cover;
+    // background:url('stroller_ok.png') no-repeat;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox2 + label{
+    background-image: asset-url('changing_table_nok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox2:checked + label{
+    background-image: asset-url('changing_table_ok_30px.png');
+    object-fit: cover;
+    // background:url('stroller_ok.png') no-repeat;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox3 + label{
+    background-image: asset-url('high_chair_nok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox3:checked + label{
+    background-image: asset-url('high_chair_ok_30px.png');
+    object-fit: cover;
+    // background:url('stroller_ok.png') no-repeat;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox4 + label{
+    background-image: asset-url('kids_friendly_nok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox4:checked + label{
+    background-image: asset-url('kids_friendly_ok_30px.png');
+    object-fit: cover;
+    // background:url('stroller_ok.png') no-repeat;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox5 + label{
+    background-image: asset-url('bus_nok.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox5:checked + label{
+    background-image: asset-url('bus_ok.png');
+    object-fit: cover;
+    // background:url('stroller_ok.png') no-repeat;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox6 + label{
+    background-image: asset-url('car_nok.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox6:checked + label{
+    background-image: asset-url('car_ok.png');
+    object-fit: cover;
+    // background:url('stroller_ok.png') no-repeat;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox7 + label{
+    background-image: asset-url('velo_nok.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #checkbox7:checked + label{
+    background-image: asset-url('velo_ok.png');
+    object-fit: cover;
+    // background:url('stroller_ok.png') no-repeat;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    // border: 1px solid black;
+    border-radius: 50%;
+  }
+  // .form-check-label {
+  //   color: black;
+  //   font-size: 12px;
+  // }
+}
+
+.form-control::placeholder { /* Most modern browsers support this now. */
+  color: $black;
+  opacity: 1; // firefox
+}
+
+.new-activity-tab-field {
+  margin-block: 3px;
+  margin-inline: 0;
+  width: 100%;
+}
+
+.new-activity-tab-field-description {
+  padding-bottom: 20px;
+}
+
+.checkbox-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-block: 0;
+  gap: 10px;
+}
+
+// toggle : pour la checkbox ajouter un site web
+.toggleUrl {
+  position: absolute;
+  transform: scale(0);
+}
+
+.toggleUrl + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 40px;
+}
+
+.toggleUrl + label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 36px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-color: #EAEAEA;
+  border-radius: 50rem;
+}
+
+.toggleUrl:checked + label::before {
+  background-color: #3D5555;
+}
+
+.toggleUrl + label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.2s ease;
+}
+
+.toggleUrl:checked + label::after {
+  left: 18px;
+}
+
+
+// toggle : pour la checkbox ajouter un téléphone
+.togglePhone {
+  position: absolute;
+  transform: scale(0);
+}
+
+.togglePhone + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 40px;
+}
+
+.togglePhone + label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 36px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-color: #EAEAEA;
+  border-radius: 50rem;
+}
+
+.togglePhone:checked + label::before {
+  background-color: #3D5555;
+}
+
+.togglePhone + label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.2s ease;
+}
+
+.togglePhone:checked + label::after {
+  left: 18px;
+}
+
+
+// toggle : pour la checkbox ajouter une photo
+.togglePhoto {
+  position: absolute;
+  transform: scale(0);
+}
+
+.togglePhoto + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 40px;
+}
+
+.togglePhoto + label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 36px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-color: #EAEAEA;
+  border-radius: 50rem;
+}
+
+.togglePhoto:checked + label::before {
+  background-color: #3D5555;
+}
+
+.togglePhoto + label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.2s ease;
+}
+
+.togglePhoto:checked + label::after {
+  left: 18px;
+}
