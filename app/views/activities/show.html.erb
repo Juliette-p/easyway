@@ -1,5 +1,5 @@
-<%# <div class="wrapper" data-controller="agenda">
-  <div class="activity-show-main-page"> %>
+<div class="wrapper" data-controller="agenda">
+  <div class="activity-show-main-page" data-agenda-target="ActivityShowView">
     <div class="activity-show-photo">
       <%= @activity.photo.attached? ? cl_image_tag(@activity.photo.key) : image_tag('image_par_defaut.png') %>
     </div>
@@ -24,17 +24,17 @@
         <p>Pas de commentaire sur cette activité.</p>
       </div>
     <% end %>
-  <%# </div> %>
+  </div>
 
   <%# faire une div sur toute la page avec un background-color gris avec transparence %>
-  <%# <div class="activity-show-transparence"
+  <div class="activity-show-transparence"
       data-action="click->agenda#hide_agendaView"
       data-agenda-target="BackgroundAgenda">
     activity-show-transparence Boîte dorée
-  </div> %>
+  </div>
 
   <%# faire une div sur la moitié basse de la page qui contient la vue calendrier %>
-  <%# <div class="activity-show-agenda" data-agenda-target="AgendaView">
+  <div class="activity-show-agenda" data-agenda-target="AgendaView">
     activity-show-agenda
   </div>
-</div> %>
+</div>
