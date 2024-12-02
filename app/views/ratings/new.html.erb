@@ -1,31 +1,46 @@
 <h1>Ajouter un avis</h1>
 
-<%= simple_form_for [@activity, @rating] do |f| %>
+<div class="basic-card rating-card">
+  <%= simple_form_for [@activity, @rating] do |f| %>
+    <div id="rating-date">
+      <%= f.input :visit_date,
+                label: "Quand y êtes vous allés ?",
+                as: :string,
+                input_html: { data: { controller: "datepicker" }, class: "rating-date-input"} %>
+    </div>
 
-  <%= f.input :visit_date,
-            label: "Quand y êtes vous allés ?",
-            as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
+      <div id="rating-range" data-controller="rating">
+        <p class="rating-range-note" data-rating-target="note">0/5</p>
 
+        <div class="rating-range-stars">
+          <i class="icone fa-solid fa-star" style="color: transparent;"></i>
+          <i class="icone fa-solid fa-star" style="color: #cccaca;", data-rating-target="star"></i>
+          <i class="icone fa-solid fa-star" style="color: #cccaca;", data-rating-target="star"></i>
+          <i class="icone fa-solid fa-star" style="color: #cccaca;", data-rating-target="star"></i>
+          <i class="icone fa-solid fa-star" style="color: #cccaca;", data-rating-target="star"></i>
+          <i class="icone fa-solid fa-star" style="color: #cccaca;", data-rating-target="star"></i>
 
-    <%= f.input :rating, label: "Note globale", as: :range, input_html: { class: "form-range", min: 0, max: 5, step: 1 } %>
+        </div>
 
+        <%= f.input :rating, label: "Notez votre experience", as: :range, input_html: { class: "form-range", id: "rating-input", min: 0, max: 5, step: 1, data: { action: "input->rating#updateNote", rating_target: "range" } } %>
+      </div>
 
-<div>
-  <input id="custom-checkbox" class="custom-check-box" type="checkbox" />
-  <label for="custom-checkbox"></label>
+      <div id="rating-checkboxes">
+        <%# CUSTOM CHECKBOXES https://stackoverflow.com/questions/38308799/changing-checkbox-icon-with-simple-form %>
+        <%= f.input :stroller, type: "checkbox", input_html: { class: "rating-stroller" } %>
+
+        <%= f.input :changing_table, type: "checkbox", input_html: { class: "rating-changingtable" } %>
+
+        <%= f.input :high_chair, type: "checkbox", input_html: { class: "rating-highchair" } %>
+
+        <%= f.input :kids_friendly, type: "checkbox", input_html: { class: "rating-kidsfriendy" } %>
+      </div>
+
+      <div id="rating-comment-div">
+        <%= f.input :comment, placeholder: "Partagez votre expérience :)", input_html: { "data-target": "character-count.text", "data-action": "keyup->character-count#updateCounter", class: "rating-comment" } %>
+      </div>
+      <div id="rating-form-btn">
+        <%= f.submit "Publier", class: "yellowbtn" %>
+      </div>
+  <% end %>
 </div>
-
-      <%# CUSTOM CHECKBOXES https://stackoverflow.com/questions/38308799/changing-checkbox-icon-with-simple-form %>
-      <%= f.input :stroller, type: "checkbox", id: "checkbox-stroller"%>
-
-      <%= f.input :changing_table, type: "checkbox", id: "checkbox-changingtable"%>
-
-      <%= f.input :high_chair, type: "checkbox", id: "checkbox-highchair"%>
-
-      <%= f.input :kids_friendly, type: "checkbox", id: "checkbox-kidsfriendy"%>
-
-    <%= f.input :comment, label: "Ajouter un commentaire", placeholder: "Partagez votre expérience :)", input_html: { "data-target": "character-count.text", "data-action": "keyup->character-count#updateCounter" } %>
-
-  <%= f.submit "Publier" %>
-<% end %>

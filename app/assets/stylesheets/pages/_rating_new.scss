@@ -1,21 +1,183 @@
-#checkbox-stroller {
-  background-image: asset-url('stroller_nok_30px.png');
-  object-fit: cover;
-  height: 30px;
-  width: 30px;
-  display:inline-block;
-  padding: 0 0 0 0px;
-  border-radius: 50%;
+.rating-card {
+  padding: 30px;
+  justify-content: center;
+
+// bouton submit
+  .yellowbtn {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-#checkbox-changingtable {
 
+#rating-range {
+  margin: 30px 0px;
+
+  label {
+    position: absolute;
+    transform: scale(0);
+  }
+  .rating-range-stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .rating-range-note {
+    margin-bottom: -14px;
+    padding: 0px;
+  }
 }
 
-#checkbox-highchair {
-
+#rating-form-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-#checkbox-kidsfriendy {
+#rating-date {
+  label {
+    font-size: 12px;
+  }
 
+  .rating-date-input {
+    border-radius: 18px;
+    margin: 0px;
+  }
+
+  .rating-date-input:focus {
+    border: 1px solid $yellow;
+  }
+}
+
+#rating-comment-div {
+  margin: 30px 0px;
+  border-radius: 15px;
+
+  label {
+    position: absolute;
+    transform: scale(0);
+  }
+
+  .rating-comment {
+    border-radius: 15px;
+    margin: 0px;
+    height: 100px;
+  }
+
+  .rating-comment:focus {
+    border: 1px solid $yellow;
+  }
+}
+
+
+
+
+
+
+
+
+#rating-checkboxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .form-check-input {
+    margin-inline: 10px;
+    margin-block: 0;
+    padding: 0;
+  }
+  label {
+    position: absolute;
+    transform: scale(0);
+  }
+
+  // Stroller
+  .rating-stroller {
+    background-image: asset-url('stroller_nok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 50%;
+    margin-left: 0px;
+  }
+
+  .rating-stroller:checked {
+    background-image: asset-url('stroller_ok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 50%;
+  }
+
+// Changing table
+  .rating-changingtable {
+    background-image: asset-url('changing_table_nok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 50%;
+    margin-left: 0px;
+  }
+
+  .rating-changingtable:checked {
+    background-image: asset-url('changing_table_ok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 50%;
+  }
+
+// High chair
+  .rating-highchair {
+    background-image: asset-url('high_chair_nok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 50%;
+    margin-left: 0px;
+    }
+
+  .rating-highchair:checked {
+    background-image: asset-url('high_chair_ok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 50%;
+    }
+
+
+// Kids friendly
+  .rating-kidsfriendy {
+    background-image: asset-url('kids_friendly_nok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 50%;
+    margin-left: 0px;
+    }
+
+  .rating-kidsfriendy:checked {
+    background-image: asset-url('kids_friendly_ok_30px.png');
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 50%;
+    }
 }
