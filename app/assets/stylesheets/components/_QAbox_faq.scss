@@ -18,9 +18,21 @@
   background-color: $light-gray;
   border-radius: 15px;
   text-align: center;
-  padding-bottom: 10px;
+  padding: 20px;
+  margin: 10px;
   }
 
 h2 {
   color: $darkgreen
+}
+
+.box-signification-icones {
+  border: 1px grey solid;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 20px;
+}
+
+li {
+ 
 }
