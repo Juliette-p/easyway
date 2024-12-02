@@ -1,39 +1,39 @@
 <div class="container-footer">
 
   <%# icone "rechercher" %>
-  <%= link_to activities_path, class: "icone-box" do %>
-    <i class="fa-solid fa-magnifying-glass-location" style="color: #3D5555; font-size: 20px;", alt="Rechercher"></i>
-    <p class="subtitle">Rechercher</p>
+  <%= link_to activities_path, class: "icone-link" do %>
+    <i class="fa-solid fa-magnifying-glass-location icone-size-left", alt="Rechercher"></i>
+    <%# <p class="subtitle">Rech</p> %>
   <% end %>
 
   <%# icone "favoris" %>
-  <%= link_to favourites_path, class: "icone-box" do %>
-    <i class="fa-solid fa-heart" style="color: #3D5555; font-size: 20px;", alt="Favoris"></i>
-    <p class="subtitle">Mes Favoris</p>
+  <%= link_to favourites_path do %>
+    <i class="fa-solid fa-heart icone-size-left" alt="Favoris"></i>
+    <%# <p class="subtitle">Mes Favoris</p> %>
   <% end %>
 
   <%# icone "home page" %>
   <%= link_to root_path, class: "icone-home" do %>
-    <%= image_tag "logo.png", height: 30, width: 30, alt: "Pas d'accueil" %>
-    <p class="subtitle">Page d'accueil</p>
+    <%= image_tag "logo.png", height: 40, width: 40, alt: "Pas d'accueil" %>
+    <%# <p class="subtitle">Page d'accueil</p> %>
   <% end %>
 
   <%# icone "ajouter une activité" %>
-  <%= link_to new_activity_path, class: "icone-box" do %>
-    <i class="fa-solid fa-plus" style="color: #3D5555; font-size: 20px;", alt="Aide"></i>
-    <p class="subtitle">Ajouter un lieu</p>
+  <%= link_to new_activity_path, class: "icone-link" do %>
+    <i class="fa-solid fa-plus icone-size", alt="Aide"></i>
+    <%# <p class="subtitle">Ajouter un lieu</p> %>
   <% end %>
 
   <%# icone "profil" %>
   <% if current_user %>
-    <%= link_to user_path(current_user), class: "icone-box" do %>
-      <i class="fa-solid fa-user" style="color: #3D5555; font-size: 20px;", alt="Profil"></i>
-      <p class="subtitle">Mon profil</p>
+    <%= link_to user_path(current_user), class: "icone-link" do %>
+      <i class="fa-solid fa-user icone-size", alt="Profil"></i>
+      <%# <p class="subtitle">Mon profil</p> %>
     <% end %>
   <% else %>
-    <%= link_to new_user_session_path, class: "icone-box" do %>
-      <i class="fa-solid fa-user" style="color: #3D5555; font-size: 20px;", alt="Profil"></i>
-      <p class="subtitle">Mon profil</p>
+    <%= link_to new_user_session_path, class: "icone-link" do %>
+      <i class="fa-solid fa-user icone-size", alt="Profil"></i>
+      <%# <p class="subtitle">Mon profil</p> %>
     <% end %>
   <% end %>
 </div>
