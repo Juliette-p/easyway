@@ -19,7 +19,6 @@ class ActivitiesController < ApplicationController
     if params[:category].present?
       @activities = @activities.where(category: params[:category])
     end
-    # raise
 
     # mise à jour des marqueurs sur la map
     @markers = @activities.geocoded.map do |activity|
@@ -33,7 +32,6 @@ class ActivitiesController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
-    # raise
   end
 
   def new
@@ -41,10 +39,8 @@ class ActivitiesController < ApplicationController
   end
 
   def create
-    # raise
     @activity = Activity.new(activity_params)
     @activity.photo = params[:activity]["photo"]
-    # raise
     if @activity.save!
       redirect_to activity_path(@activity)
     else

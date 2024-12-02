@@ -1,24 +1,47 @@
-<div class="activity-show-photo">
-  <%= @activity.photo.attached? ? cl_image_tag(@activity.photo.key) : image_tag('image_par_defaut.png') %>
-</div>
+<div class="wrapper" data-controller="agenda">
+  <div class="activity-show-main-page" data-agenda-target="ActivityShowView">
+    <div class="activity-show-photo">
+      <%= @activity.photo.attached? ? cl_image_tag(@activity.photo.key) : image_tag('image_par_defaut.png') %>
+    </div>
 
-<%# carte présentation de l'activité : nom, icones, ... %>
-<%= render "activities/card_show_activity_name", activity: @activity %>
+    <%# carte présentation de l'activité : nom, icones, ... %>
+    <%= render "activities/card_show_activity_name", activity: @activity %>
 
-<%# carte avec boutons "j'y vais", "ajout favoris", ... %>
-<%= render "activities/card_show_activity_btn_list", activity: @activity %>
+    <%# carte avec boutons "j'y vais", "ajout favoris", ... %>
+    <%= render "activities/card_show_activity_btn_list", activity: @activity %>
 
-<%# carte détails de l'activité : addresse, téléphone, website, ... %>
-<%= render "activities/card_show_activity_details", activity: @activity %>
+    <%# carte détails de l'activité : addresse, téléphone, website, ... %>
+    <%= render "activities/card_show_activity_details", activity: @activity %>
 
-<%# carte détails sur l'accessibilité de l'activité %>
-<%= render "activities/card_show_activity_accessibility", activity: @activity %>
+    <%# carte détails sur l'accessibilité de l'activité %>
+    <%= render "activities/card_show_activity_accessibility", activity: @activity %>
 
-<%# liste des commentaires %>
-<% if @activity.ratings.size >= 1 %>
-  <%= render "ratings/ratings_card_carousel", ratings: @activity.ratings %>
-<% else %>
-  <div class="basic-card empty-rating-card">
-    <p>Pas de commentaire sur cette activité.</p>
+    <%# liste des commentaires %>
+    <% if @activity.ratings.size >= 1 %>
+      <%= render "ratings/ratings_card_carousel", ratings: @activity.ratings %>
+    <% else %>
+      <div class="basic-card empty-rating-card">
+        <p>Pas de commentaire sur cette activité.</p>
+      </div>
+    <% end %>
   </div>
-<% end %>
+
+  <%# faire une div sur toute la page avec un background-color gris avec transparence %>
+  <div class="activity-show-transparence d-none" data-agenda-target="BackgroundAgenda">
+    activity-show-transparence Boîte dorée
+  </div>
+
+  <%# faire une div sur la moitié basse de la page qui contient la vue calendrier %>
+  <div class="activity-show-agenda d-none" data-agenda-target="AgendaView">
+      <div class="agenda-card-title">
+        <i class="fa-regular fa-calendar-days" style="color: #3D5555; font-size: 24px;"></i>
+        <div class="agenda-card-subtitle">
+          <p><strong>Planifier ma sortie</strong></p>
+          <p>Ajouter l'activité à mon agenda personnel</p>
+          </div>
+        <p id="btn-agenda-close" data-action="click->agenda#hide_agendaView"><strong>X</strong></p>
+      </div>
+      <div data-controller="agenda-datepicker"></div>
+      <p class="yellow_small_btn" id="agenda-confirm" data-action="click->agenda#invitation">Ajouter à votre agenda</p>
+  </div>
+</div>
