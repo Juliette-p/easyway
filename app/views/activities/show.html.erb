@@ -27,14 +27,21 @@
   </div>
 
   <%# faire une div sur toute la page avec un background-color gris avec transparence %>
-  <div class="activity-show-transparence"
-      data-action="click->agenda#hide_agendaView"
-      data-agenda-target="BackgroundAgenda">
+  <div class="activity-show-transparence d-none" data-agenda-target="BackgroundAgenda">
     activity-show-transparence Boîte dorée
   </div>
 
   <%# faire une div sur la moitié basse de la page qui contient la vue calendrier %>
-  <div class="activity-show-agenda" data-agenda-target="AgendaView">
-    activity-show-agenda
+  <div class="activity-show-agenda d-none" data-agenda-target="AgendaView">
+      <div class="agenda-card-title">
+        <i class="fa-regular fa-calendar-days" style="color: #3D5555; font-size: 24px;"></i>
+        <div class="agenda-card-subtitle">
+          <p><strong>Planifier ma sortie</strong></p>
+          <p>Ajouter l'activité à mon agenda personnel</p>
+          </div>
+        <p id="btn-agenda-close" data-action="click->agenda#hide_agendaView"><strong>X</strong></p>
+      </div>
+      <div data-controller="agenda-datepicker"></div>
+      <p class="yellow_small_btn" id="agenda-confirm" data-action="click->agenda#invitation">Ajouter à votre agenda</p>
   </div>
 </div>

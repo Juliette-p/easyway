@@ -1,0 +1,32 @@
+// la gestion de la superposition des pages est dans le fichier "activity_show.scss".
+// Ici on gère la mise en forme de la vue/div agenda
+
+#btn-agenda-close {
+  text-align: right;
+  padding: 10 10 0 0;
+  margin-block: 0;
+  font-size: 12px;
+  font-size: 24px;
+  color: $darkgreen;
+}
+
+.agenda-card-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.agenda-card-subtitle {
+  // margin-left: 10px;
+
+  p {
+    margin: 0;
+    color: $darkgreen;
+  }
+}
+
+#agenda-confirm {
+  font-size: 12px;
+  margin-top: 12px;
+}
