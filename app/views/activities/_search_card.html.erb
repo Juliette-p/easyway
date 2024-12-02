@@ -3,10 +3,10 @@
     <%= form_with url: activities_path, method: :get, class: "d-flex flex-column" do %>
       <%# champs texte pour sélectionner une addresse %>
       <div class="search-tab-field">
-        <%= text_field_tag :address,
-          params[:address],
+        <%= text_field_tag "search",
+          params[:search],
           class: "form-control",
-          placeholder: "Ville ou addresse..."
+          placeholder: "Rechercher..."
         %>
       </div>
 
