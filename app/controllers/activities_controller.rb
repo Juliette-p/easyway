@@ -3,7 +3,8 @@ class ActivitiesController < ApplicationController
   def index
     # mise à jour de la liste d'activité
     @activities = Activity.all
-    @activities = @activities.search_by_address(params[:address]) if params[:address].present?
+    # raise
+    @activities = @activities.search_by_address_name(params[:search]) if params[:search].present?
     if params[:stroller].present?
       @activities = @activities.where(stroller: true) if params[:stroller] == "1"
     end
