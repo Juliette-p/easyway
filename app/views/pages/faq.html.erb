@@ -1,24 +1,36 @@
 <h1>la FAQ Easyway</h1>
-  <div class= "box1"><h2>Qu'est-ce Easyway?</h2>
+<div class= "box1"><h2>Qu'est-ce Easyway?</h2>
   <p>Une application pour trouver des lieux de sortie adaptés aux familles avec enfants 
-  en bas âges qui répondent à leur besoin d'accessibilité en poussette.</p>
-  </div>
-
-  <h2>Que veulent dire les icones?</h2>
-  <ul><p>Afin de répondre à vos envies, chaque lieu proposé est classée par catégorie:</p></ul>
-    <li>"Lieux culturels,"</li>
-    <li>"Cafés et Restos,"</li>
-    <li>"Parcs,"</li>
-    <li>"les espaces de jeux,"</li>
-  <p>Nous avons ensuite attribuer à chaque lieu des icônes afin de vous permettre d'organiser votre sortie. 
-    L'icône est collorée cela signifie que le service est présent sur le lieu de sortie
-    L'icône est grisé cela signifie que le service n'est pas présent sur le lieu de sortie</p>
-
+    en bas âges, qui répondent à leur besoin d'accessibilité en poussette et de services.</p>
   <%= image_tag('stroller_ok.png', class: "taille-icone") %>
   <%= image_tag('high_chair_ok.png', class: "taille-icone") %>
   <%= image_tag('changing_table_ok.png', class: "taille-icone") %>
   <%= image_tag('kids_friendly_ok.png', class: "taille-icone") %>
+</div>
 
+<div class= "box-signification-icones">
+  <h2>Que veulent dire les icones?</h2>
+  <ul><p>Afin de répondre à vos envies, chaque lieu proposé est classée par catégorie:</p></ul>
+    <li>Lieux culturels,</li>
+    <li>Cafés et Restos,</li>
+    <li>Parcs,</li>
+    <li>les espaces de jeux,</li>
+  <p>Nous avons ensuite attribuer à chaque lieu des icônes afin de vous permettre d'organiser votre sortie. 
+    L'icône est collorée cela signifie que le service est présent sur le lieu de sortie
+    L'icône est grisé cela signifie que le service n'est pas présent sur le lieu de sortie</p>
+  <%= image_tag('stroller_ok.png', height:100, width: 100) %>
+  <p>Accessible en poussette</p>
+
+  <%= image_tag('high_chair_ok.png', height:100, width: 100) %>
+  <p>Chaise haute à disposition</p>
+
+  <%= image_tag('changing_table_ok.png', height:100, width: 100) %>
+  <p>Table à langer à disposition</p>
+
+  <%= image_tag('kids_friendly_ok.png', height:100, width: 100) %>
+  <p>espace de jeux à disposition des enfants</p>
+  
+</div>
 <%# <%= render "pages/QAbox_faq",
   question: "Qu'est-ce Easyway ?",
   answer: "Une application pour trouver des lieux de sortie adaptés aux familles avec enfants en bas âges 

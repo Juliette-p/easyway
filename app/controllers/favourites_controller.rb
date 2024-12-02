@@ -11,16 +11,20 @@ class FavouritesController < ApplicationController
     @activity = Activity.find(params[:activity_id])
     @favourite = Favourite.new(user: current_user, activity: @activity)
     if @favourite.save
-      redirect_to activity_path(@activity)
+      redirect_to activity_path(@favourite.activity)
     else
-      render :new, status: :unprocessable_entity
+      render "activity/show"
     end
+  
   end
 
   def destroy
     @activity = Activity.find(params[:activity_id])
     @favourite = Favourite.where(user: current_user, activity: @activity).first
-    @favourite.destroy
-    redirect_to activities_path, status: :see_other
+    if @favourite.destroy
+      redirect_to activity_path(@favourite.activity)
+    else
+      render "activity/show"
+    end
   end
 end
