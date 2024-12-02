@@ -1,7 +1,7 @@
 <h1>Ajouter un avis</h1>
 
 <div class="basic-card rating-card">
-  <%= simple_form_for [@activity, @rating] do |f| %>
+  <%= simple_form_for [@activity, @rating], data: { controller: "character-count-rating", character_count_rating_nb_value: "#{Rating::COMMENT_MAX}" } do |f| %>
     <div id="rating-date">
       <%= f.input :visit_date,
                 label: "Quand y êtes vous allés ?",
@@ -37,7 +37,8 @@
       </div>
 
       <div id="rating-comment-div">
-        <%= f.input :comment, placeholder: "Partagez votre expérience :)", input_html: { "data-target": "character-count.text", "data-action": "keyup->character-count#updateCounter", class: "rating-comment" } %>
+        <%= f.input :comment, placeholder: "Partagez votre expérience :)", input_html: { "data-target": "character-count-rating.text", "data-action": "keyup->character-count-rating#updateCounter", class: "rating-comment" } %>
+        <p data-character-count-rating-target="counter"></p>
       </div>
       <div id="rating-form-btn">
         <%= f.submit "Publier", class: "yellowbtn" %>
