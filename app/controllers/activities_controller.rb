@@ -33,5 +33,28 @@ class ActivitiesController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
+    # raise
+  end
+
+  def new
+    @activity = Activity.new
+  end
+
+  def create
+    # raise
+    @activity = Activity.new(activity_params)
+    @activity.photo = params[:activity]["photo"]
+    # raise
+    if @activity.save!
+      redirect_to activity_path(@activity)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  private
+
+  def activity_params
+    params.require(:activity).permit(:name, :address, :category, :description)
   end
 end

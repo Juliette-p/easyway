@@ -2,13 +2,13 @@
 
   <%# icone "rechercher" %>
   <%= link_to activities_path, class: "icone-box" do %>
-    <i class="fa-solid fa-magnifying-glass-location" style="color: #000000;", alt="Rechercher"></i>
+    <i class="fa-solid fa-magnifying-glass-location" style="color: #3D5555; font-size: 20px;", alt="Rechercher"></i>
     <p class="subtitle">Rechercher</p>
   <% end %>
 
   <%# icone "favoris" %>
   <%= link_to favourites_path, class: "icone-box" do %>
-    <i class="fa-solid fa-heart" style="color: #000000;", alt="Favoris"></i>
+    <i class="fa-solid fa-heart" style="color: #3D5555; font-size: 20px;", alt="Favoris"></i>
     <p class="subtitle">Mes Favoris</p>
   <% end %>
 
@@ -18,21 +18,21 @@
     <p class="subtitle">Page d'accueil</p>
   <% end %>
 
-  <%# icone "aide / FAQ" %>
-  <%= link_to faq_path, class: "icone-box" do %>
-    <i class="fa-solid fa-question" style="color: #000000;", alt="Aide"></i>
-    <p class="subtitle">Aide</p>
+  <%# icone "ajouter une activité" %>
+  <%= link_to new_activity_path, class: "icone-box" do %>
+    <i class="fa-solid fa-plus" style="color: #3D5555; font-size: 20px;", alt="Aide"></i>
+    <p class="subtitle">Ajouter un lieu</p>
   <% end %>
 
   <%# icone "profil" %>
   <% if current_user %>
     <%= link_to user_path(current_user), class: "icone-box" do %>
-      <i class="fa-solid fa-user" style="color: #000000;", alt="Profil"></i>
+      <i class="fa-solid fa-user" style="color: #3D5555; font-size: 20px;", alt="Profil"></i>
       <p class="subtitle">Mon profil</p>
     <% end %>
   <% else %>
     <%= link_to new_user_session_path, class: "icone-box" do %>
-      <i class="fa-solid fa-user" style="color: #000000;", alt="Profil"></i>
+      <i class="fa-solid fa-user" style="color: #3D5555; font-size: 20px;", alt="Profil"></i>
       <p class="subtitle">Mon profil</p>
     <% end %>
   <% end %>

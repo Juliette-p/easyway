@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :activities do
     resources :ratings, only: %i[new create]
-    resources :favourites, only: %i[create]
+    resources :favourites, only: %i[create destroy]
   end
   resources :favourites, only: %i[index]
 

@@ -1,0 +1,82 @@
+<div id="carouselRatingsControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="basic-card carousel-inner">
+    <% ratings.each do |rating| %>
+      <%if rating == ratings.first %>
+        <div class="carousel-item active">
+          <div class="carousel-item-row">
+            <i class="icone fa-solid fa-star" style="color: #FFCC51;"></i>
+            <p><%= rating.rating %> / 5</p>
+          </div>
+          <div class="carousel-item-row">
+            <% if rating.stroller %>
+              <%= image_tag "stroller_ok_30px.png", alt: "Stroller ok", width: 25, height: 25 %>
+            <% else %>
+              <%= image_tag "stroller_nok_30px.png", alt: "Stroller nok", width: 25, height: 25 %>
+            <% end %>
+
+            <% if rating.changing_table %>
+              <%= image_tag "changing_table_ok_30px.png", alt: "changing_table ok", width: 25, height: 25 %>
+            <% else %>
+              <%= image_tag "changing_table_nok_30px.png", alt: "changing_table nok", width: 25, height: 25 %>
+            <% end %>
+
+            <% if rating.high_chair %>
+              <%= image_tag "high_chair_ok_30px.png", alt: "high_chair ok", width: 25, height: 25 %>
+            <% else %>
+              <%= image_tag "high_chair_nok_30px.png", alt: "high_chair nok", width: 25, height: 25 %>
+            <% end %>
+
+            <% if rating.kids_friendly %>
+              <%= image_tag "kids_friendly_ok_30px.png", alt: "kids_friendly ok", width: 25, height: 25 %>
+            <% else %>
+              <%= image_tag "kids_friendly_nok_30px.png", alt: "kids_friendly nok", width: 25, height: 25 %>
+            <% end %>
+          </div>
+          <p><%= rating.comment %></p>
+        </div>
+      <% else %>
+        <div class="carousel-item">
+          <div class="carousel-item-row">
+            <i class="icone fa-solid fa-star" style="color: #FFCC51;"></i>
+            <p><%= rating.rating %> / 5</p>
+          </div>
+          <div class="carousel-item-row">
+            <% if rating.stroller %>
+              <%= image_tag "stroller_ok_30px.png", alt: "Stroller ok", width: 25, height: 25 %>
+            <% else %>
+              <%= image_tag "stroller_nok_30px.png", alt: "Stroller nok", width: 25, height: 25 %>
+            <% end %>
+
+            <% if rating.changing_table %>
+              <%= image_tag "changing_table_ok_30px.png", alt: "changing_table ok", width: 25, height: 25 %>
+            <% else %>
+              <%= image_tag "changing_table_nok_30px.png", alt: "changing_table nok", width: 25, height: 25 %>
+            <% end %>
+
+            <% if rating.high_chair %>
+              <%= image_tag "high_chair_ok_30px.png", alt: "high_chair ok", width: 25, height: 25 %>
+            <% else %>
+              <%= image_tag "high_chair_nok_30px.png", alt: "high_chair nok", width: 25, height: 25 %>
+            <% end %>
+
+            <% if rating.kids_friendly %>
+              <%= image_tag "kids_friendly_ok_30px.png", alt: "kids_friendly ok", width: 25, height: 25 %>
+            <% else %>
+              <%= image_tag "kids_friendly_nok_30px.png", alt: "kids_friendly nok", width: 25, height: 25 %>
+            <% end %>
+          </div>
+          <p><%= rating.comment %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselRatingsControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselRatingsControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
