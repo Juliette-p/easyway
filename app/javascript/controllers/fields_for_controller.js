@@ -1,8 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["fieldUrl", "fieldPhone", "field5", "field6", "field7",
-                    "checkboxUrl", "checkboxPhone", "checkbox5", "checkbox6", "checkbox7"]
+  static targets = ["fieldUrl", "fieldPhone", "field5", "field6", "field7", "fieldPhoto",
+                    "checkboxUrl", "checkboxPhone", "checkbox5", "checkbox6", "checkbox7", "checkboxPhoto"]
 
   connect() {
     console.log("connect fields_for ok");
@@ -62,4 +62,15 @@ export default class extends Controller {
       this.field7Target.style = "display: none;"
     }
   }
+
+    // acces vélo
+    hide_checkboxPhoto() {
+      console.log("hide_Photo fields_for ok");
+      // console.log(this.PhotoTarget.checked);
+      if (this.checkboxPhotoTarget.checked) {
+        this.fieldPhotoTarget.style = "display: initial;"
+      } else {
+        this.fieldPhotoTarget.style = "display: none;"
+      }
+    }
 }

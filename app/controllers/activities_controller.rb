@@ -41,8 +41,10 @@ class ActivitiesController < ApplicationController
   end
 
   def create
-    raise
+    # raise
     @activity = Activity.new(activity_params)
+    @activity.photo = params[:activity]["photo"]
+    # raise
     if @activity.save!
       redirect_to activity_path(@activity)
     else
@@ -53,8 +55,6 @@ class ActivitiesController < ApplicationController
   private
 
   def activity_params
-    params.require(:activity).permit(:name, :address, :category, :description,
-                                      :stroller, :changing_table, :high_chair, :kids_friendly,
-                                      :public_transport, :car_park, :bike_park)
+    params.require(:activity).permit(:name, :address, :category, :description)
   end
 end
