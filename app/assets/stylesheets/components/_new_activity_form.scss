@@ -121,7 +121,7 @@
   }
 
   #checkbox5 + label{
-    background-image: asset-url('stroller_nok_30px.png');
+    background-image: asset-url('bus_nok.png');
     object-fit: cover;
     height: 30px;
     width: 30px;
@@ -132,7 +132,7 @@
   }
 
   #checkbox5:checked + label{
-    background-image: asset-url('stroller_ok_30px.png');
+    background-image: asset-url('bus_ok.png');
     object-fit: cover;
     // background:url('stroller_ok.png') no-repeat;
     height: 30px;
@@ -144,7 +144,7 @@
   }
 
   #checkbox6 + label{
-    background-image: asset-url('stroller_nok_30px.png');
+    background-image: asset-url('car_nok.png');
     object-fit: cover;
     height: 30px;
     width: 30px;
@@ -155,7 +155,7 @@
   }
 
   #checkbox6:checked + label{
-    background-image: asset-url('stroller_ok_30px.png');
+    background-image: asset-url('car_ok.png');
     object-fit: cover;
     // background:url('stroller_ok.png') no-repeat;
     height: 30px;
@@ -167,7 +167,7 @@
   }
 
   #checkbox7 + label{
-    background-image: asset-url('stroller_nok_30px.png');
+    background-image: asset-url('velo_nok.png');
     object-fit: cover;
     height: 30px;
     width: 30px;
@@ -178,7 +178,7 @@
   }
 
   #checkbox7:checked + label{
-    background-image: asset-url('stroller_ok_30px.png');
+    background-image: asset-url('velo_ok.png');
     object-fit: cover;
     // background:url('stroller_ok.png') no-repeat;
     height: 30px;
@@ -213,4 +213,99 @@
   justify-content: center;
   margin-block: 0;
   gap: 10px;
+}
+
+// toggle : pour la checkbox ajouter un site web
+.toggleUrl {
+  position: absolute;
+  transform: scale(0);
+}
+
+.toggleUrl + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 40px;
+}
+
+.toggleUrl + label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 36px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-color: #EAEAEA;
+  border-radius: 50rem;
+}
+
+.toggleUrl:checked + label::before {
+  background-color: #3D5555;
+}
+
+.toggleUrl + label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.2s ease;
+}
+
+.toggleUrl:checked + label::after {
+  left: 18px;
+}
+
+
+// toggle : pour la checkbox ajouter un téléphone
+.togglePhone {
+  position: absolute;
+  transform: scale(0);
+}
+
+.togglePhone + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 40px;
+}
+
+.togglePhone + label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 36px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-color: #EAEAEA;
+  border-radius: 50rem;
+}
+
+.togglePhone:checked + label::before {
+  background-color: #3D5555;
+}
+
+.togglePhone + label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.2s ease;
+}
+
+.togglePhone:checked + label::after {
+  left: 18px;
 }
