@@ -34,7 +34,7 @@
 
   p {
     color: $darkgreen;
-    text-align: center;
+    text-align: left;
     font-size: 16px;
   }
 }
@@ -65,6 +65,8 @@ h2 {
   padding: 20px;
 }
 
-li {
-
+.icones-row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
 }
