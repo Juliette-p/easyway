@@ -18,8 +18,8 @@
 <%# end %>
 
 <div class="basic-card card-new-activity">
-  <div class="sub-card-new-activity col-sm-8">
-    <%= form_with model: @activity, class: "d-flex flex-column", data: { controller: "fields-for", controller: "character-count-activity", character_count_activity_nb_value: "#{Activity::DESCRIPTION_MAX}" } do |f| %>
+  <div class="sub-card-new-activity col-sm-8" >
+    <%= form_with model: @activity, class: "d-flex flex-column", data: { controller: "fields-for" } do |f| %>
       <%# champs texte pour enregistrer un nom %>
       <div class="new-activity-tab-field new-activity-top-tab-field">
         <%= f.text_field :name,
@@ -48,7 +48,7 @@
       </div>
 
       <%# champs texte pour enregistrer une description %>
-      <div class="new-activity-tab-field-description new-activity-top-tab-field">
+      <div class="new-activity-tab-field-description new-activity-top-tab-field" data-controller="character-count-activity" data-character-count-activity-nb-value="<%= Activity::DESCRIPTION_MAX %>">
         <%= f.text_area :description,
           # params[:description],
           class: "form-control",
