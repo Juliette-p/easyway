@@ -8,10 +8,25 @@
   background-color: $light-gray;
   border-radius: 15px;
   padding: 20px;
+
 }
 
 .card-activity-accessibility-category {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 5px 0px;
+
   p {
-    font-size: 12px;
+    font-size: 14px;
   }
+
+  img {
+    height: 30px;
+  }
+
+  .no-access-info {
+    color: grey;
+  }
+
 }

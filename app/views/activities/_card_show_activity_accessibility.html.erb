@@ -3,31 +3,35 @@
 
   <%# public transport %>
   <div class="card-activity-accessibility-category">
-      <i class="fa-solid fa-bus-simple" style="color: <%= $darkgreen %>"></i>
     <% if @activity.public_transport  %>
+      <%= image_tag "bus_ok.png" %>
       <p><%= @activity.public_transport_detail %></p>
     <% else %>
-      <p>Pas d'informations sur les transports en commun.</p>
+      <%= image_tag "bus_nok.png" %>
+      <p class="no-access-info">Pas d'informations sur les transports en commun.</p>
     <% end %>
   </div>
 
   <%# car park %>
   <div class="card-activity-accessibility-category">
-    <i class="fa-solid fa-car" style="color: <%= $darkgreen %>"></i>
     <% if @activity.car_park %>
+      <%= image_tag "car_ok.png" %>
       <p><%= @activity.car_park_detail %></p>
     <% else %>
-      <p>Pas d'informations sur l'accès en voiture.</p>
+      <%= image_tag "car_nok.png" %>
+      <p class="no-access-info">Pas d'informations sur l'accès en voiture.</p>
     <% end %>
   </div>
 
   <%# bike park%>
   <div class="card-activity-accessibility-category">
-    <i class="fa-solid fa-person-biking" style="<%= $darkgreen %>"></i>
+
     <% if @activity.bike_park  %>
+      <%= image_tag "velo_ok.png" %>
       <p><%= @activity.bike_park_detail %></p>
     <% else %>
-      <p>Pas d'informations sur l'accès en vélo.</p>
+      <%= image_tag "velo_nok.png" %>
+      <p class="no-access-info">Pas d'informations sur l'accès en vélo.</p>
     <% end %>
   </div>
 
