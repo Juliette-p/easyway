@@ -32,28 +32,29 @@
 <%# </div> %>
 
 <div class="QAbox_faq">
-  <button class="basic-card box-q" data-bs-toggle="collapse" data-bs-target="#demo-2">Qu'est-ce Easyway ?</button>
+  <button class="basic-card box-q" data-bs-toggle="collapse" data-bs-target="#demo-2" style="text-align: left;">Qu'est-ce Easyway ?</button>
   <div id="demo-2" class="collapse basic-card box-a">
     <p>Easyway est une application pour trouver des lieux de sortie adaptés aux familles avec enfants
     en bas âges, qui répondent à leur besoin d'accessibilité en poussette et de services.</p>
-    <%= image_tag('stroller_ok.png', class: "taille-icone") %>
-    <%= image_tag('high_chair_ok.png', class: "taille-icone") %>
-    <%= image_tag('changing_table_ok.png', class: "taille-icone") %>
-    <%= image_tag('kids_friendly_ok.png', class: "taille-icone") %>
+    <div class="icones-row">
+      <%= image_tag('stroller_ok.png', class: "taille-icone") %>
+      <%= image_tag('high_chair_ok.png', class: "taille-icone") %>
+      <%= image_tag('changing_table_ok.png', class: "taille-icone") %>
+      <%= image_tag('kids_friendly_ok.png', class: "taille-icone") %>
+    </div>
   </div>
 </div>
 
 <div class="QAbox_faq">
-  <button class="basic-card box-q" data-bs-toggle="collapse" data-bs-target="#demo-3">Que signifie les icônes ?</button>
+  <button class="basic-card box-q" data-bs-toggle="collapse" data-bs-target="#demo-3" style="text-align: left;">Que signifient les icônes ?</button>
   <div id="demo-3" class="collapse basic-card box-a">
-    <p>Afin de répondre à vos envies, chaque lieu proposé est classée par catégorie:</p>
+    <p>Afin de répondre à vos envies, chaque lieu proposé est classée par catégorie :</p>
     <ul>
       <li>Lieux culturels,</li>
-      <li>Cafés et Restos,</li>
+      <li>Cafés et Restaurants,</li>
       <li>Parcs,</li>
-      <li>les espaces de jeux,</li>
+      <li>Espaces de jeux.</li>
     </ul>
-    <br>
     <p>Nous avons attribué à chaque lieu des icônes afin de vous permettre d'organiser votre sortie.</p>
     <p>L'icône colorée signifie que le service est présent sur le lieu de sortie.</p>
     <p>L'icône grisée signifie que le service n'est pas présent sur le lieu de sortie.</p>
@@ -74,7 +75,7 @@
 
     <div class="icone">
       <%= image_tag('kids_friendly_ok.png', height:30, width: 30) %>
-      <p>espace de jeux à disposition des enfants</p>
+      <p>Espace de jeux à disposition</p>
     </div>
 
   </div>
