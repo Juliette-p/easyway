@@ -1,38 +1,43 @@
 <div class="container-footer">
 
   <%# icone "rechercher" %>
-  <%= link_to activities_path, class: "icone-link" do %>
-    <i class="fa-solid fa-magnifying-glass-location icone-size-left", alt="Rechercher"></i>
+  <%= link_to activities_path, class: "icone-home" do %>
+    <%# <i class="fa-solid fa-magnifying-glass-location icone-size-left", alt="Rechercher"></i> %>
+    <%= image_tag "nav_activities_empty.png", class: "icone-30", alt: "Rechercher" %>
     <%# <p class="subtitle">Rech</p> %>
   <% end %>
 
   <%# icone "favoris" %>
-  <%= link_to favourites_path do %>
-    <i class="fa-solid fa-heart icone-size-left" alt="Favoris"></i>
+  <%= link_to favourites_path, class: "icone-home" do %>
+    <%# <i class="fa-solid fa-heart icone-size-left" alt="Favoris"></i> %>
+    <%= image_tag "nav_favourite_empty.png", class: "icone-30", alt: "Favoris" %>
     <%# <p class="subtitle">Mes Favoris</p> %>
   <% end %>
 
   <%# icone "home page" %>
   <%= link_to root_path, class: "icone-home" do %>
-    <%= image_tag "logo.png", height: 40, width: 40, alt: "Pas d'accueil" %>
+    <%= image_tag "logo.png", class: "icone-40", alt: "Pas d'accueil" %>
     <%# <p class="subtitle">Page d'accueil</p> %>
   <% end %>
 
   <%# icone "ajouter une activité" %>
-  <%= link_to new_activity_path, class: "icone-link" do %>
-    <i class="fa-solid fa-plus icone-size", alt="Aide"></i>
+  <%= link_to new_activity_path, class: "icone-home" do %>
+    <%# <i class="fa-solid fa-plus icone-size", alt="Aide"></i> %>
+    <%= image_tag "nav_add_empty.png", class: "icone-30", alt: "Favoris" %>
     <%# <p class="subtitle">Ajouter un lieu</p> %>
   <% end %>
 
   <%# icone "profil" %>
   <% if current_user %>
-    <%= link_to user_path(current_user), class: "icone-link" do %>
-      <i class="fa-solid fa-user icone-size", alt="Profil"></i>
+    <%= link_to user_path(current_user), class: "icone-home" do %>
+      <%# <i class="fa-solid fa-user icone-size", alt="Profil"></i> %>
+      <%= image_tag "nav_profile_empty.png", class: "icone-30", alt: "Favoris" %>
       <%# <p class="subtitle">Mon profil</p> %>
     <% end %>
   <% else %>
-    <%= link_to new_user_session_path, class: "icone-link" do %>
-      <i class="fa-solid fa-user icone-size", alt="Profil"></i>
+    <%= link_to new_user_session_path, class: "icone-home" do %>
+      <%# <i class="fa-solid fa-user icone-size", alt="Profil"></i> %>
+      <%= image_tag "nav_profile_empty.png", class: "icone-30", alt: "Favoris" %>
       <%# <p class="subtitle">Mon profil</p> %>
     <% end %>
   <% end %>
