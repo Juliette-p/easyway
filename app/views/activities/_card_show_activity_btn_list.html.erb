@@ -26,10 +26,12 @@
   <% end %>
 
   <%# icone "ajouter au calendrier" %>
-  <%= link_to activity_path(@activity), class: "card-activity-btn" do %>
+  <%# <%= link_to activity_path(@activity), class: "card-activity-btn", data: { action: "click->agenda#hide_agendaView" } do %>
+  <div class="card-activity-btn" class="card-activity-btn" data-action="click->agenda#hide_agendaView">
     <i class="icone fa-regular fa-calendar-plus" style="color: #000000;"></i>
     <p>Planifier</p>
-  <% end %>
+  </div>
+  <%# <% end %>
 
   <%# icone "y aller : ouverture GPS" %>
   <%= link_to activity_path(@activity), class: "card-activity-btn" do %>

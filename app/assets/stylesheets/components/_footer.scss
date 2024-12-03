@@ -10,24 +10,38 @@
   padding: 10px 20px;
   box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
   border: 1px solid rgba(203, 203, 203, 0.304);
+  z-index: 5;
 
   .icone-home {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    text-decoration: none;
   }
 
-  .icone-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  .icone-link {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: space-between;
+    text-decoration: none;
+   }
+
+  .icone-size-left {
+    color: #3D5555;
+    font-size: 30px;
+  }
+
+  .icone-size {
+    color: #3D5555;
+    font-size: 25px;
   }
 
   .subtitle {
     color: gray;
     font-size: 10px;
     text-align: center;
+    text-decoration: none;
   }
 }

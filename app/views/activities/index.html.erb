@@ -4,13 +4,19 @@
 <%# search tab %>
 <%= render "activities/search_card" %>
 
+<%# BP de géolocalisation de l'utilisateur %>
+<!-- Bouton de géolocalisation -->
+<%# <button type="button" data-action="click->map#geolocate" data-map-target="geolocateButton">
+  Géolocaliser
+</button> %>
 
 <%# map %>
 <div id="map-container"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+  <%# data-map-target="map" %>
+></div>
 
 <%# affichage du nb de résultats %>
 <p style="color: <%= $darkgreen %>"><%= @activities.size %> résultats correspondent à votre recherche.</p>

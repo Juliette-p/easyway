@@ -3,7 +3,8 @@ class ActivitiesController < ApplicationController
   def index
     # mise à jour de la liste d'activité
     @activities = Activity.all
-    @activities = @activities.search_by_address(params[:address]) if params[:address].present?
+    # raise
+    @activities = @activities.search_by_address_name(params[:search]) if params[:search].present?
     if params[:stroller].present?
       @activities = @activities.where(stroller: true) if params[:stroller] == "1"
     end
@@ -19,21 +20,20 @@ class ActivitiesController < ApplicationController
     if params[:category].present?
       @activities = @activities.where(category: params[:category])
     end
-    # raise
 
     # mise à jour des marqueurs sur la map
     @markers = @activities.geocoded.map do |activity|
       {
         lat: activity.latitude,
         lng: activity.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: { activity: activity })
+        info_window_html: render_to_string(partial: "info_window", locals: { activity: activity }),
+        marker_html: render_to_string(partial: "marker_map")
       }
     end
   end
 
   def show
     @activity = Activity.find(params[:id])
-    # raise
   end
 
   def new
@@ -41,10 +41,8 @@ class ActivitiesController < ApplicationController
   end
 
   def create
-    # raise
     @activity = Activity.new(activity_params)
     @activity.photo = params[:activity]["photo"]
-    # raise
     if @activity.save!
       redirect_to activity_path(@activity)
     else
