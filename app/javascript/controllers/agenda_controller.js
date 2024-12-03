@@ -34,6 +34,13 @@ export default class extends Controller {
   invitation() {
     console.log("agenda confirm ok")
     // alert("Une invitation vous a été envoyée par mail.");
-    Swal.fire("Une invitation vous a été envoyée par mail.");
+    // Swal.fire("Une invitation vous a été envoyée par mail.");
+    Swal.fire({
+      title: "Une invitation vous a été envoyée par mail.",
+      titleColor: "#3D5555",
+      confirmButtonText: "OK",
+      confirmButtonColor: "#3D5555",
+      width: "80%",
+    });
   }
 }
