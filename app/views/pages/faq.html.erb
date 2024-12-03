@@ -1,4 +1,4 @@
-<h1>La FAQ Easyway</h1>
+<%# ANCIENNE FAQ. CE CONTENU A ETE MIS DANS LES CARDS DEROULANTES %>
 <%# <div class= "box1"><h2>Qu'est-ce Easyway?</h2>
   <p>Une application pour trouver des lieux de sortie adaptés aux familles avec enfants
     en bas âges, qui répondent à leur besoin d'accessibilité en poussette et de services.</p>
@@ -30,6 +30,19 @@
   <%# <%= image_tag('kids_friendly_ok.png', height:100, width: 100) %>
   <%# <p>espace de jeux à disposition des enfants</p> %>
 <%# </div> %>
+
+<%# bouton "go back" %>
+<% if current_user %>
+  <%= link_to user_path(current_user) do %>
+    <%= image_tag "go_back_arrow.png", alt: "Retour", class:"go-back-btn" %>
+  <% end %>
+<% else %>
+  <%= link_to root_path do %>
+    <%= image_tag "go_back_arrow.png", alt: "Retour", class:"go-back-btn" %>
+  <% end %>
+<% end %>
+
+<h1>La FAQ Easyway</h1>
 
 <div class="QAbox_faq">
   <button class="basic-card box-q" data-bs-toggle="collapse" data-bs-target="#demo-2" style="text-align: left;">Qu'est-ce Easyway ?</button>
