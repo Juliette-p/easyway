@@ -14,7 +14,7 @@ export default class extends Controller {
 
   // Function displayAutocomplete
   displayAutocomplete(data) {
-    // console.log("display autocomplete ok");
+    console.log("display autocomplete ok");
     // console.log(data);
     const myLiList = document.querySelectorAll("#results li");
     myLiList.forEach((myLi) => {

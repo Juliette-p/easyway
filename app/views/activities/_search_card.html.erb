@@ -1,16 +1,17 @@
 <div class="basic-card card-search">
   <div class="sub-card-search col-sm-8 my-3">
-    <%= form_with url: activities_path, method: :get, class: "d-flex flex-column",
-        data: { controller: "autocomplete-search", autocomplete_search_names_value: "#{@activities_names}", autocomplete_search_addresses_value: "#{@activities_addresses}" } do %>
+    <%= form_with url: activities_path, method: :get, class: "d-flex flex-column" do %>
+        <%# data: { controller: "autocomplete-search", autocomplete_search_names_value: "#{@activities_names}", autocomplete_search_addresses_value: "#{@activities_addresses}" } %>
       <%# champs texte pour sélectionner une addresse %>
       <div class="search-tab-field">
         <%= text_field_tag "search",
           params[:search],
           class: "form-control",
-          placeholder: "Rechercher...",
-          data: { action: "keyup->autocomplete-search#autocomplete", target: "autocomplete-search.searchText"}
+          placeholder: "Rechercher..."
+          # data: { action: "keyup->autocomplete-search#autocomplete", target: "autocomplete-search.searchText"}
         %>
       </div>
+      
       <%# div en dessous pour proposer une autocomplétion. %>
       <%# l'autocomplétion fonctionne, on affiche les 5 premiers. Par contre elle n'est pas gérée dans une popup superposée à la view %>
       <%# il faut rajouter la copie dans le champs search %>
