@@ -4,11 +4,6 @@ export default class extends Controller {
   static targets = ["searchText", "autocompletionResult",
                     "li1", "li2","li3","li4","li5"];
 
-  // static values = {
-  //   names: Array,
-  //   addresses: Array
-  // }
-
   connect() {
     console.log("connect autocomplete search ok");
   }
@@ -46,14 +41,12 @@ export default class extends Controller {
     // console.log(this.searchTextTarget.value)
     if (this.searchTextTarget.value.length > 0) {
       this.autocompletionResultTarget.style = "display: initial;"
-      // console.log("remove");
       const url = `/activities.json?search=${this.searchTextTarget.value}`;
       fetch(url) // requestDetails)
         .then(response => response.json())
         // .then(data => console.log(data.activities));
         .then(data => this.displayAutocomplete(data.activities));
     } else {
-      // console.log("add")
       this.autocompletionResultTarget.style = "display: none;"
     }
   };
