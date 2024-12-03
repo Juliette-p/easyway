@@ -2,7 +2,7 @@ class Rating < ApplicationRecord
   belongs_to :user
   belongs_to :activity
 
-  COMMENT_MAX = 150
+  COMMENT_MAX = 250
 
   validates :comment, length: { maximum: COMMENT_MAX }
   validates :rating, presence: true, inclusion: { in: (0..5) }

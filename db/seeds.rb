@@ -16,8 +16,31 @@ Favourite.destroy_all
 puts "end destroy all"
 
 puts "creating users"
-camille = User.create!(first_name: "camille", last_name: "dupont", email: "camille.dupont@mail.com", password: "pass12C")
+file = URI.parse( "https://res.cloudinary.com/dnm2n1iid/image/upload/v1732205716/nora_profile_lykcsp.jpg" ).open
+camille = User.create!(first_name: "Nora", last_name: "Camille", email: "camille.dupont@mail.com", password: "pass12C")
+camille.photo.attach(io: file, filename: "camille.jpg", content_type: "image/jpg")
+camille.save
+
+file = URI.parse( "https://res.cloudinary.com/dnm2n1iid/image/upload/v1733237787/IMG_2502_xru2io.jpg" ).open
 manu = User.create!(first_name: "manu", last_name: "martin", email: "manu.martin@mail.com", password: "pass12M")
+manu.photo.attach(io: file, filename: "manu.jpg", content_type: "image/jpg")
+manu.save
+
+file = URI.parse( "https://res.cloudinary.com/dnm2n1iid/image/upload/v1731686241/samples/people/smiling-man.jpg" ).open
+paul = User.create!(first_name: "Paul", last_name: "Marto", email: "paul.marto@mail.fr", password: "pass12M")
+paul.photo.attach(io: file, filename: "paul.jpg", content_type: "image/jpg")
+paul.save
+
+file = URI.parse( "https://res.cloudinary.com/dnm2n1iid/image/upload/v1733237556/stephanie_ls3fdy.jpg" ).open
+stephanie = User.create!(first_name: "Stephanie", last_name: "Monaco", email: "stephanie.monaco@mail.fr", password: "pass12M")
+stephanie.photo.attach(io: file, filename: "manu.jpg", content_type: "image/jpg")
+stephanie.save
+
+file = URI.parse( "https://res.cloudinary.com/dnm2n1iid/image/upload/v1733240459/rose_btbngh.jpg" ).open
+rose = User.create!(first_name: "Rose", last_name: "Fargeau", email: "rose.fargeau@mail.fr", password: "pass12M")
+rose.photo.attach(io: file, filename: "rose.jpg", content_type: "image/jpg")
+rose.save
+
 puts "end creating users"
 # ###############################################
 
@@ -40,7 +63,7 @@ musee_art_nantes = Activity.new(name: "musée d'arts",
                 à disposition.
                 Passez aussi faire un tour à la librairie-boutique, qui propose un large choix de souvenirs : crayons, 
                 jeux, livres, cartes-postales, carnets de dessins…",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "10 rue Georges-Clemenceau, Nantes",
   phone_number: "02 51 17 45 00",
   url: "https://museedartsdenantes.nantesmetropole.fr/",
@@ -61,13 +84,13 @@ musee_art_nantes.photo.attach(io: file, filename: "museeartnantes.jpg", content_
 musee_art_nantes.save
 
   
-file = URI.parse("https://www.chateaunantes.fr/wp-content/uploads/2020/09/Chateau-des-ducs-de-Bretagne.-Nantes-%C2%A9-Philippe-Piron-_-LVAN-2-768x614.jpg").open
+file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733235839/Chateau-des-ducs-de-Bretagne_mv5g09.jpg").open
 chateau_des_ducs = Activity.new(name: "Château des Ducs de Bretagne",
   description: "Le Château des Ducs de Bretagne, forteresse médiévale au cœur de Nantes, abrite le musée d'histoire de 
   la ville. Avec ses remparts, sa cour intérieure et ses expositions interactives, il offre un voyage 
   fascinant à travers l'histoire de Nantes et de la région. Les enfants apprécieront particulièrement 
   les animations et les ateliers proposés pendant les vacances scolaires.",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "4 Place Marc Elder, 44000 Nantes",
   phone_number: "08 11 46 46 44",
   url: "https://www.chateaunantes.fr/",
@@ -89,7 +112,7 @@ machines_ile = Activity.new(name: "Les Machines de l'île",
   description: "Les Machines de l'île sont un projet artistique unique, mêlant l'imaginaire de Jules Verne aux mondes 
   mécaniques de Léonard de Vinci. Le Grand Éléphant, le Carrousel des Mondes Marins et l'Arbre aux Hérons 
   émerveillent petits et grands. Des ateliers de découverte sont proposés pour les enfants.",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "Boulevard Léon Bureau, 44200 Nantes",
   phone_number: "0810 12 12 25",
   url: "https://www.lesmachines-nantes.fr/",
@@ -113,7 +136,7 @@ planetarium = Activity.new(name: "Planétarium de Nantes",
   mètres de diamètre, les visiteurs peuvent explorer les étoiles, les planètes et les galaxies. 
   Des séances spéciales pour enfants sont proposées, ainsi que des ateliers d'astronomie pendant les 
   vacances scolaires.",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "8 Rue des Acadiens, 44100 Nantes",
   phone_number: "02 40 73 99 23",
   url: "https://planetarium.nantes.fr/",
@@ -136,7 +159,7 @@ museum_histoire_naturelle = Activity.new(name: "Muséum d'Histoire Naturelle",
                 l'évolution. Avec ses collections de fossiles, de minéraux et d'animaux naturalisés, il offre une 
                 expérience éducative pour toute la famille. Des ateliers et des visites guidées sont régulièrement 
                 organisés pour les enfants.",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "12 Rue Voltaire, 44000 Nantes",
   phone_number: "02 40 41 55 00",
   url: "https://museum.nantesmetropole.fr/",
@@ -159,7 +182,7 @@ musee_enfants = Activity.new(name: "Musée des enfants de Nantes",
               l'imagination des enfants. Il offre des expositions interactives, des ateliers créatifs et des espaces 
               d'expérimentation adaptés aux enfants de 3 mois à 12 ans. Le musée vise à démocratiser l'art et la 
               culture auprès de tous les enfants, tout en renforçant les liens intergénérationnels et familiaux12.",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "20 All. de la Maison Rouge, 44000 Nantes",
   phone_number: "06 50 49 68 81",
   url: "https://www.le-musee-des-enfants-de-nantes.fr",
@@ -181,7 +204,7 @@ file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732799948/
 musee_jules_verne = Activity.new(
   name: "Musée Jules Verne",
   description: "Le musée Jules Verne de Nantes est dédié à l'écrivain nantais et à son œuvre. Il présente des manuscrits, objets personnels et illustrations liés aux romans de Jules Verne, offrant une plongée fascinante dans l'univers de l'auteur.",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "3 Rue de l'Hermitage, 44100 Nantes",
   phone_number: "02 40 69 72 52",
   url: "https://julesverne.nantesmetropole.fr/home/le-musee-jules-verne.html",
@@ -204,7 +227,7 @@ file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732799733/
 maison_hommes_techniques = Activity.new(
   name: "Maison des Hommes et des techniques",
   description: "Située dans le bâtiment des Ateliers et Chantiers de Nantes, la Maison des Hommes et des techniques propose des expositions sur l'histoire industrielle et sociale de Nantes, en particulier sur la construction navale.",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "2 Boulevard Léon Bureau, 44200 Nantes",
   phone_number: "02 40 08 20 22",
   url: "http://www.maison-hommes-techniques.fr",
@@ -226,10 +249,39 @@ maison_hommes_techniques.save!
 puts "creating activity parc et jardins"
 
 # jardin des plantes
+
+file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733236229/fermechantrerie_wtb2mn.jpg").open
+parc_chantrerie = Activity.new(name: "Parc et ferme de la Chantrerie",
+  description: "18 hectares sur la rive gauche de l'Erdre.L’aménagement très paysager longe l’Erdre sur près de 
+  900 mètres. On notera quelques très beaux arbres : hêtres pourpres, platanes, cèdres, épicéas, chênes et 
+  châtaigniers multi centenaires. Les communs de la propriété abritent une ferme d’éveil. Les différents animaux 
+  peuvent être observés dans les pâtures longeant l’allée principale. Rendez-vous à la ferme : A partir du mois 
+  d’avril jusqu’au mois d’octobre, parents et enfants peuvent partir à la rencontre des animaux et des légumes 
+  du potager et participer gratuitement à des animations. Chaque 1er dimanche du mois, la ferme est en visite libre 
+  le matin, avec des ateliers thématiques l’après-midi (programme complet ci-dessous). Le mercredi, les familles 
+  peuvent explorer librement le site et rencontrer l’animateur-fermier, lui poser des questions sur les animaux, 
+  obtenir des conseils de jardinage.",
+  category: "Parc",
+  address: "95 Route de Gachet 44300 Nantes, France",
+  phone_number: "",
+  url: "https://nature.metropole.nantes.fr/explorations-nantaises/les-11-grands-parcs-de-nantes/parc-de-la-chantrerie/#FERME",
+  stroller: true,
+  changing_table: false,
+  high_chair: false,
+  kids_friendly: true,
+  public_transport: true,
+  public_transport_detail: "bus C6: arret chantrerie",
+  car_park: false,
+  car_park_detail: "",
+  bike_park: true,
+  bike_park_detail: "Arceaux à vélos à l'entrée du parc")
+parc_chantrerie.photo.attach(io: file, filename: "parcchantrerie.jpg", content_type: "image/jpg")
+parc_chantrerie.save
+
 file = URI.parse("https://www.jardinspaysdelaloire.fr/media/4399/big/44-jardindesplantes_depliant2011_%C2%A9com-externe-ville-de-nantes.jpg").open
 jardin_plantes = Activity.new(name: "Jardin des Plantes",
   description: "Le Jardin des Plantes de Nantes est un havre de paix au cœur de la ville. Avec ses 7 hectares, ses serres et ses collections botaniques, c'est un lieu idéal pour une promenade en famille. Les enfants adoreront le manège écologique et les aires de jeux. Des visites guidées et des ateliers sont régulièrement organisés.",
-  category: "Parcs",
+  category: "Parc",
   address: "Rue Stanislas Baudry, 44000 Nantes",
   phone_number: "02 40 41 65 09",
   url: "https://jardins.nantes.fr/N/Jardin/Parcs-Jardins/Plus/546/Jardin-des-Plantes",
@@ -250,7 +302,7 @@ jardin_plantes.save
 file = URI.parse("https://fastly.4sqi.net/img/general/600x600/7gctTY8eF2YH9-yLPLgHFck5eKOKJr7bvxjncTBYwJ4.jpg").open
 grand_blottereau = Activity.new(name: "Parc du Grand Blottereau",
   description: "Le Parc du Grand Blottereau est un vaste espace vert de 37 hectares offrant une variété d'activités pour toute la famille. Les enfants peuvent profiter des aires de jeux, explorer le potager pédagogique, et observer les animaux de la mini-ferme. Le parc propose également des serres tropicales et des jardins thématiques.",
-  category: "Parcs",
+  category: "Parc",
   address: "Boulevard Auguste Péneau, 44300 Nantes",
   phone_number: "02 40 41 90 00",
   url: "https://jardins.nantes.fr/N/Jardin/Parcs-Jardins/Plus/544/Parc-du-Grand-Blottereau",
@@ -274,7 +326,7 @@ description: "Le Parc de la Beaujoire est un vaste espace vert de 12 hectares, i
   Les enfants adoreront les aires de jeux, le parcours sportif, et les grands espaces pour courir et 
   jouer. Le parc abrite également un jardin des plantes médicinales et aromatiques, parfait pour éveiller 
   les sens des plus jeunes.",
-  category: "Parcs",
+  category: "Parc",
   address: "Route de Saint-Joseph, 44300 Nantes",
   phone_number: "02 40 41 9000",
   url: "https://jardins.nantes.fr/N/Jardin/Parcs-Jardins/Plus/542/Parc-de-la-Beaujoire",
@@ -295,7 +347,7 @@ parc_beaujoire.save
 file = URI.parse("https://api-infonantes.nantesmetropole.fr/banque/public/images/lieux/2/1-E5665-24062023-BLL2274.jpg").open
 jardin_extraordinaire = Activity.new(name: "Jardin extraordinaire",
   description: "Le Jardin extraordinaire est un parc public de 3,5 hectares situé dans l'ancienne carrière Miséry à Nantes. Inauguré en 2019, il offre une expérience unique avec sa cascade de 25 mètres, sa flore exotique et son ambiance inspirée de l'univers de Jules Verne. Les visiteurs peuvent admirer plus de 200 espèces végétales, dont des bananiers, lotus et fougères arborescentes. Un grand escalier de 177 marches offre des vues panoramiques sur la Loire123.",
-  category: "Parcs",
+  category: "Parc",
   address: "1 Rue Joseph Cholet, 44100 Nantes",
   phone_number: "02 40 41 90 00",
   url: "https://nature.metropole.nantes.fr/parcs-jardins/le-jardin-extraordinaire/",
@@ -315,7 +367,7 @@ jardin_extraordinaire.save
 file = URI.parse("https://www.levoyageanantes.fr/wp-content/uploads/2015/10/maison-erdre-nantes.jpg").open
 ile_versailles = Activity.new(name: "Jardin de l'Ile de Versailles",
   description: "Le Jardin de l'Ile de Versailles est un parc de 1,5 hectares situé sur l'Erdre à Nantes. Il offre un dépaysement unique avec son jardin japonais, ses cascades et sa végétation exotique. Les enfants apprécieront la diversité des plantes, les jeux d'eau, le bassin avec canards et carpes koï, ainsi que l'aire de jeux. La Maison de l'Erdre propose des expositions sur la biodiversité et l'histoire de la rivière.",
-  category: "Parcs",
+  category: "Parc",
   address: "Quai de Versailles, 44000 Nantes",
   phone_number: "02 40 41 90 00",
   url: "https://nature.metropole.nantes.fr/parcs-jardins/ile-de-versailles/",
@@ -335,7 +387,7 @@ ile_versailles.save
 file = URI.parse("https://upload.wikimedia.org/wikipedia/commons/0/02/Nantes_-_Parc_Gaudiniere_%281%29.jpg").open
 parc_gaudiniere = Activity.new(name: "Parc de la Gaudinière",
   description: "Le Parc de la Gaudinière est un vaste jardin paysager de 12,5 hectares situé au nord de Nantes. Il offre une variété d'espaces, dont des bois de feuillus, des pelouses ensoleillées, et une rocaille alpine. Les enfants apprécieront les aires de jeux, les grands espaces pour courir, et l'observation de la faune locale comme les écureuils, les oiseaux et les canards. Le parc est particulièrement beau au printemps avec sa floraison de narcisses, crocus et anémones.",
-  category: "Parcs",
+  category: "Parc",
   address: "227 Boulevard Robert Schuman, 44300 Nantes",
   phone_number: "02 40 41 90 00",
   url: "https://jardins.nantes.fr/N/Jardin/Parcs-Jardins/Plus/542/Parc-de-la-Gaudiniere",
@@ -355,7 +407,7 @@ parc_gaudiniere.save!
 file = URI.parse("https://www.nantesweb.net/wp-content/uploads/2019/02/DSC_6241.jpg").open
 parc_proce = Activity.new(name: "Parc de Procé",
   description: "Le Parc de Procé est un grand parc paysager de style anglais au cœur de Nantes. Il offre de vastes pelouses, des arbres centenaires, un étang et des allées ombragées, idéales pour les promenades en famille. Les enfants peuvent profiter des aires de jeux, observer les canards sur l'étang, et participer aux animations nature organisées régulièrement.",
-  category: "Parcs",
+  category: "Parc",
   address: "Boulevard des Anglais, 44000 Nantes",
   phone_number: "02 40 41 90 00",
   url: "https://jardins.nantes.fr/N/Jardin/Parcs-Jardins/Plus/542/Parc-de-Proce",
@@ -375,7 +427,7 @@ parc_proce.save!
 file = URI.parse("https://nature.metropole.nantes.fr/wp-content/uploads/2023/08/08/04062023-bll5470.jpg").open
 jardin_enfants_proce = Activity.new(name: "Jardin d'enfants de Procé",
 description: "Le Jardin d'enfants de Procé est un espace dédié aux plus jeunes au sein du Parc de Procé. Il propose diverses structures de jeux adaptées à différents âges, comme des toboggans, des balançoires, et des jeux à ressort. C'est un lieu sécurisé où les enfants peuvent s'amuser et développer leur motricité tout en profitant du cadre verdoyant du parc.",
-category: "Parcs",
+category: "Parc",
 address: "Rue des Dervallières, 44100 Nantes",
 phone_number: "02 40 41 90 00",
 url: "https://jardins.nantes.fr/N/Jardin/Parcs-Jardins/Plus/542/Parc-de-Proce",
@@ -397,7 +449,7 @@ file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732793694/
 parc_oblates = Activity.new(
   name: "Parc des Oblates",
   description: "Le parc des Oblates est un espace vert de 2,8 hectares situé à Nantes. Il offre une vue panoramique sur la Loire et dispose d'aires de jeux pour enfants, de pelouses pour pique-niquer et de chemins de promenade. C'est un lieu idéal pour les familles souhaitant profiter de la nature en ville.",
-  category: "Parcs",
+  category: "Parc",
   address: "4 Rue des Oblates 44100 Nantes, france",
   phone_number: "02 40 41 9000",
   url: "https://metropole.nantes.fr/parc-oblates",
@@ -421,7 +473,7 @@ square_schwob = Activity.new(
   description: "Le square Maurice Schwob est un petit jardin public situé dans le centre-ville de Nantes. 
                 Il offre un espace de détente avec des bancs, des pelouses et quelques jeux pour enfants. 
                 C'est un endroit paisible pour une pause en famille au cœur de la ville.",
-  category: "Parcs",
+  category: "Parc",
   address: "Allée Duquesne, 44000 Nantes",
   phone_number: "02 40 41 9000",
   url: "https://metropole.nantes.fr/square-maurice-schwob",
@@ -444,7 +496,7 @@ file = URI.parse("https://cdn.paris.fr/eqpts-prod/2022/05/10/df75660349a040044c6
 parc_say = Activity.new(
   name: "Parc Say",
   description: "Le parc Say est un espace vert situé dans le quartier Malakoff à Nantes. Il offre des aires de jeux pour enfants, des espaces de pique-nique et des sentiers de promenade. C'est un lieu idéal pour les familles et les amateurs de nature en ville.",
-  category: "Parcs",
+  category: "Parc",
   address: "Boulevard de Sarrebruck, 44000 Nantes",
   phone_number: "02 40 41 9000",
   url: "https://metropole.nantes.fr/parc-say",
@@ -465,7 +517,7 @@ parc_say.save!
 # Parc des Capucins
 parc_capucins = Activity.new(name: "Parc des Capucins",
   description: "Le parc des Capucins est un jardin public historique au cœur de Nantes. Il propose des allées ombragées, des pelouses et une aire de jeux pour enfants. C'est un havre de paix apprécié des Nantais pour sa tranquillité et son charme.",
-  category: "Parcs",
+  category: "Parc",
   address: "Rue Noire, 44000 Nantes",
   phone_number: "02 40 41 9000",
   url: "https://metropole.nantes.fr/parc-des-capucins",
@@ -483,7 +535,7 @@ parc_capucins = Activity.new(name: "Parc des Capucins",
 # Square Gaston Michel
 square_gaston_michel = Activity.new(name: "Square Gaston Michel",
   description: "Le square Gaston Michel est un petit espace vert situé dans le quartier Doulon-Bottière. Il offre une aire de jeux pour enfants et des bancs ombragés, idéal pour une pause détente en famille.",
-  category: "Parcs",
+  category: "Parc",
   address: "Rue de la Papotière, 44300 Nantes",
   phone_number: "02 40 41 9000",
   url: "https://metropole.nantes.fr/square-gaston-michel",
@@ -502,7 +554,7 @@ square_gaston_michel = Activity.new(name: "Square Gaston Michel",
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732794465/parc_rqzpgb.jpg").open
 parc_noe_mitrie = Activity.new(name: "Parc de la Noé Mitrie",
   description: "Le parc de la Noé Mitrie est un vaste espace vert dans le quartier Nantes Erdre. Il propose des sentiers de promenade, des aires de jeux et des espaces de pique-nique. C'est un lieu idéal pour les activités en plein air et les balades en famille.",
-  category: "Parcs",
+  category: "Parc",
   address: "Rue de la Noé Mitrie, 44300 Nantes",
   phone_number: "02 40 41 9000",
   url: "https://metropole.nantes.fr/parc-noe-mitrie",
@@ -525,7 +577,7 @@ file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732794564/
 parc_plessis_tison = Activity.new(
   name: "Parc du Plessis Tison",
   description: "Le parc du Plessis Tison est un jardin public situé dans le quartier Hauts-Pavés - Saint-Félix. Il offre un cadre verdoyant avec des arbres centenaires, des pelouses et une aire de jeux pour enfants. C'est un lieu paisible pour se ressourcer en pleine ville.",
-  category: "Parcs",
+  category: "Parc",
   address: "Rue du Plessis Tison, 44300 Nantes",
   phone_number: "02 40 41 9000",
   url: "https://metropole.nantes.fr/parc-plessis-tison",
@@ -547,7 +599,7 @@ parc_plessis_tison.save!
 square_louis_bureau = Activity.new(
   name: "Square Louis Bureau",
   description: "Le square Louis Bureau est un petit jardin public situé dans le centre-ville de Nantes. Il offre un espace de détente avec des bancs et des pelouses, idéal pour une pause au cœur de la ville.",
-  category: "Parcs",
+  category: "Parc",
   address: "Place Louis Bureau, 44000 Nantes",
   phone_number: "02 40 41 9000",
   url: "https://metropole.nantes.fr/square-louis-bureau",
@@ -567,7 +619,7 @@ file = URI.parse("https://www.jardinspaysdelaloire.fr/media/4484/big/4460_04_22.
 cimetiere_parc = Activity.new(
   name: "Cimetière Parc",
   description: "Le Cimetière Parc de Nantes est un vaste espace vert conçu comme un parc paysager. Il offre des allées arborées et des espaces de recueillement dans un cadre naturel apaisant. C'est un lieu de promenade et de méditation.",
-  category: "Parcs",
+  category: "Parc",
   address: "2 Chemin de la Justice, 44300 Nantes",
   phone_number: "02 40 41 9000",
   url: "https://metropole.nantes.fr/cimetiere-parc",
@@ -589,7 +641,7 @@ cimetiere_parc.save!
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732799364/fonderie_cj5t3o.jpg").open
 jardin_fonderies = Activity.new(name: "Jardin des Fonderies",
   description: "Le Jardin des Fonderies est un espace vert moderne situé sur l'île de Nantes. Il propose des espaces de détente, des jeux d'eau et des vestiges industriels mis en valeur. C'est un lieu apprécié pour son ambiance unique mêlant nature et patrimoine.",
-  category: "Parcs",
+  category: "Parc",
   address: "Boulevard Léon Bureau, 44200 Nantes",
   phone_number: "02 40 41 9000",
   url: "https://metropole.nantes.fr/jardin-des-fonderies",
@@ -610,7 +662,7 @@ jardin_fonderies.save!
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732799456/jardin-des-douves_eeetip.jpg").open
 jardin_douves_chateau = Activity.new(name: "Jardin des Douves du château",
   description: "Le Jardin des Douves entoure le Château des Ducs de Bretagne au cœur de Nantes. Il offre un espace de promenade agréable avec des vues sur les remparts du château. C'est un lieu chargé d'histoire, idéal pour une balade culturelle.",
-  category: "Parcs",
+  category: "Parc",
   address: "4 Place Marc Elder, 44000 Nantes",
   phone_number: "02 40 41 9000",
   url: "https://metropole.nantes.fr/jardin-douves-chateau",
@@ -632,7 +684,7 @@ jardin_douves_chateau.save!
 file = URI.parse("https://api-infonantes.nantesmetropole.fr/banque/public/images/lieux/w/3-E4577-web-SQUARE-Gabriel-Chereau.jpg").open
 square_gabriel_chereau = Activity.new(name: "Square Gabriel Chéreau",
   description: "Le square Gabriel Chéreau est un petit espace vert situé dans le quartier Bellevue - Chantenay - Sainte-Anne. Il offre une aire de jeux pour enfants et des espaces de détente ombragés, parfait pour une pause en famille.",
-  category: "Parcs",
+  category: "Parc",
   address: "Rue des Alouettes, 44100 Nantes",
   phone_number: "02 40 41 9000",
   url: "https://metropole.nantes.fr/square-gabriel-chereau",
@@ -653,7 +705,7 @@ square_gabriel_chereau.save!
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732794022/parc_cours_cambronne_q3jxiv.jpg").open
 cours_cambronne = Activity.new(name: "Cours Cambronne",
   description: "Le cours Cambronne est une promenade historique au cœur de Nantes. Bordé d'arbres centenaires et de bâtiments néoclassiques, il offre un cadre agréable pour une balade en famille. Les enfants peuvent profiter des espaces verts et des statues qui ponctuent le lieu.",
-  category: "Parcs",
+  category: "Parc",
   address: "Cours Cambronne, 44000 Nantes",
   phone_number: "02 40 41 9000",
   url: "https://www.nantes-tourisme.com/fr/patrimoine/cours-cambronne",
@@ -680,7 +732,7 @@ les_gamines = Activity.new(name: "Les Gamines",
                 une cuisine maison avec des options végétariennes, et organise régulièrement des ateliers et événements 
                 pour toute la famille. L'endroit est conçu pour que les parents puissent se détendre tout en gardant 
                 un œil sur leurs enfants.",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "5 rue Lamoricière, 44100 Nantes",
   phone_number: "09 83 93 98 90",
   url: "https://lesgamines-cafe.com",
@@ -700,7 +752,7 @@ les_gamines.save!
 cafe_marmaille = Activity.new(name: "Le café Marmaille",
   description: "Le café Marmaille est un lieu convivial à Nantes, adapté aux familles. Il propose 
                 une restauration légère et des boissons dans un cadre accueillant pour les enfants.",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "8 Rue Jeanne d'Arc, 44000 Nantes",
   phone_number: "02 40 89 70 86",
   url: "https://www.facebook.com/cafemarmaille/?locale=fr_FR",
@@ -721,7 +773,7 @@ cantine_voyage = Activity.new(name: "La Cantine du Voyage",
 description: "La Cantine du Voyage est un restaurant éphémère qui s'installe chaque été sur l'île de Nantes. 
                 Dans une ambiance conviviale et décontractée, elle propose une cuisine locale et de saison. 
                 Les enfants apprécieront l'espace extérieur avec des jeux et la possibilité de pique-niquer sur l'herbe. C'est un lieu idéal pour un déjeuner en famille lors d'une journée de découverte de l'île.",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "Quai des Antilles, 44200 Nantes",
   phone_number: "02 51 82 37 70",
   url: "https://www.levoyageanantes.fr/etapes/la-cantine-du-voyage/",
@@ -738,34 +790,34 @@ description: "La Cantine du Voyage est un restaurant éphémère qui s'installe 
 cantine_voyage.photo.attach(io: file, filename: "cantinevoyage.jpg", content_type: "image/jpg")
 cantine_voyage.save
 
-# Le Petit Bacchus
-file = URI.parse("https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/464444292_8620405064741067_5288523795565714004_n.png?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=dHoKSFvNQ-YQ7kNvgFiUbL9&_nc_zt=23&_nc_ht=scontent-cdg4-2.xx&_nc_gid=Ac3qsA6rVCmdZFxGzNlx3RV&oh=00_AYC8CMR37HZJteI21Jj6xVQsnm5GJKvkssjQ44paGKOEvw&oe=674D01C6").open
-petit_bacchus = Activity.new(name: "Le Petit Bacchus",
-description: "Le Petit Bacchus est un restaurant familial au cœur de Nantes, réputé pour sa cuisine traditionnelle 
+# Le Bistrot des enfants Nantais
+file = URI.parse("https://www.petitfute.com/medias/professionnel/1491699/premium/originale/640cc26bdb812-bistro-enfant-nantais.png").open
+bistrot_enfants_nantais = Activity.new(name: "Le Bistrot des enfants Nantais",
+description: "Le Bistrot des enfants Nantais est un restaurant familial au cœur de Nantes, réputé pour sa cuisine traditionnelle 
   française. L'ambiance chaleureuse et le menu enfant varié en font un lieu idéal pour un repas en famille. 
   Les enfants apprécieront les portions généreuses et l'accueil bienveillant du personnel.",
-  category: "Cafés et restaurants",
-  address: "5 Rue Beauregard, 44000 Nantes",
-  phone_number: "02 40 20 24 25",
-  url: "https://www.facebook.com/lepetitbacchusnantes/",
+  category: "Café et Resto",
+  address: "4 RUE DESAIX, 44000 NANTES, France",
+  phone_number: "02 51 12 15 11",
+  url: "https://le-bistro-des-enfants-nantais.eatbu.com/?lang=fr",
   stroller: true,
   changing_table: false,
   high_chair: true,
   kids_friendly: true,
   public_transport: true,
-  public_transport_detail: "Tram: Ligne 1, arrêt 'Commerce'",
+  public_transport_detail: "",
   car_park: false,
   car_park_detail: "",
   bike_park: true,
   bike_park_detail: "Arceaux à vélos dans la rue")
-petit_bacchus.photo.attach(io: file, filename: "petitbacchus.jpg", content_type: "image/jpg")
-petit_bacchus.save
+bistrot_enfants_nantais.photo.attach(io: file, filename: "bistrotdesenfants.jpg", content_type: "image/jpg")
+bistrot_enfants_nantais.save
   
 # Restaurant 1: Le café des Enfants
 file = URI.parse("https://resize.elle.fr/original/var/plain_site/storage/images/loisirs/sorties/dossiers/cafe-pour-enfants-cafe-poussette/80850947-1-fre-FR/Cafes-pour-enfants-nos-adresses-preferees.jpg").open
 cantine_enfants = Activity.new(name: "Le Café des Enfants",
   description: "Un restaurant familial avec un menu spécial pour les enfants et une aire de jeux intérieure. Les plats sont préparés avec des ingrédients locaux et biologiques.",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "2 rue Joyau, 44000 Nantes",
   phone_number: "02 40 12 34 56",
   url: "https://lecafedesenfants.fr",
@@ -787,7 +839,7 @@ file = URI.parse("https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plai
 petit_chef = Activity.new(name: "La poule mouillette",
   description: "Un restaurant interactif où les enfants peuvent participer à la préparation de leurs repas sous la 
   supervision de chefs professionnels. Une expérience culinaire ludique et éducative.",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "15 rue Paul Bellamy, 44100 Nantes",
   phone_number: "02 40 98 76 54",
   url: "https://la-poule-mouillette-nantes.com",
@@ -809,7 +861,7 @@ file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732800321/
 creperie_enchantee = Activity.new(name: "La Crêperie Enchantée",
   description: "Une crêperie magique avec des crêpes aux formes amusantes et des garnitures colorées. Les enfants 
   peuvent créer leurs propres crêpes et participer à des ateliers de décoration.",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "13 Rue des Halles, 44000 Nantes",
   phone_number: "02 40 11 22 33",
   url: "https://creperieenchantee.fr",
@@ -831,7 +883,7 @@ file = URI.parse("https://lh3.googleusercontent.com/p/AF1QipNr1-5ggHg4_cW3Jdb8ZZ
 safari_gourmand = Activity.new(name: "Le Safari Gourmand",
   description: "Un restaurant à thème safari avec des plats inspirés de la cuisine du monde. Les enfants peuvent 
   manger dans des cabanes en forme d'animaux et participer à des chasses au trésor culinaires.",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "25 rue rene Coty, 44980 Ste Luce S/ Loire",
   phone_number: "02 40 44 55 66",
   url: "https://safarigourmand-nantes.com",
@@ -853,7 +905,7 @@ file = URI.parse("https://media.ouest-france.fr/v1/pictures/MjAyMDAxOGI4YmEwMDk2
 pizza_artistes = Activity.new(name: "La Pizza des Artistes",
   description: "Une pizzeria où les enfants peuvent créer leur propre pizza en la décorant comme une œuvre d'art. 
                 Des ateliers de peinture sur pizza sont organisés régulièrement.",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "12 bld des Poilus, 44000 Nantes",
   phone_number: "02 40 77 88 99",
   url: "https://pizzaartistes.fr",
@@ -875,7 +927,7 @@ file = URI.parse("https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plai
 chateau_smoothies = Activity.new(name: "Le Château des Smoothies",
 description: "Un restaurant healthy dans un décor de château médiéval. Les enfants peuvent créer leurs propres 
             smoothies et participer à des quêtes nutritionnelles amusantes.",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "3 rue du chateau, 44400 Nantes",
   phone_number: "02 40 10 20 30",
   url: "https://chateausmoothies-nantes.com",
@@ -897,7 +949,7 @@ file = URI.parse("https://www.silencecapousse-chezvous.fr/media/images/298/recta
 jardin_secret = Activity.new(name: "Le Jardin Secret",
 description: "Un restaurant bio avec un potager pédagogique. Les enfants peuvent cueillir leurs propres 
               légumes et apprendre à cuisiner des plats simples et sains.",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "18 Rue des Hortensias, 44000 Nantes",
   phone_number: "02 40 33 44 55",
   url: "https://jardinsecret-nantes.fr",
@@ -919,7 +971,7 @@ file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732792272/
 vaisseau_spatial = Activity.new(name: "Le Vaisseau Spatial",
   description: "Un restaurant futuriste où les plats sont servis par des robots. Les enfants peuvent jouer à des 
   jeux vidéo éducatifs sur des tablettes pendant que leurs repas sont préparés.",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "15 rue André Tardieu, 44000 Nantes",
   phone_number: "02 40 66 77 88",
   url: "https://vaisseauspatial.com",
@@ -941,7 +993,7 @@ file = URI.parse("https://www.mylittleparis.com/_ipx/_/https://api.mylittleparis
 ferme_rigolote = Activity.new(name: "La Ferme Rigolote",
   description: "Un restaurant-ferme où les enfants peuvent caresser des animaux, participer à la traite des vaches et 
   déguster des produits frais de la ferme. Des animations autour de la vie à la ferme sont proposées.",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "Chemin de La Longère, 44470 Carquefou",
   phone_number: "02 40 99 00 11",
   url: "https://fermerigolote-nantes.fr",
@@ -958,34 +1010,38 @@ ferme_rigolote = Activity.new(name: "La Ferme Rigolote",
 ferme_rigolote.photo.attach(io: file, filename: "fermerigolote.jpg", content_type: "image/jpg")
 ferme_rigolote.save
 
-# Restaurant 10: L'Aquarium Gourmand
-file = URI.parse("https://img.freepik.com/photos-premium/restaurant-du-recif-est-entoure-grand-aquarium_865967-43503.jpg?w=826").open
-aquarium_gourmand = Activity.new(name: "L'Aquarium Gourmand",
-  description: "Un restaurant avec de grands aquariums où les enfants peuvent observer des poissons exotiques 
-  tout en mangeant. Des menus spéciaux 'sirène' et 'pirate' sont proposés aux enfants.",
-  category: "Cafés et restaurants",
-  address: "Route de Gachet, 44470 Carquefou",
-  phone_number: "02 40 22 33 44",
-  url: "https://aquariumgourmand.com",
+# Restaurant 10: Le circuit
+file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733241463/circus_uzfd8b.jpg").open
+circus = Activity.new(name: "Le circus",
+  description: " Entrez sous le chapiteau et profitez du spectacle pour les yeux et les papilles ! 
+  Monsieur Loyal & sa troupe de saltimbanques vous servent 7 jours sur 7 pour déjeuner ou dîner avec 
+  un numéro de cuisine fait maison. Une décoration mélangeant clowns, manèges & acrobaties vous plongent dans 
+  un univers spectaculaire proposant 120 places assises en intérieur et une jolie terrasse pour les représentations 
+  aux beaux jours. Un manège est à disposition des petits.
+  Bienvenue sur la piste du Circus! ",
+  category: "Café et Resto",
+  address: "avenue syrma, 44470 Carquefou",
+  phone_number: "02 28 16 61 24",
+  url: "https://circussainteluce.com",
   stroller: true,
   changing_table: true,
   high_chair: true,
   kids_friendly: true,
-  public_transport: true,
-  public_transport_detail: "Bus: Ligne 72, arrêt 'Docks'",
+  public_transport: false,
+  public_transport_detail: "",
   car_park: true,
-  car_park_detail: "Parking couvert payant",
+  car_park_detail: "Parking gratuit",
   bike_park: true,
   bike_park_detail: "Arceaux à vélos devant le restaurant")
-aquarium_gourmand.photo.attach(io: file, filename: "aquariumgourmand.jpg", content_type: "image/jpg")
-aquarium_gourmand.save!
+circus.photo.attach(io: file, filename: "circus.jpg", content_type: "image/jpg")
+circus.save!
 
   # A l'abord'âge : le café participatif
 file = URI.parse("https://www.bigcitylife.fr/wp-content/uploads/2023/10/image-8.jpg").open
 abordage = Activity.new(
   name: "A l'abord'âge : le café participatif",
   description: "A l'abord'âge est un café participatif à Nantes qui offre un espace convivial pour les familles. Il propose des activités ludiques et créatives pour les enfants, ainsi que des ateliers et des rencontres pour les parents. C'est un lieu idéal pour partager des moments en famille et rencontrer d'autres parents dans une ambiance chaleureuse.",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "94 Rue de la Ville en Pierre, 44000 Nantes",
   phone_number: "02 40 69 24 98",
   url: "https://alabordage-le-cafe-des-enfants.fr",
@@ -1010,7 +1066,7 @@ magmaa = Activity.new(
                 Les jeunes enfants (2-10 ans) pourront profiter du kids corner pour bouquiner, jouer et faire connaissance dans un petit espace dédié.  Il propose une variété d'ateliers 
                 créatifs, de jeux éducatifs et d'animations pour les enfants de tous âges. C'est l'endroit idéal 
                 pour stimuler l'imagination et la créativité des enfants tout en passant un moment agréable en famille.",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "13 Rue de la Juiverie, 44000 Nantes",
   phone_number: "02 51 82 48 64",
   url: "https://www.magmaa.fr",
@@ -1032,7 +1088,7 @@ file = URI.parse("https://www.bigcitylife.fr/wp-content/uploads/2023/10/image-4.
 ptit_qua_fait = Activity.new(
   name: "Le p'tit qu'à fait",
   description: "Le p'tit qu'à fait est un troquet ludique et familial à Nantes, offrant un espace de jeu et de détente pour toute la famille. Il propose une large sélection de jeux de société, des animations pour enfants, et un menu adapté aux petits et grands. C'est l'endroit parfait pour passer un moment convivial et amusant en famille ou entre amis.",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "3 Rue Bossuet, 44000 Nantes",
   phone_number: "09 80 59 01 00",
   url: "https://www.leptitquafait.fr",
@@ -1054,7 +1110,7 @@ file = URI.parse("https://restaurants.leparadisdufruit.fr/wp-content/uploads/202
 paradis_du_fruit = Activity.new(
   name: "Le paradis du fruit",
   description: "Resturant alliant jus pressés minute de fruits et légumes & cocktails maison, recettes savoureuses et salades vitaminées, assiettes à composer, desserts très très gourmands…",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "Centre commercial Atlantis, 44800 Saint-Herblain, France",
   phone_number: "02 40 02 40 44",
   url: "https://restaurants.leparadisdufruit.fr/nantes-saint-herblain/",
@@ -1076,7 +1132,7 @@ le_coraly = Activity.new(
   name: "Le Coraly",
   description: "Le Coraly est un établissement situé à Rezé, dans la banlieue de Nantes. Restaurant de produits frais
                 à Rezé 100% fait maison. Menu enfant jusqu'à 12 anq",
-  category: "Cafés et restaurants",
+  category: "Café et Resto",
   address: "131 Rue Aristide Briand 44400 REZÉ",
   phone_number: "02 40 05 15 37",
   url: "https://www.restaurant-le-coraly.fr/",
@@ -1100,7 +1156,7 @@ puts "creating espace jeux"
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732792779/blockout_nzhrlq.jpg").open
 blockout = Activity.new(name: "Block'Out Nantes",
   description: "Block'Out Nantes est une salle d'escalade de bloc offrant des parcours variés pour tous les niveaux. Idéal pour une activité sportive en famille ou entre amis, le lieu propose également des cours et des stages pour les enfants.",
-  category: "Espaces de jeu",
+  category: "Espace de jeux",
   address: "27 Bd Bâtonnier Cholet, 44100 Nantes",
   phone_number: "02 55 10 10 11",
   url: "https://nantes.blockout.fr",
@@ -1121,7 +1177,7 @@ blockout.save!
 file = URI.parse("https://www.parc-attraction-loisirs.fr/wp/files/2024/04/parc-des-naudieres.jpg").open
 parc_naudieres = Activity.new(name: "Parc des Naudières",
   description: "Le parc des Naudières est un parc d'attractions familial situé à Sautron, près de Nantes. Il propose de nombreuses activités pour les enfants : manèges, toboggans aquatiques, mini-ferme, structures gonflables et aires de jeux. C'est un lieu idéal pour une journée de divertissement en famille.",
-  category: "Espaces de jeu",
+  category: "Espace de jeux",
   address: "Route de Brimberne, 44880 Sautron",
   phone_number: "02 40 63 21 05",
   url: "https://www.parcnaudieres.com",
@@ -1141,7 +1197,7 @@ parc_naudieres.save!
 file = URI.parse("https://www.sainte-luce-loire.com/medias/2021/07/royal-kids-web-1240x523.jpg").open
 royal_kids = Activity.new(name: "Royal Kids",
   description: "Royal Kids est un parc de jeux intérieur pour enfants offrant une variété d'activités ludiques et sportives. Les enfants peuvent profiter de structures gonflables, toboggans, piscines à balles, parcours d'obstacles et zones de jeux adaptées à différents âges. C'est un endroit idéal pour les anniversaires et les sorties en famille, permettant aux enfants de s'amuser en toute sécurité.",
-  category: "Espaces de jeu",
+  category: "Espace de jeux",
   address: "12 Rue Marcel Dassault, 44980 Sainte-Luce-sur-Loire",
   phone_number: "02 40 25 21 21",
   url: "https://www.royalkids.fr/parcs/sainte_luce_sur_loire",
@@ -1161,7 +1217,7 @@ royal_kids.save!
 file = URI.parse("https://www.galipy.com/wp-content/uploads/2016/04/ac03-500x500.jpg").open
 galipy = Activity.new(name: "Galipy",
   description: "Galipy est un espace de jeux intérieur pour enfants situé à Saint-Sébastien-sur-Loire. Il propose des structures de jeux adaptées à différents âges, des toboggans, des piscines à balles, et des parcours d'obstacles. C'est un lieu idéal pour que les enfants se dépensent et s'amusent en toute sécurité, quel que soit le temps.",
-  category: "Espaces de jeu",
+  category: "Espace de jeux",
   address: "2 Rue Marie Curie, 44230 Saint-Sébastien-sur-Loire",
   phone_number: "02 40 34 90 90",
   url: "https://www.galipy.com",
@@ -1185,7 +1241,7 @@ nidoludo = Activity.new(name: "Nidoludo",
               avec des jeux d'imitation, de musique et de motricité. Les parents peuvent profiter 
               d'un salon de thé pendant que les enfants s'amusent. Nidoludo offre également une programmation 
               d'ateliers variés pour les enfants de 0 à 10 ans, comme l'éveil musical, le yoga, le théâtre et le cirque.",
-  category: "Espaces de jeu",
+  category: "Espace de jeux",
   address: "4 Rue de l'Héronnière, 44000 Nantes",
   phone_number: "06 51 88 36 35",
   url: "https://nidoludo.fr",
@@ -1204,12 +1260,36 @@ nidoludo.save!
 
 puts "creating mediatheque"
 
+file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733235553/mediatheque_carquefou_sg1ahd.jpg").open
+mediatheque_carquefou = Activity.new(
+  name: "Médiathèque de Carquefou",
+  description: "La médiathèque de Carquefou est un espace culturel moderne offrant une large collection de livres, 
+  médias et ressources numériques. Elle propose des animations pour tous les âges et des espaces de lecture 
+  confortables. Une ludothèque est également à diposition. Des soirées jeux sont régulièrement proposés",
+  category: "Lieu culturel",
+  address: "21 Rue de la Mairie, 44470 Carquefou",
+  phone_number: "02 28 22 24 00",
+  url: "https://mediatheque.carquefou.fr/",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true,
+  public_transport: true,
+  public_transport_detail: "Bus: Ligne 85, arrêt 'Mairie de Carquefou'",
+  car_park: true,
+  car_park_detail: "Parking public gratuit à proximité",
+  bike_park: true,
+  bike_park_detail: "Arceaux à vélos devant la médiathèque"
+)
+mediatheque_carquefou.photo.attach(io: file, filename: "mediatheque_carquefou.jpg", content_type: "image/jpg")
+mediatheque_carquefou.save
+
 # Bibliothèque du Breil-Malville
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732793552/biblio_breil_wnrpn1.png").open
 bibliotheque_breil = Activity.new(
   name: "Bibliothèque du Breil-Malville",
   description: "La bibliothèque du Breil-Malville offre un espace de lecture et de découverte pour tous les âges. Elle propose des collections variées, des animations pour enfants et des espaces de travail confortables.",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "37 Bis Av. des Plantes, 44800 Saint-Herblain",
   phone_number: "02 40 76 06 56",
   url: "https://bm.nantes.fr/home/bibliotheques-et-mediatheques/les-bibliotheques-et-mediatheques/bibliotheque-du-breil-malville.html",
@@ -1232,7 +1312,7 @@ file = URI.parse("https://api-infonantes.nantesmetropole.fr/banque/public/images
 bibliotheque_chantenay = Activity.new(
   name: "Bibliothèque de Chantenay",
   description: "La bibliothèque de Chantenay est un lieu convivial proposant une large sélection de livres, magazines et ressources numériques. Elle organise régulièrement des activités pour les enfants et les familles.",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "18 Av. de l'Angevinière, 44100 Nantes",
   phone_number: "02 40 46 26 03",
   url: "https://bm.nantes.fr/home/bibliotheques-et-mediatheques/les-bibliotheques-et-mediatheques/bibliotheque-de-chantenay.html",
@@ -1255,7 +1335,7 @@ file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732793325/
 bibliotheque_erdre = Activity.new(
   name: "Bibliothèque Erdre-Batignolles",
   description: "La bibliothèque Erdre-Batignolles est un espace moderne dédié à la lecture et à la culture. Elle propose des collections variées, des espaces de travail et des animations pour tous les âges.",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "4 Rue de la Roche, 44000 Nantes",
   phone_number: "02 40 41 53 47",
   url: "https://bm.nantes.fr/home/bibliotheques-et-mediatheques/les-bibliotheques-et-mediatheques/bibliotheque-erdre-batignolles.html",
@@ -1278,7 +1358,7 @@ file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732793157/
 bibliotheque_manufacture = Activity.new(
   name: "Bibliothèque de la Manufacture",
   description: "Située dans un ancien bâtiment industriel, la bibliothèque de la Manufacture offre un cadre unique pour la lecture et la découverte. Elle propose des collections diversifiées et des activités pour tous les publics.",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "6 Cour Jules Durand, 44000 Nantes",
   phone_number: "02 40 41 95 65",
   url: "https://bm.nantes.fr/home/bibliotheques-et-mediatheques/les-bibliotheques-et-mediatheques/bibliotheque-de-la-manufacture.html",
@@ -1300,7 +1380,7 @@ bibliotheque_manufacture.save!
 mediatheque_conservatoire = Activity.new(
   name: "Médiathèque du Conservatoire",
   description: "La médiathèque du Conservatoire de Nantes est spécialisée dans les documents musicaux et chorégraphiques. Elle offre un large choix de partitions, CD, DVD et ouvrages sur la musique et la danse.",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "4 Rue Gaëtan Rondeau, 44200 Nantes",
   phone_number: "02 51 25 00 20",
   url: "https://conservatoire.nantes.fr/home/le-conservatoire/la-mediatheque.html",
@@ -1318,7 +1398,7 @@ mediatheque_conservatoire = Activity.new(
 file = URI.parse("https://files.structurae.net/files/350high/2018/la_mediatheque_1.jpg").open
 mediatheque_jacques_demy = Activity.new(name: "Médiathèque Jacques Demy",
   description: "La médiathèque Jacques Demy est la plus importante du réseau de la bibliothèque municipale de Nantes. Elle offre une vaste collection de livres, documents précieux et contenus multimédias. Le bâtiment, construit en 1985, abrite également un musée de l'imprimerie et un centre d'études verniennes. C'est un lieu de culture et d'animation idéal pour les familles et les enfants[1][2].",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "24 Quai de la Fosse, 44000 Nantes",
   phone_number: "02 40 41 95 95",
   url: "https://bibliotheque.nantes.fr/bibliotheques/mediatheque-espace-jacques-demy/",
@@ -1338,7 +1418,7 @@ mediatheque_jacques_demy.save!
 file = URI.parse("https://api-infonantes.nantesmetropole.fr/banque/public/images/lieux/c/3-E3657-cj-FGuepin-01.jpg").open
 floresca_guepin = Activity.new(name: "Médiathèque Floresca Guépin",
   description: "La Médiathèque Floresca Guépin est un espace culturel moderne offrant une large collection de livres, CD, DVD et ressources numériques. Elle propose des espaces dédiés aux enfants avec des animations régulières, des ateliers de lecture et des activités ludiques pour tous les âges.",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "15 Rue de la Haluchère, 44300 Nantes",
   phone_number: "02 40 93 41 60",
   url: "https://bibliotheque.nantes.fr/bibliotheques/mediatheque-est-floresca-guepin/",
@@ -1358,7 +1438,7 @@ floresca_guepin.save!
 file = URI.parse("https://api-infonantes.nantesmetropole.fr/banque/public/images/lieux/l/3-E4149-LisaBresner-02.jpg").open
 lisa_bresner = Activity.new(name: "Médiathèque Lisa Bresner",
 description: "La Médiathèque Lisa Bresner est un lieu culturel convivial proposant une riche collection de documents pour tous les âges. Elle dispose d'un espace jeunesse avec des livres, des jeux et des animations adaptés aux enfants, favorisant la découverte et l'apprentissage.",
-category: "Lieux culturels",
+category: "Lieu culturel",
 address: "23 Boulevard Emile Romanet, 44100 Nantes",
 phone_number: "02 40 41 54 00",
   url: "https://bibliotheque.nantes.fr/bibliotheques/mediatheque-lisa-bresner/",
@@ -1378,7 +1458,7 @@ lisa_bresner.save!
 file = URI.parse("https://api-infonantes.nantesmetropole.fr/banque/public/images/lieux/l/3-E26-LuceCourville-01.jpg").open
 luce_courville = Activity.new(name: "Médiathèque Luce Courville",
   description: "La Médiathèque Luce Courville est un espace culturel dynamique offrant une variété de ressources pour tous les publics. Elle propose un coin enfants avec des livres, des jeux éducatifs et des animations régulières, encourageant la lecture et la créativité chez les plus jeunes.",
-  category: "Lieux culturels",
+  category: "Lieu culturel",
   address: "1 Rue Eugène Thomas, 44300 Nantes",
   phone_number: "02 40 41 53 50",
   url: "https://bibliotheque.nantes.fr/bibliotheques/mediatheque-nord-luce-courville/",
@@ -1394,6 +1474,28 @@ luce_courville = Activity.new(name: "Médiathèque Luce Courville",
   bike_park_detail: "Arceaux à vélos disponibles")
 luce_courville.photo.attach(io: file, filename: "luce_courville.jpg", content_type: "image/jpg")
 luce_courville.save!
+
+file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733239447/inclusive_playground_for_children_with_sensory_paths_counting_and_building_panels_musical_tubes_sound_stations_colorful_and_fragrant_elements_in_a_park_setting_c5b0ce.jpg").open
+aire_jeu_charbonneau = Activity.new(name: "Aire de jeu inclusive du Charbonneau",
+  description: "une aire de jeux inclusive permettant à tous les enfants (de 2 à 12 ans) de profiter pleinement d'une aire adaptée à chacun.
+Les différents modules sont accessibles PMR et encouragent l’éveil des enfants au travers des 5 sens: du toucher (parcours sensoriel), de la manipulation (panneaux pour compter, construire…), de l’audition (tubes musicaux, bornes sonores), des couleurs, des odeurs.
+Une aire de jeux adaptée à tous, qui permet aux enfants et aux familles de se rencontrer et de partager un moment de jeux et de convivialité dans un espace adapté à chacun.",
+  category: "Espace de jeux",
+  address: "Passage de la noue, 44470 Carquefou, France",
+  phone_number: "",
+  url: "https://metropole.nantes.fr/infonantes/equipement/E2437-parc-du-charbonneau",
+  stroller: true,
+  changing_table: false,
+  high_chair: false,
+  kids_friendly: true,
+  public_transport: true,
+  public_transport_detail: "",
+  car_park: true,
+  car_park_detail: "Parking gratuit à proximité",
+  bike_park: true,
+  bike_park_detail: "Arceaux à vélos disponibles")
+aire_jeu_charbonneau.photo.attach(io: file, filename: "aire_jeu_charbonneau.jpg", content_type: "image/jpg")
+aire_jeu_charbonneau.save!
 
 puts "end creating activities"
 
@@ -1415,7 +1517,7 @@ camille_rating_1 = Rating.create!(user: camille,
 
 camille_rating_2 = Rating.create!(user: manu,
   activity: nidoludo,
-  visit_date: Date.today + 4,
+  visit_date: Date.today - 5,
   rating: 5,
   comment: "Des jeux d'imitation avec les enfants, de bons apres-midi en famille! super goûter après sur place!",
   stroller: true,
@@ -1427,7 +1529,102 @@ manu_rating_1 = Rating.create!(user: manu,
   activity: musee_art_nantes,
   visit_date: Date.today + 2,
   rating: 5,
-  comment: "access avec poussette grâce à l'ascenseur! et table à langer. Espace de jeux et salon de thé adaptés aux enfants",
+  comment: "access avec poussette grâce à l'ascenseur! et table à langer. 
+            Espace de jeux et salon de thé adaptés aux enfants",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+manu_rating_2 = Rating.create!(user: manu,
+  activity: parc_chantrerie,
+  visit_date: Date.today - 60,
+  rating: 5,
+  comment: "Parc très agréable au bord de l'Erdre. Reposant et avec une ferme très apprécié par les enfants",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+manu_rating_3 = Rating.create!(user: manu,
+  activity: ferme_rigolote,
+  visit_date: Date.today - 60,
+  rating: 3,
+  comment: "Lieu agréable, mais peu d'animaux en tout cas moins qu'imaginé. Carte un peu cher",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+rose_rating_1 = Rating.create!(user: rose,
+  activity: musee_art_nantes,
+  visit_date: Date.today - 4,
+  rating: 5,
+  comment: "access avec poussette grâce à l'ascenseur! et table à langer OK. 
+            c'est l'idéal pour faire découvrir l'art aux enfants. Ma fille a adorée l'atelier de peinture",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+rose_rating_2 = Rating.create!(user: rose,
+  activity: circus,
+  visit_date: Date.today - 4,
+  rating: 5,
+  comment: "access avec poussette et table à langer OK. 
+            Très belle décoration sur le theme du cirque. Ma fille a adorée le tour de manège offert",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+paul_rating_1 = Rating.create!(user: paul,
+  activity: circus,
+  visit_date: Date.today - 12,
+  rating: 4,
+  comment: "Table à langer à dispo très pratique pour changer bébé. Toute la famille était ravie
+            par le spectacle de jonglage",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+paul_rating_2 = Rating.create!(user: paul,
+  activity: musee_art_nantes,
+  visit_date: Date.today - 12,
+  rating: 5,
+  comment: "Table à langer à dispo très pratique pour changer bébé. Petite pose gourmande au 
+            Salon de thé adaptés aux enfants. toute la famille a appréciée",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+paul_rating_2 = Rating.create!(user: stephanie,
+  activity: aire_jeu_charbonneau,
+  visit_date: Date.today - 10,
+  rating: 4,
+  comment: "aire de jeu très agréable, permet à mon enfant de 6ans de grimper et de se défouler. ",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+stephanie_rating_1 = Rating.create!(user: stephanie,
+  activity: parc_chantrerie,
+  visit_date: Date.today - 12,
+  rating: 4,
+  comment: "Très beau parc avec de beaux arbres centenaires. Belle promenade dans le jardin potager",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+stephanie_rating_2 = Rating.create!(user: stephanie,
+  activity: aire_jeu_charbonneau,
+  visit_date: Date.today - 10,
+  rating: 4,
+  comment: "aire de jeu nouvellement créée, mes enfants de 4 ans et 2 nas ont adorés les modules musicaux. ",
   stroller: true,
   changing_table: true,
   high_chair: false,

@@ -2,7 +2,7 @@ class Activity < ApplicationRecord
   has_many :favourites, dependent: :destroy
   has_many :ratings, dependent: :destroy
 
-  ACTIVITY_CATEGORY = ["Cafés et restaurants", "Parcs", "Lieux culturels", "Espaces de jeu"]
+  ACTIVITY_CATEGORY = ["Café et Resto", "Parc", "Lieu culturel", "Espace de jeux"]
   DESCRIPTION_MAX = 1330
 
   validates :name, presence: true, length: { minimum: 2, maximum: 50 }
