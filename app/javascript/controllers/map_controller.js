@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from 'mapbox-gl' // Don't forget this! pour afficher mapbox
-import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder" // pour la recherche dans la map
+// import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder" // pour la recherche dans la map
 
 // Connects to data-controller="map"
 export default class extends Controller {
@@ -17,7 +17,7 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/mapbox/streets-v10"
+      style: "mapbox://styles/mapbox/streets-v12"
     })
 
     this.#addMarkersToMap();
@@ -26,6 +26,7 @@ export default class extends Controller {
     // pour une barre de recherche dans la map geobox uniquement
     // this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
     //   mapboxgl: mapboxgl }))
+
   }
 
   // Méthode pour géolocaliser l'utilisateur
