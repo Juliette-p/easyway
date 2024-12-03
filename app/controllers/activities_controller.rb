@@ -21,13 +21,29 @@ class ActivitiesController < ApplicationController
       @activities = @activities.where(category: params[:category])
     end
 
-    # mise à jour des marqueurs sur la map
-    @markers = @activities.geocoded.map do |activity|
-      {
-        lat: activity.latitude,
-        lng: activity.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: { activity: activity })
+
+
+    # pour l'autocomplétion
+    @activities_names = []
+    @activities_addresses = []
+    @activities.each do |activitie|
+      @activities_names << activitie.name
+      @activities_addresses << activitie.address
+    end
+
+    respond_to do |format|
+      format.html {
+        # mise à jour des marqueurs sur la map
+        @markers = @activities.geocoded.map do |activity|
+          {
+            lat: activity.latitude,
+            lng: activity.longitude,
+            info_window_html: render_to_string(partial: "info_window", locals: { activity: activity }),
+            marker_html: render_to_string(partial: "marker_map")
+          }
+        end
       }
+      format.json
     end
   end
 

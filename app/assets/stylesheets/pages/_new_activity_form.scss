@@ -4,42 +4,48 @@
   justify-content: center;
   margin-inline: 0;
   width: 100%;
+  padding: 30px;
   // row justify-content-center
+
+  .yellowbtn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+  }
 }
 
 .sub-card-new-activity {
-  margin-inline: 20px;
-  margin-block: 0;
-  padding: 0;
   width: 100%;
 
   .form-control {
-    border: 1px solid $shadow-gray;
     border-radius: 20px;
-    // box-shadow: -1px -1px -3px rgba(0,0,0,0.2);
-    background-color: $white;
-    color: black;
-    margin: 0;
-    width: 100%;
-    padding-block: 0;
+    margin: 0px;
+    font-size: 12px;
+
+    .form-control:focus {
+      border: 1px solid $yellow;
+    }
   }
 
   #activity_category {
     border: 1px solid $shadow-gray;
     border-radius: 20px;
-    // box-shadow: -1px -1px -3px rgba(0,0,0,0.2);
     background-color: $white;
     color: black;
-    margin: 0;
     width: 100%;
-    padding-block: 0;
+    height: 28px;
+    padding-left: 10px;
+    font-size: 12px;
+
+    option {
+      font-family: nunito;
+      font-size: 12px;
+    }
+
   }
 
   .form-check-input {
-    // color: black;
     display:none;
-    // position: absolute;
-    // transform: scale(0);
   }
 
   #checkbox1 + label{
@@ -49,19 +55,16 @@
     width: 30px;
     display:inline-block;
     padding: 0 0 0 0px;
-    // border: 1px solid black;
     border-radius: 50%;
   }
 
-  #checkbox1:checked + label{
+  #checkbox1:checked + label {
     background-image: asset-url('stroller_ok_30px.png');
     object-fit: cover;
-    // background:url('stroller_ok.png') no-repeat;
     height: 30px;
     width: 30px;
     display:inline-block;
     padding: 0 0 0 0px;
-    // border: 1px solid black;
     border-radius: 50%;
   }
 
@@ -72,19 +75,16 @@
     width: 30px;
     display:inline-block;
     padding: 0 0 0 0px;
-    // border: 1px solid black;
     border-radius: 50%;
   }
 
   #checkbox2:checked + label{
     background-image: asset-url('changing_table_ok_30px.png');
     object-fit: cover;
-    // background:url('stroller_ok.png') no-repeat;
     height: 30px;
     width: 30px;
     display:inline-block;
     padding: 0 0 0 0px;
-    // border: 1px solid black;
     border-radius: 50%;
   }
 
@@ -95,19 +95,16 @@
     width: 30px;
     display:inline-block;
     padding: 0 0 0 0px;
-    // border: 1px solid black;
     border-radius: 50%;
   }
 
   #checkbox3:checked + label{
     background-image: asset-url('high_chair_ok_30px.png');
     object-fit: cover;
-    // background:url('stroller_ok.png') no-repeat;
     height: 30px;
     width: 30px;
     display:inline-block;
     padding: 0 0 0 0px;
-    // border: 1px solid black;
     border-radius: 50%;
   }
 
@@ -118,19 +115,16 @@
     width: 30px;
     display:inline-block;
     padding: 0 0 0 0px;
-    // border: 1px solid black;
     border-radius: 50%;
   }
 
   #checkbox4:checked + label{
     background-image: asset-url('kids_friendly_ok_30px.png');
     object-fit: cover;
-    // background:url('stroller_ok.png') no-repeat;
     height: 30px;
     width: 30px;
     display:inline-block;
     padding: 0 0 0 0px;
-    // border: 1px solid black;
     border-radius: 50%;
   }
 
@@ -141,19 +135,16 @@
     width: 30px;
     display:inline-block;
     padding: 0 0 0 0px;
-    // border: 1px solid black;
     border-radius: 50%;
   }
 
   #checkbox5:checked + label{
     background-image: asset-url('bus_ok.png');
     object-fit: cover;
-    // background:url('stroller_ok.png') no-repeat;
     height: 30px;
     width: 30px;
     display:inline-block;
     padding: 0 0 0 0px;
-    // border: 1px solid black;
     border-radius: 50%;
   }
 
@@ -164,19 +155,16 @@
     width: 30px;
     display:inline-block;
     padding: 0 0 0 0px;
-    // border: 1px solid black;
     border-radius: 50%;
   }
 
   #checkbox6:checked + label{
     background-image: asset-url('car_ok.png');
     object-fit: cover;
-    // background:url('stroller_ok.png') no-repeat;
     height: 30px;
     width: 30px;
     display:inline-block;
     padding: 0 0 0 0px;
-    // border: 1px solid black;
     border-radius: 50%;
   }
 
@@ -187,40 +175,33 @@
     width: 30px;
     display:inline-block;
     padding: 0 0 0 0px;
-    // border: 1px solid black;
     border-radius: 50%;
   }
 
   #checkbox7:checked + label{
     background-image: asset-url('velo_ok.png');
     object-fit: cover;
-    // background:url('stroller_ok.png') no-repeat;
     height: 30px;
     width: 30px;
     display:inline-block;
     padding: 0 0 0 0px;
-    // border: 1px solid black;
     border-radius: 50%;
   }
-  // .form-check-label {
-  //   color: black;
-  //   font-size: 12px;
-  // }
-}
-
-.form-control::placeholder { /* Most modern browsers support this now. */
-  color: $black;
-  opacity: 1; // firefox
 }
 
 .new-activity-tab-field {
-  margin-block: 3px;
-  margin-inline: 0;
-  width: 100%;
+  margin: 5px 0px;
+}
+
+.new-activity-top-tab-field {
+  margin: 10px 0px;
 }
 
 .new-activity-tab-field-description {
   padding-bottom: 20px;
+  .form-control {
+    height: 100px;
+  }
 }
 
 .checkbox-row {
@@ -231,7 +212,7 @@
   gap: 10px;
 }
 
-// toggle : pour la checkbox ajouter un site web
+// WEBSITE toggle : pour la checkbox ajouter un site web
 .toggleUrl {
   position: absolute;
   transform: scale(0);
@@ -241,6 +222,7 @@
   position: relative;
   display: inline-block;
   padding-left: 40px;
+  font-size: 15px;
 }
 
 .toggleUrl + label::before {
@@ -278,8 +260,15 @@
   left: 18px;
 }
 
+#activity_url {
+  height: 35px;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
 
-// toggle : pour la checkbox ajouter un téléphone
+
+
+// TELEPHONE toggle : pour la checkbox ajouter un téléphone
 .togglePhone {
   position: absolute;
   transform: scale(0);
@@ -289,6 +278,7 @@
   position: relative;
   display: inline-block;
   padding-left: 40px;
+  font-size: 15px;
 }
 
 .togglePhone + label::before {
@@ -326,8 +316,14 @@
   left: 18px;
 }
 
+#activity_phone_number {
+  height: 35px;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
 
-// toggle : pour la checkbox ajouter une photo
+
+// PHOTO toggle : pour la checkbox ajouter une photo
 .togglePhoto {
   position: absolute;
   transform: scale(0);
@@ -337,6 +333,7 @@
   position: relative;
   display: inline-block;
   padding-left: 40px;
+  font-size: 15px;
 }
 
 .togglePhoto + label::before {
@@ -372,4 +369,10 @@
 
 .togglePhoto:checked + label::after {
   left: 18px;
+}
+
+#activity_photo {
+  height: 35px;
+  margin-bottom: 15px;
+  font-size: 12px;
 }

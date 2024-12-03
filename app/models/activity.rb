@@ -3,10 +3,12 @@ class Activity < ApplicationRecord
   has_many :ratings, dependent: :destroy
 
   ACTIVITY_CATEGORY = ["Cafés et restaurants", "Parcs", "Lieux culturels", "Espaces de jeu"]
+  DESCRIPTION_MAX = 1330
 
-  validates :name, presence: true, length: { minimum: 2 }
+  validates :name, presence: true, length: { minimum: 2, maximum: 50 }
   validates :category, presence: true, inclusion: { in: ACTIVITY_CATEGORY }
   validates :address, presence: true
+  validates :description, length: { maximum: DESCRIPTION_MAX }
 
   has_one_attached :photo
 
