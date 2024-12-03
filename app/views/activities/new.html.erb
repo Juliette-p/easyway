@@ -1,4 +1,4 @@
-<h1>Ajouter un nouveau lieu</h1>
+<h1>Ajouter une nouvelle activité</h1>
 <%# <%= simple_form_for(@activity) do |f| %>
   <%# <%= f.input :name, label: "Nom du lieu", placeholder: "Ajouter un nom..." %>
   <%# <%= f.input :address, label: "Adresse", placeholder: "Ajouter une adresse..." %>
@@ -18,10 +18,10 @@
 <%# end %>
 
 <div class="basic-card card-new-activity">
-  <div class="sub-card-new-activity col-sm-8 my-3">
+  <div class="sub-card-new-activity col-sm-8">
     <%= form_with model: @activity, class: "d-flex flex-column", data: { controller: "fields-for", controller: "character-count-activity", character_count_activity_nb_value: "#{Activity::DESCRIPTION_MAX}" } do |f| %>
       <%# champs texte pour enregistrer un nom %>
-      <div class="new-activity-tab-field">
+      <div class="new-activity-tab-field new-activity-top-tab-field">
         <%= f.text_field :name,
           # params[:name],
           class: "form-control",
@@ -30,7 +30,7 @@
       </div>
 
       <%# champs texte pour enregistrer une addresse %>
-      <div class="new-activity-tab-field">
+      <div class="new-activity-tab-field new-activity-top-tab-field">
         <%= f.text_field :address,
           # params[:address],
           class: "form-control",
@@ -39,21 +39,25 @@
       </div>
 
       <%# champs collection pour sélectionner la catégorie %>
-      <div class="new-activity-tab-field">
+      <div class="new-activity-tab-field new-activity-top-tab-field">
         <%= f.select :category,
           options_for_select(Activity::ACTIVITY_CATEGORY, params[:category]),
           class: 'form-control',
-          prompt: "Sélectionner une catégorie..."
+          prompt: "Sélectionnez une catégorie..."
         %>
       </div>
 
       <%# champs texte pour enregistrer une description %>
-      <div class="new-activity-tab-field-description">
-        <%= f.text_field :description,
+      <div class="new-activity-tab-field-description new-activity-top-tab-field">
+        <%= f.text_area :description,
           # params[:description],
           class: "form-control",
+<<<<<<< HEAD
+          placeholder: "Ajoutez une brève description..."
+=======
           placeholder: "Brève description...",
           data: { target: "character-count-activity.text", action: "keyup->character-count-activity#updateCounter"}
+>>>>>>> 58aaa3e7cfc12af24bf660792f08e23b5a831dee
         %>
         <p data-character-count-activity-target="counter"></p>
       </div>
@@ -247,7 +251,7 @@
       </div>
 
       <%# bouton de validation %>
-      <%= f.submit "Ajouter cette activité", class: "yellow_small_btn mt-2" %>
+      <%= f.submit "Ajouter cette activité", class: "yellowbtn" %>
     <% end %>
   </div>
 </div>
