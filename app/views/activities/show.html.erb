@@ -1,5 +1,6 @@
 <div class="wrapper" data-controller="agenda">
   <div class="activity-show-main-page" data-agenda-target="ActivityShowView">
+    <%# <%= link_to, activities_path %> %>
     <div class="activity-show-photo">
       <%= @activity.photo.attached? ? cl_image_tag(@activity.photo.key) : image_tag('image_par_defaut.png') %>
     </div>

@@ -4,8 +4,8 @@
 <%# carte détails de l'activité : addresse, téléphone, website, ... %>
 <div class="card-activity-details"
 data-controller="copy-to-clipboard"
-data-copy-to-clipboard-address-text-value="Address copied!"
-data-copy-to-clipboard-phone-text-value="Phone number copied!">
+data-copy-to-clipboard-address-text-value="Addresse copiée!"
+data-copy-to-clipboard-phone-text-value="Numéro de téléphone copié!">
 
   <%# addresse %>
   <div class="container-info"
@@ -24,7 +24,7 @@ data-copy-to-clipboard-phone-text-value="Phone number copied!">
   <%# url site web %>
   <div class="container-info">
     <i class="fa-solid fa-globe" style="color: #3D5555;"></i>
-    <p><%= @activity.url %></p>
+    <a href="<%= @activity.url %>" target="_blank" style="text-decoration: none;"><p><%= @activity.url %></p></a>
   </div>
 
 </div>
