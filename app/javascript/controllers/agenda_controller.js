@@ -33,6 +33,7 @@ export default class extends Controller {
 
   invitation() {
     console.log("agenda confirm ok")
-    alert("Une invitation vous a été envoyée par mail.");
+    // alert("Une invitation vous a été envoyée par mail.");
+    Swal.fire("Une invitation vous a été envoyée par mail.");
   }
 }
