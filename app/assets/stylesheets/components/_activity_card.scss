@@ -44,7 +44,7 @@
   }
 
   h3 {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
     text-align: left;
     padding: 0px;
@@ -52,12 +52,12 @@
   }
 
   p {
-    font-size: 10px;
+    font-size: 12px;
     text-align: right;
-
+    color: grey;
     padding: 0px;
     margin: 0px;
-    width: 80px;
+    width: 90px;
   }
 
   // div contenant les icônes d'accessibilité
@@ -70,6 +70,7 @@
   }
 
   .card-activity-description {
+    font-size: 14px;
     margin: 5px 0px;
   }
 }

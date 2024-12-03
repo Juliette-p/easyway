@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
+  <meta charset="UTF-8">
+  <title>Erreur (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background-color: #ffffff;
+    color: #FFCC51;
     text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin:  0;
+    padding: 0;
+
   }
 
   .rails-default-error-page div.dialog {
@@ -23,7 +31,7 @@
     border-right-color: #999;
     border-left-color: #999;
     border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
+    border-top: #3D5455 solid 4px;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
     background-color: white;
@@ -33,11 +41,11 @@
 
   .rails-default-error-page h1 {
     font-size: 100%;
-    color: #730E15;
+    color: #3D5455;
     line-height: 1.5em;
   }
 
-  .rails-default-error-page div.dialog > p {
+  .rails-default-error-page div.dialog > h6 {
     margin: 0 0 1em;
     padding: 1em;
     background-color: #F7F7F7;
@@ -58,10 +66,10 @@
   <!-- This file lives in public/404.html -->
   <div class="dialog">
     <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+      <h1>Oups ! Cette page semble s'être perdue.</h1>
+      <h4>Retournez à la page d'accueil et continuez à explorer nos suggestions de lieux et d'activités pour vos enfants. </h4>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <h6>Si vous êtes le propriétaire de l'application, vérifiez les logs pour plus d'informations.</h6>
   </div>
 </body>
 </html>

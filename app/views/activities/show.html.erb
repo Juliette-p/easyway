@@ -1,4 +1,9 @@
 <div class="wrapper" data-controller="agenda">
+  <%# bouton "go back" %>
+  <%= link_to activities_path do %>
+    <%= image_tag "go_back_arrow.png", alt: "Retour", class:"go-back-btn" %>
+  <% end %>
+
   <div class="activity-show-main-page" data-agenda-target="ActivityShowView">
     <div class="activity-show-photo">
       <%= @activity.photo.attached? ? cl_image_tag(@activity.photo.key) : image_tag('image_par_defaut.png') %>
@@ -33,13 +38,13 @@
 
   <%# faire une div sur la moitié basse de la page qui contient la vue calendrier %>
   <div class="activity-show-agenda d-none" data-agenda-target="AgendaView">
+      <p id="btn-agenda-close" data-action="click->agenda#hide_agendaView"><strong>X</strong></p>
       <div class="agenda-card-title">
         <i class="fa-regular fa-calendar-days" style="color: #3D5555; font-size: 24px;"></i>
         <div class="agenda-card-subtitle">
           <p><strong>Planifier ma sortie</strong></p>
           <p>Ajouter l'activité à mon agenda personnel</p>
           </div>
-        <p id="btn-agenda-close" data-action="click->agenda#hide_agendaView"><strong>X</strong></p>
       </div>
       <div data-controller="agenda-datepicker"></div>
       <p class="yellow_small_btn" id="agenda-confirm" data-action="click->agenda#invitation">Ajouter à votre agenda</p>

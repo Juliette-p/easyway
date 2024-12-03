@@ -10,7 +10,6 @@
   <% if Favourite.where(activity: @activity, user: current_user).size > 0 %>
     <%= link_to activity_favourite_path(@activity), data: {turbo_method: :delete}, class: "card-activity-btn" do %>
       <i class="fa-solid fa-heart" style="color: #FF8351;"></i>
-      <p>Favoris</p>
     <% end %>
   <% else %>
     <%= link_to activity_favourites_path(@activity), data: {turbo_method: :post}, class: "card-activity-btn" do %>
@@ -22,20 +21,17 @@
   <%# icone "ajouter un commentaire" %>
   <%= link_to new_activity_rating_path(@activity), class: "card-activity-btn"  do %>
     <i class="icone fa-solid fa-star" style="color: #FFCC51;"></i>
-    <p>Laisser un avis</p>
   <% end %>
 
   <%# icone "ajouter au calendrier" %>
   <%# <%= link_to activity_path(@activity), class: "card-activity-btn", data: { action: "click->agenda#hide_agendaView" } do %>
   <div class="card-activity-btn" class="card-activity-btn" data-action="click->agenda#hide_agendaView">
     <i class="icone fa-regular fa-calendar-plus" style="color: #000000;"></i>
-    <p>Planifier</p>
   </div>
   <%# <% end %>
 
   <%# icone "y aller : ouverture GPS" %>
   <%= link_to activity_path(@activity), class: "card-activity-btn" do %>
     <i class="fa-solid fa-location-dot" style="color: #3D5555;"></i>
-    <p>Itineraire</p>
   <% end %>
 </div>

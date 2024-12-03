@@ -1,4 +1,14 @@
+<%# bouton "go back" %>
+<%= link_to activities_path do %>
+  <%= image_tag "go_back_arrow.png", alt: "Retour", class:"go-back-btn" %>
+<% end %>
+
 <h1>Mes favoris</h1>
+
+<%# search tab %>
+<%= render "activities/search_card" %>
+
+<br>
 
 <%# liste des activités %>
 <% @activities.each do |activity|%>

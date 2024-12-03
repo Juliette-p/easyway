@@ -1010,7 +1010,7 @@ ferme_rigolote = Activity.new(name: "La Ferme Rigolote",
 ferme_rigolote.photo.attach(io: file, filename: "fermerigolote.jpg", content_type: "image/jpg")
 ferme_rigolote.save
 
-# Restaurant 10: Le circuit
+# Restaurant 10: Le circus
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733241463/circus_uzfd8b.jpg").open
 circus = Activity.new(name: "Le circus",
   description: " Entrez sous le chapiteau et profitez du spectacle pour les yeux et les papilles ! 

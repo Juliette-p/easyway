@@ -21,17 +21,8 @@ class ActivitiesController < ApplicationController
       @activities = @activities.where(category: params[:category])
     end
 
-
-
-    # pour l'autocomplétion
-    @activities_names = []
-    @activities_addresses = []
-    @activities.each do |activitie|
-      @activities_names << activitie.name
-      @activities_addresses << activitie.address
-    end
-
     respond_to do |format|
+      # si format json alors on fait ça
       format.html {
         # mise à jour des marqueurs sur la map
         @markers = @activities.geocoded.map do |activity|
@@ -43,6 +34,7 @@ class ActivitiesController < ApplicationController
           }
         end
       }
+      # si format json, pas d'action particulière
       format.json
     end
   end
