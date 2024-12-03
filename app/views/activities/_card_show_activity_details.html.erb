@@ -1,6 +1,3 @@
-<%# description %>
-<p class="card-activity-details-text"><%= @activity.description %></p>
-
 <%# carte détails de l'activité : addresse, téléphone, website, ... %>
 <div class="card-activity-details"
 data-controller="copy-to-clipboard"
@@ -12,6 +9,7 @@ data-copy-to-clipboard-phone-text-value="Numéro de téléphone copié!">
     data-action="click->copy-to-clipboard#copyAddress">
     <i class="fa-solid fa-location-dot" style="color: #3D5555;"></i>
     <p data-copy-to-clipboard-target="address"><%= @activity.address %></p>
+    <i class="fa-regular fa-copy activity-copy"></i>
   </div>
 
   <%# téléphone %>
@@ -19,12 +17,34 @@ data-copy-to-clipboard-phone-text-value="Numéro de téléphone copié!">
   data-action="click->copy-to-clipboard#copyPhoneNumber">
     <i class="fa-solid fa-phone" style="color: #3D5555;"></i>
     <p data-copy-to-clipboard-target="phone"><%= @activity.phone_number %></p>
+    <i class="fa-regular fa-copy activity-copy"></i>
   </div>
 
   <%# url site web %>
   <div class="container-info">
-    <i class="fa-solid fa-globe" style="color: #3D5555;"></i>
-    <a href="<%= @activity.url %>" target="_blank" style="text-decoration: none;"><p><%= @activity.url %></p></a>
+    <a href="<%= @activity.url %>" target="_blank" style="text-decoration: none;" id="container-info-website">
+      <i class="fa-solid fa-globe" style="color: #3D5555;"></i>
+      <p>Site internet</p>
+      <i class="fa-solid fa-arrow-up-right-from-square activity-website-open"></i>
+    </a>
   </div>
 
 </div>
+
+<%# description %>
+<p class="card-activity-details-text" data-controller="activity-description">
+
+  <span class="short-text" data-activity-description-target="shortText">
+    <%= truncate(@activity.description, length: 150) %>
+  </span>
+
+  <span class="full-text" style="display: none;" data-activity-description-target="fullText">
+    <%= @activity.description %>
+  </span>
+
+  <% if @activity.description.length > 150 %>
+    <span class="show-more" data-action="click->activity-description#showFullText" data-activity-description-target="showMoreLink">Voir plus ⯆</span>
+    <span class="show-less" data-action="click->activity-description#showLessText" data-activity-description-target="showLessLink" style="display: none;">Voir moins ⯅</span>
+  <% end %>
+
+</p>

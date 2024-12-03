@@ -1,17 +1,37 @@
 .card-activity-details-text {
   color: $black;
-  font-size: 12px;
-  padding: 10px;
+  font-size: 14px;
+  padding: 20px 10px 20px 10px;
   text-align: justify;
+
+  .full-text {
+    display: none;
+    transition: all 0.3s ease;
+  }
+
+  .short-text {
+    display: inline;
+    transition: all 0.3s ease;
+  }
+
+  .show-more {
+    color: $darkgreen;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .show-less {
+    color: $darkgreen;
+    font-weight: 600;
+    cursor: pointer;
+  }
 }
 
 .card-activity-details {
   display: flex;
   flex-direction: column;
   color: black;
-  margin-inline: 0;
-  width: 100%;
-  padding: 10px;
+  padding: 30px 10px 0px 10px;
 }
 
 .container-info {
@@ -19,8 +39,38 @@
   flex-direction: row;
   gap: 10px;
   justify-content: left;
+  align-items: center;
+  margin: 8px 0px;
+  cursor: pointer;
+
+  i {
+    font-size: 15px;
+  }
+
+  .activity-copy {
+    color: grey;
+    font-size: 15px;
+  }
+
+  .activity-website-open {
+    color: grey;
+    font-size: 12px;
+  }
+
+  #container-info-website {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    align-items: center;
+
+    p {
+      padding: 0px 10px;
+    }
+  }
 
   p {
-    font-size: 12px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px;
   }
 }
