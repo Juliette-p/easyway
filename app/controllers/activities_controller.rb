@@ -21,8 +21,6 @@ class ActivitiesController < ApplicationController
       @activities = @activities.where(category: params[:category])
     end
 
-
-
     # pour l'autocomplétion
     @activities_names = []
     @activities_addresses = []
