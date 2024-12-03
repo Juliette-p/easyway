@@ -16,8 +16,31 @@ Favourite.destroy_all
 puts "end destroy all"
 
 puts "creating users"
-camille = User.create!(first_name: "camille", last_name: "dupont", email: "camille.dupont@mail.com", password: "pass12C")
+file = URI.parse( "https://res.cloudinary.com/dnm2n1iid/image/upload/v1732205716/nora_profile_lykcsp.jpg" ).open
+camille = User.create!(first_name: "Nora", last_name: "Camille", email: "camille.dupont@mail.com", password: "pass12C")
+camille.photo.attach(io: file, filename: "camille.jpg", content_type: "image/jpg")
+camille.save
+
+file = URI.parse( "https://res.cloudinary.com/dnm2n1iid/image/upload/v1733237787/IMG_2502_xru2io.jpg" ).open
 manu = User.create!(first_name: "manu", last_name: "martin", email: "manu.martin@mail.com", password: "pass12M")
+manu.photo.attach(io: file, filename: "manu.jpg", content_type: "image/jpg")
+manu.save
+
+file = URI.parse( "https://res.cloudinary.com/dnm2n1iid/image/upload/v1731686241/samples/people/smiling-man.jpg" ).open
+paul = User.create!(first_name: "Paul", last_name: "Marto", email: "paul.marto@mail.fr", password: "pass12M")
+paul.photo.attach(io: file, filename: "paul.jpg", content_type: "image/jpg")
+paul.save
+
+file = URI.parse( "https://res.cloudinary.com/dnm2n1iid/image/upload/v1733237556/stephanie_ls3fdy.jpg" ).open
+stephanie = User.create!(first_name: "Stephanie", last_name: "Monaco", email: "stephanie.monaco@mail.fr", password: "pass12M")
+stephanie.photo.attach(io: file, filename: "manu.jpg", content_type: "image/jpg")
+stephanie.save
+
+file = URI.parse( "https://res.cloudinary.com/dnm2n1iid/image/upload/v1733240459/rose_btbngh.jpg" ).open
+rose = User.create!(first_name: "Rose", last_name: "Fargeau", email: "rose.fargeau@mail.fr", password: "pass12M")
+rose.photo.attach(io: file, filename: "rose.jpg", content_type: "image/jpg")
+rose.save
+
 puts "end creating users"
 # ###############################################
 
@@ -61,7 +84,7 @@ musee_art_nantes.photo.attach(io: file, filename: "museeartnantes.jpg", content_
 musee_art_nantes.save
 
   
-file = URI.parse("https://www.chateaunantes.fr/wp-content/uploads/2020/09/Chateau-des-ducs-de-Bretagne.-Nantes-%C2%A9-Philippe-Piron-_-LVAN-2-768x614.jpg").open
+file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733235839/Chateau-des-ducs-de-Bretagne_mv5g09.jpg").open
 chateau_des_ducs = Activity.new(name: "Château des Ducs de Bretagne",
   description: "Le Château des Ducs de Bretagne, forteresse médiévale au cœur de Nantes, abrite le musée d'histoire de 
   la ville. Avec ses remparts, sa cour intérieure et ses expositions interactives, il offre un voyage 
@@ -226,6 +249,35 @@ maison_hommes_techniques.save!
 puts "creating activity parc et jardins"
 
 # jardin des plantes
+
+file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733236229/fermechantrerie_wtb2mn.jpg").open
+parc_chantrerie = Activity.new(name: "Parc et ferme de la Chantrerie",
+  description: "18 hectares sur la rive gauche de l'Erdre.L’aménagement très paysager longe l’Erdre sur près de 
+  900 mètres. On notera quelques très beaux arbres : hêtres pourpres, platanes, cèdres, épicéas, chênes et 
+  châtaigniers multi centenaires. Les communs de la propriété abritent une ferme d’éveil. Les différents animaux 
+  peuvent être observés dans les pâtures longeant l’allée principale. Rendez-vous à la ferme : A partir du mois 
+  d’avril jusqu’au mois d’octobre, parents et enfants peuvent partir à la rencontre des animaux et des légumes 
+  du potager et participer gratuitement à des animations. Chaque 1er dimanche du mois, la ferme est en visite libre 
+  le matin, avec des ateliers thématiques l’après-midi (programme complet ci-dessous). Le mercredi, les familles 
+  peuvent explorer librement le site et rencontrer l’animateur-fermier, lui poser des questions sur les animaux, 
+  obtenir des conseils de jardinage.",
+  category: "Parc",
+  address: "95 Route de Gachet 44300 Nantes, France",
+  phone_number: "",
+  url: "https://nature.metropole.nantes.fr/explorations-nantaises/les-11-grands-parcs-de-nantes/parc-de-la-chantrerie/#FERME",
+  stroller: true,
+  changing_table: false,
+  high_chair: false,
+  kids_friendly: true,
+  public_transport: true,
+  public_transport_detail: "bus C6: arret chantrerie",
+  car_park: false,
+  car_park_detail: "",
+  bike_park: true,
+  bike_park_detail: "Arceaux à vélos à l'entrée du parc")
+parc_chantrerie.photo.attach(io: file, filename: "parcchantrerie.jpg", content_type: "image/jpg")
+parc_chantrerie.save
+
 file = URI.parse("https://www.jardinspaysdelaloire.fr/media/4399/big/44-jardindesplantes_depliant2011_%C2%A9com-externe-ville-de-nantes.jpg").open
 jardin_plantes = Activity.new(name: "Jardin des Plantes",
   description: "Le Jardin des Plantes de Nantes est un havre de paix au cœur de la ville. Avec ses 7 hectares, ses serres et ses collections botaniques, c'est un lieu idéal pour une promenade en famille. Les enfants adoreront le manège écologique et les aires de jeux. Des visites guidées et des ateliers sont régulièrement organisés.",
@@ -738,16 +790,16 @@ description: "La Cantine du Voyage est un restaurant éphémère qui s'installe 
 cantine_voyage.photo.attach(io: file, filename: "cantinevoyage.jpg", content_type: "image/jpg")
 cantine_voyage.save
 
-# Le Petit Bacchus
-file = URI.parse("https://cdn.eat-list.fr/establishment/photo/gallery_photo/44000-nantes/le-bistro-des-enfants-nantais_188456_d0e.jpg").open
-petit_bacchus = Activity.new(name: "Bistrot des enfants Nantais",
-description: "Le Bistrot des enfants nantais est un restaurant familial au cœur de Nantes, réputé pour sa cuisine traditionnelle 
+# Le Bistrot des enfants Nantais
+file = URI.parse("https://www.petitfute.com/medias/professionnel/1491699/premium/originale/640cc26bdb812-bistro-enfant-nantais.png").open
+bistrot_enfants_nantais = Activity.new(name: "Le Bistrot des enfants Nantais",
+description: "Le Bistrot des enfants Nantais est un restaurant familial au cœur de Nantes, réputé pour sa cuisine traditionnelle 
   française. L'ambiance chaleureuse et le menu enfant varié en font un lieu idéal pour un repas en famille. 
   Les enfants apprécieront les portions généreuses et l'accueil bienveillant du personnel.",
   category: "Café et Resto",
-  address: "4 rue Desaix, 44000 Nantes",
-  phone_number: "02 40 20 24 25",
-  url: "",
+  address: "4 RUE DESAIX, 44000 NANTES, France",
+  phone_number: "02 51 12 15 11",
+  url: "https://le-bistro-des-enfants-nantais.eatbu.com/?lang=fr",
   stroller: true,
   changing_table: false,
   high_chair: true,
@@ -758,8 +810,8 @@ description: "Le Bistrot des enfants nantais est un restaurant familial au cœur
   car_park_detail: "",
   bike_park: true,
   bike_park_detail: "Arceaux à vélos dans la rue")
-petit_bacchus.photo.attach(io: file, filename: "petitbacchus.jpg", content_type: "image/jpg")
-petit_bacchus.save
+bistrot_enfants_nantais.photo.attach(io: file, filename: "bistrotdesenfants.jpg", content_type: "image/jpg")
+bistrot_enfants_nantais.save
   
 # Restaurant 1: Le café des Enfants
 file = URI.parse("https://resize.elle.fr/original/var/plain_site/storage/images/loisirs/sorties/dossiers/cafe-pour-enfants-cafe-poussette/80850947-1-fre-FR/Cafes-pour-enfants-nos-adresses-preferees.jpg").open
@@ -958,27 +1010,31 @@ ferme_rigolote = Activity.new(name: "La Ferme Rigolote",
 ferme_rigolote.photo.attach(io: file, filename: "fermerigolote.jpg", content_type: "image/jpg")
 ferme_rigolote.save
 
-# Restaurant 10: L'Aquarium Gourmand
-file = URI.parse("https://img.freepik.com/photos-premium/restaurant-du-recif-est-entoure-grand-aquarium_865967-43503.jpg?w=826").open
-aquarium_gourmand = Activity.new(name: "L'Aquarium Gourmand",
-  description: "Un restaurant avec de grands aquariums où les enfants peuvent observer des poissons exotiques 
-  tout en mangeant. Des menus spéciaux 'sirène' et 'pirate' sont proposés aux enfants.",
+# Restaurant 10: Le circus
+file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733241463/circus_uzfd8b.jpg").open
+circus = Activity.new(name: "Le circus",
+  description: " Entrez sous le chapiteau et profitez du spectacle pour les yeux et les papilles ! 
+  Monsieur Loyal & sa troupe de saltimbanques vous servent 7 jours sur 7 pour déjeuner ou dîner avec 
+  un numéro de cuisine fait maison. Une décoration mélangeant clowns, manèges & acrobaties vous plongent dans 
+  un univers spectaculaire proposant 120 places assises en intérieur et une jolie terrasse pour les représentations 
+  aux beaux jours. Un manège est à disposition des petits.
+  Bienvenue sur la piste du Circus! ",
   category: "Café et Resto",
-  address: "Route de Gachet, 44470 Carquefou",
-  phone_number: "02 40 22 33 44",
-  url: "https://aquariumgourmand.com",
+  address: "avenue syrma, 44470 Carquefou",
+  phone_number: "02 28 16 61 24",
+  url: "https://circussainteluce.com",
   stroller: true,
   changing_table: true,
   high_chair: true,
   kids_friendly: true,
-  public_transport: true,
-  public_transport_detail: "Bus: Ligne 72, arrêt 'Docks'",
+  public_transport: false,
+  public_transport_detail: "",
   car_park: true,
-  car_park_detail: "Parking couvert payant",
+  car_park_detail: "Parking gratuit",
   bike_park: true,
   bike_park_detail: "Arceaux à vélos devant le restaurant")
-aquarium_gourmand.photo.attach(io: file, filename: "aquariumgourmand.jpg", content_type: "image/jpg")
-aquarium_gourmand.save!
+circus.photo.attach(io: file, filename: "circus.jpg", content_type: "image/jpg")
+circus.save!
 
   # A l'abord'âge : le café participatif
 file = URI.parse("https://www.bigcitylife.fr/wp-content/uploads/2023/10/image-8.jpg").open
@@ -1100,7 +1156,7 @@ puts "creating espace jeux"
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732792779/blockout_nzhrlq.jpg").open
 blockout = Activity.new(name: "Block'Out Nantes",
   description: "Block'Out Nantes est une salle d'escalade de bloc offrant des parcours variés pour tous les niveaux. Idéal pour une activité sportive en famille ou entre amis, le lieu propose également des cours et des stages pour les enfants.",
-  category: "Espace de jeu",
+  category: "Espace de jeux",
   address: "27 Bd Bâtonnier Cholet, 44100 Nantes",
   phone_number: "02 55 10 10 11",
   url: "https://nantes.blockout.fr",
@@ -1121,7 +1177,7 @@ blockout.save!
 file = URI.parse("https://www.parc-attraction-loisirs.fr/wp/files/2024/04/parc-des-naudieres.jpg").open
 parc_naudieres = Activity.new(name: "Parc des Naudières",
   description: "Le parc des Naudières est un parc d'attractions familial situé à Sautron, près de Nantes. Il propose de nombreuses activités pour les enfants : manèges, toboggans aquatiques, mini-ferme, structures gonflables et aires de jeux. C'est un lieu idéal pour une journée de divertissement en famille.",
-  category: "Espace de jeu",
+  category: "Espace de jeux",
   address: "Route de Brimberne, 44880 Sautron",
   phone_number: "02 40 63 21 05",
   url: "https://www.parcnaudieres.com",
@@ -1141,7 +1197,7 @@ parc_naudieres.save!
 file = URI.parse("https://www.sainte-luce-loire.com/medias/2021/07/royal-kids-web-1240x523.jpg").open
 royal_kids = Activity.new(name: "Royal Kids",
   description: "Royal Kids est un parc de jeux intérieur pour enfants offrant une variété d'activités ludiques et sportives. Les enfants peuvent profiter de structures gonflables, toboggans, piscines à balles, parcours d'obstacles et zones de jeux adaptées à différents âges. C'est un endroit idéal pour les anniversaires et les sorties en famille, permettant aux enfants de s'amuser en toute sécurité.",
-  category: "Espace de jeu",
+  category: "Espace de jeux",
   address: "12 Rue Marcel Dassault, 44980 Sainte-Luce-sur-Loire",
   phone_number: "02 40 25 21 21",
   url: "https://www.royalkids.fr/parcs/sainte_luce_sur_loire",
@@ -1161,7 +1217,7 @@ royal_kids.save!
 file = URI.parse("https://www.galipy.com/wp-content/uploads/2016/04/ac03-500x500.jpg").open
 galipy = Activity.new(name: "Galipy",
   description: "Galipy est un espace de jeux intérieur pour enfants situé à Saint-Sébastien-sur-Loire. Il propose des structures de jeux adaptées à différents âges, des toboggans, des piscines à balles, et des parcours d'obstacles. C'est un lieu idéal pour que les enfants se dépensent et s'amusent en toute sécurité, quel que soit le temps.",
-  category: "Espace de jeu",
+  category: "Espace de jeux",
   address: "2 Rue Marie Curie, 44230 Saint-Sébastien-sur-Loire",
   phone_number: "02 40 34 90 90",
   url: "https://www.galipy.com",
@@ -1185,7 +1241,7 @@ nidoludo = Activity.new(name: "Nidoludo",
               avec des jeux d'imitation, de musique et de motricité. Les parents peuvent profiter 
               d'un salon de thé pendant que les enfants s'amusent. Nidoludo offre également une programmation 
               d'ateliers variés pour les enfants de 0 à 10 ans, comme l'éveil musical, le yoga, le théâtre et le cirque.",
-  category: "Espace de jeu",
+  category: "Espace de jeux",
   address: "4 Rue de l'Héronnière, 44000 Nantes",
   phone_number: "06 51 88 36 35",
   url: "https://nidoludo.fr",
@@ -1203,6 +1259,30 @@ nidoludo.photo.attach(io: file, filename: "nidoludo.png", content_type: "image/p
 nidoludo.save!
 
 puts "creating mediatheque"
+
+file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733235553/mediatheque_carquefou_sg1ahd.jpg").open
+mediatheque_carquefou = Activity.new(
+  name: "Médiathèque de Carquefou",
+  description: "La médiathèque de Carquefou est un espace culturel moderne offrant une large collection de livres, 
+  médias et ressources numériques. Elle propose des animations pour tous les âges et des espaces de lecture 
+  confortables. Une ludothèque est également à diposition. Des soirées jeux sont régulièrement proposés",
+  category: "Lieu culturel",
+  address: "21 Rue de la Mairie, 44470 Carquefou",
+  phone_number: "02 28 22 24 00",
+  url: "https://mediatheque.carquefou.fr/",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true,
+  public_transport: true,
+  public_transport_detail: "Bus: Ligne 85, arrêt 'Mairie de Carquefou'",
+  car_park: true,
+  car_park_detail: "Parking public gratuit à proximité",
+  bike_park: true,
+  bike_park_detail: "Arceaux à vélos devant la médiathèque"
+)
+mediatheque_carquefou.photo.attach(io: file, filename: "mediatheque_carquefou.jpg", content_type: "image/jpg")
+mediatheque_carquefou.save
 
 # Bibliothèque du Breil-Malville
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732793552/biblio_breil_wnrpn1.png").open
@@ -1395,6 +1475,28 @@ luce_courville = Activity.new(name: "Médiathèque Luce Courville",
 luce_courville.photo.attach(io: file, filename: "luce_courville.jpg", content_type: "image/jpg")
 luce_courville.save!
 
+file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733239447/inclusive_playground_for_children_with_sensory_paths_counting_and_building_panels_musical_tubes_sound_stations_colorful_and_fragrant_elements_in_a_park_setting_c5b0ce.jpg").open
+aire_jeu_charbonneau = Activity.new(name: "Aire de jeu inclusive du Charbonneau",
+  description: "une aire de jeux inclusive permettant à tous les enfants (de 2 à 12 ans) de profiter pleinement d'une aire adaptée à chacun.
+Les différents modules sont accessibles PMR et encouragent l’éveil des enfants au travers des 5 sens: du toucher (parcours sensoriel), de la manipulation (panneaux pour compter, construire…), de l’audition (tubes musicaux, bornes sonores), des couleurs, des odeurs.
+Une aire de jeux adaptée à tous, qui permet aux enfants et aux familles de se rencontrer et de partager un moment de jeux et de convivialité dans un espace adapté à chacun.",
+  category: "Espace de jeux",
+  address: "Passage de la noue, 44470 Carquefou, France",
+  phone_number: "",
+  url: "https://metropole.nantes.fr/infonantes/equipement/E2437-parc-du-charbonneau",
+  stroller: true,
+  changing_table: false,
+  high_chair: false,
+  kids_friendly: true,
+  public_transport: true,
+  public_transport_detail: "",
+  car_park: true,
+  car_park_detail: "Parking gratuit à proximité",
+  bike_park: true,
+  bike_park_detail: "Arceaux à vélos disponibles")
+aire_jeu_charbonneau.photo.attach(io: file, filename: "aire_jeu_charbonneau.jpg", content_type: "image/jpg")
+aire_jeu_charbonneau.save!
+
 puts "end creating activities"
 
 # ###############################################
@@ -1415,7 +1517,7 @@ camille_rating_1 = Rating.create!(user: camille,
 
 camille_rating_2 = Rating.create!(user: manu,
   activity: nidoludo,
-  visit_date: Date.today + 4,
+  visit_date: Date.today - 5,
   rating: 5,
   comment: "Des jeux d'imitation avec les enfants, de bons apres-midi en famille! super goûter après sur place!",
   stroller: true,
@@ -1427,7 +1529,102 @@ manu_rating_1 = Rating.create!(user: manu,
   activity: musee_art_nantes,
   visit_date: Date.today + 2,
   rating: 5,
-  comment: "access avec poussette grâce à l'ascenseur! et table à langer. Espace de jeux et salon de thé adaptés aux enfants",
+  comment: "access avec poussette grâce à l'ascenseur! et table à langer. 
+            Espace de jeux et salon de thé adaptés aux enfants",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+manu_rating_2 = Rating.create!(user: manu,
+  activity: parc_chantrerie,
+  visit_date: Date.today - 60,
+  rating: 5,
+  comment: "Parc très agréable au bord de l'Erdre. Reposant et avec une ferme très apprécié par les enfants",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+manu_rating_3 = Rating.create!(user: manu,
+  activity: ferme_rigolote,
+  visit_date: Date.today - 60,
+  rating: 3,
+  comment: "Lieu agréable, mais peu d'animaux en tout cas moins qu'imaginé. Carte un peu cher",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+rose_rating_1 = Rating.create!(user: rose,
+  activity: musee_art_nantes,
+  visit_date: Date.today - 4,
+  rating: 5,
+  comment: "access avec poussette grâce à l'ascenseur! et table à langer OK. 
+            c'est l'idéal pour faire découvrir l'art aux enfants. Ma fille a adorée l'atelier de peinture",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+rose_rating_2 = Rating.create!(user: rose,
+  activity: circus,
+  visit_date: Date.today - 4,
+  rating: 5,
+  comment: "access avec poussette et table à langer OK. 
+            Très belle décoration sur le theme du cirque. Ma fille a adorée le tour de manège offert",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+paul_rating_1 = Rating.create!(user: paul,
+  activity: circus,
+  visit_date: Date.today - 12,
+  rating: 4,
+  comment: "Table à langer à dispo très pratique pour changer bébé. Toute la famille était ravie
+            par le spectacle de jonglage",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+paul_rating_2 = Rating.create!(user: paul,
+  activity: musee_art_nantes,
+  visit_date: Date.today - 12,
+  rating: 5,
+  comment: "Table à langer à dispo très pratique pour changer bébé. Petite pose gourmande au 
+            Salon de thé adaptés aux enfants. toute la famille a appréciée",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+paul_rating_2 = Rating.create!(user: stephanie,
+  activity: aire_jeu_charbonneau,
+  visit_date: Date.today - 10,
+  rating: 4,
+  comment: "aire de jeu très agréable, permet à mon enfant de 6ans de grimper et de se défouler. ",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+stephanie_rating_1 = Rating.create!(user: stephanie,
+  activity: parc_chantrerie,
+  visit_date: Date.today - 12,
+  rating: 4,
+  comment: "Très beau parc avec de beaux arbres centenaires. Belle promenade dans le jardin potager",
+  stroller: true,
+  changing_table: true,
+  high_chair: false,
+  kids_friendly: true)
+
+stephanie_rating_2 = Rating.create!(user: stephanie,
+  activity: aire_jeu_charbonneau,
+  visit_date: Date.today - 10,
+  rating: 4,
+  comment: "aire de jeu nouvellement créée, mes enfants de 4 ans et 2 nas ont adorés les modules musicaux. ",
   stroller: true,
   changing_table: true,
   high_chair: false,
