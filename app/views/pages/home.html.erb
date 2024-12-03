@@ -14,8 +14,8 @@
 <% if current_user %>
   <div class="basic-card home-card">
     <div class="home-card-line">
-      <p>Mes Cool kids places préférées</p>
-      <i class="fa-solid fa-heart" style="color: #FF8351; font-size: 20px;"></i>
+      <p>Mes activités favorites</p>
+      <i class="fa-solid fa-heart" style="color: #FF8351;"></i>
     </div>
     <% if Favourite.where(user: current_user) %>
       <%= render "home_card_carousel", activities: @fav_activities, category: "favourites" %>
@@ -27,8 +27,8 @@
 
 <div class="basic-card home-card">
   <div class="home-card-line">
-    <p>Les Cool kids places du moment</p>
-    <i class="fa-solid fa-star" style="color: #FFCC67; font-size: 20px;"></i>
+    <p>Les activités les mieux notées</p>
+    <i class="fa-solid fa-star" style="color: #FFCC67;"></i>
   </div>
   <%= render "home_card_carousel", activities: @activities, category: "activities"  %>
 </div>
