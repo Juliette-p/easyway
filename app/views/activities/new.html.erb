@@ -52,7 +52,7 @@
         <%= f.text_area :description,
           # params[:description],
           class: "form-control",
-          placeholder: "Ajoutez une brève description..."
+          placeholder: "Ajoutez une brève description...",
           data: { target: "character-count-activity.text", action: "keyup->character-count-activity#updateCounter"}
         %>
         <p data-character-count-activity-target="counter"></p>
