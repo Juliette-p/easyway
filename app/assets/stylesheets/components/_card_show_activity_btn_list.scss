@@ -1,14 +1,12 @@
 .card-activity-btn-list {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-block: 10px;
-  // margin-inline: 10px;
   width: 100%;
-  padding: 15px;
+  padding: 20px 0px;
   gap: 5px;
+  border-radius: 50px;
 }
 
 .card-activity-btn {
@@ -17,14 +15,8 @@
   align-items: center;
   text-decoration: none;
 
-  p {
-    color: $black;
-    font-size: 12px;
-    margin: 0px;
-  }
-
   i {
-    font-size: 20px;
+    font-size: 25px;
     color: $black;
   }
 

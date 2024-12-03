@@ -15,8 +15,8 @@
     <div class="card-activity basic-card">
 
         <div class="card-activity-image"
-        style="background-image: url(<%= activity.photo.attached? ? cl_image_path(activity.photo.key) : asset_path('image_par_defaut.png') %>)">      
-          
+        style="background-image: url(<%= activity.photo.attached? ? cl_image_path(activity.photo.key) : asset_path('image_par_defaut.png') %>)">
+
 
         </div>
 
@@ -34,7 +34,7 @@
           </div>
 
           <div class="card-activity-description">
-            <%= truncate activity.description, length: 80 %>
+            <%= truncate activity.description, length: 70 %>
           </div>
         </div>
       </div>
