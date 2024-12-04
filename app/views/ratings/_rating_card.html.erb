@@ -1,0 +1,55 @@
+<div class="user-infos">
+  <p><%= rating.user.first_name.capitalize %> <%= rating.user.last_name.upcase %></p>
+  <% if rating.user.photo.attached? %>
+    <%= cl_image_tag rating.user.photo.key, crop: :fill, alt: "profil-picture", class: "avatar user-profile-picture" %>
+  <% else %>
+    <%= image_tag "image_user_par_defaut.png", alt: "default-profil-picture", class: "avatar user-profile-picture" %>
+  <% end  %>
+</div>
+
+<div class="carousel-item-row">
+  <i class="icone fa-solid fa-star" style="color: #FFCC51;"></i>
+  <p><strong><%= rating.rating %> / 5</strong></p>
+</div>
+
+<div class="carousel-item-row">
+  <% if rating.stroller %>
+    <%= image_tag "stroller_ok_30px.png", alt: "Stroller ok", width: 25, height: 25 %>
+  <% else %>
+    <%= image_tag "stroller_nok_30px.png", alt: "Stroller nok", width: 25, height: 25 %>
+  <% end %>
+
+  <% if rating.changing_table %>
+    <%= image_tag "changing_table_ok_30px.png", alt: "changing_table ok", width: 25, height: 25 %>
+  <% else %>
+    <%= image_tag "changing_table_nok_30px.png", alt: "changing_table nok", width: 25, height: 25 %>
+  <% end %>
+
+  <% if rating.high_chair %>
+    <%= image_tag "high_chair_ok_30px.png", alt: "high_chair ok", width: 25, height: 25 %>
+  <% else %>
+    <%= image_tag "high_chair_nok_30px.png", alt: "high_chair nok", width: 25, height: 25 %>
+  <% end %>
+
+  <% if rating.kids_friendly %>
+    <%= image_tag "kids_friendly_ok_30px.png", alt: "kids_friendly ok", width: 25, height: 25 %>
+  <% else %>
+    <%= image_tag "kids_friendly_nok_30px.png", alt: "kids_friendly nok", width: 25, height: 25 %>
+  <% end %>
+</div>
+
+<p data-controller="rating-comment">
+<%# <p> %>
+  <span class="short-text" data-rating-comment-target="shortText">
+    <%= truncate(rating.comment.capitalize, length: 75) %>
+  </span>
+
+  <span class="full-text" style="display: none;" data-rating-comment-target="fullText">
+    <%= rating.comment.capitalize %>
+  </span>
+
+  <% if rating.comment.capitalize.length > 75 %>
+    <span class="show-more" data-action="click->rating-comment#showFullText" data-rating-comment-target="showMoreLink">Voir plus ⯆</span>
+    <span class="show-less" data-action="click->rating-comment#showLessText" data-rating-comment-target="showLessLink" style="display: none;">Voir moins ⯅</span>
+  <% end %>
+</p>

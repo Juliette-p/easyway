@@ -49,19 +49,19 @@ puts "creating culturals activities"
 
 file = URI.parse( "https://www.seevisit.fr/uploads/seevisit-nantes-musee-d-art-de-nantes.jpg" ).open
 musee_art_nantes = Activity.new(name: "musée d'arts",
-  description: "Au Musée d’arts de Nantes, neuf siècles d’arts visuels, du Moyen Âge à aujourd’hui, 
-                dialoguent au fil de ses espaces. Les collections représentent un fonds de plus de 14000 œuvres, 
-                dont près de la moitié en art moderne et contemporain. Dans une architecture mariant celle d’hier à 
-                celle d’aujourd’hui, le musée offre aux visiteurs un point de vue unique sur l’art occidental et 
+  description: "Au Musée d’arts de Nantes, neuf siècles d’arts visuels, du Moyen Âge à aujourd’hui,
+                dialoguent au fil de ses espaces. Les collections représentent un fonds de plus de 14000 œuvres,
+                dont près de la moitié en art moderne et contemporain. Dans une architecture mariant celle d’hier à
+                celle d’aujourd’hui, le musée offre aux visiteurs un point de vue unique sur l’art occidental et
                 d’audacieuses expositions temporaires qui font la renommée de ce grand musée de l’Ouest.
                 Dimanche: visite en famille, venez avec vos enfants.
-                Parce que l’art n’est pas qu’une affaire de grands, les tout-petits sont les bienvenus ! 
-                L’accès poussette se fait par l’ascenseur sur le parvis du musée et des tables à langer sont installées 
+                Parce que l’art n’est pas qu’une affaire de grands, les tout-petits sont les bienvenus !
+                L’accès poussette se fait par l’ascenseur sur le parvis du musée et des tables à langer sont installées
                 aux sanitaires de l’étage -1.
-                Restaurer les œuvres oui, les petits ventres aussi ! Avant ou après la visite, le Café du musée vous 
-                attend pour prendre le goûter. Des livres pour petits et grands ainsi que des jeux de société sont 
+                Restaurer les œuvres oui, les petits ventres aussi ! Avant ou après la visite, le Café du musée vous
+                attend pour prendre le goûter. Des livres pour petits et grands ainsi que des jeux de société sont
                 à disposition.
-                Passez aussi faire un tour à la librairie-boutique, qui propose un large choix de souvenirs : crayons, 
+                Passez aussi faire un tour à la librairie-boutique, qui propose un large choix de souvenirs : crayons,
                 jeux, livres, cartes-postales, carnets de dessins…",
   category: "Lieu culturel",
   address: "10 rue Georges-Clemenceau, Nantes",
@@ -74,7 +74,7 @@ musee_art_nantes = Activity.new(name: "musée d'arts",
   public_transport: true,
   public_transport_detail: "Tram: Ligne 1, arrêt « Duchesse-Anne » puis 6 minutes de marche
                             Ligne 2, arrêt « St-Mihiel » puis 10 minutes de marche
-                            Bus: Lignes C1, C6, 11, 12 et Busway 4.Arrêt « Foch-Cathédrale » 
+                            Bus: Lignes C1, C6, 11, 12 et Busway 4.Arrêt « Foch-Cathédrale »
                             puis 4 minutes de marche.",
   car_park: true,
   car_park_detail: "Parking couvert : Cathédrale (rue Sully, 44000 Nantes)",
@@ -83,12 +83,12 @@ musee_art_nantes = Activity.new(name: "musée d'arts",
 musee_art_nantes.photo.attach(io: file, filename: "museeartnantes.jpg", content_type: "image/jpg")
 musee_art_nantes.save
 
-  
+
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733235839/Chateau-des-ducs-de-Bretagne_mv5g09.jpg").open
 chateau_des_ducs = Activity.new(name: "Château des Ducs de Bretagne",
-  description: "Le Château des Ducs de Bretagne, forteresse médiévale au cœur de Nantes, abrite le musée d'histoire de 
-  la ville. Avec ses remparts, sa cour intérieure et ses expositions interactives, il offre un voyage 
-  fascinant à travers l'histoire de Nantes et de la région. Les enfants apprécieront particulièrement 
+  description: "Le Château des Ducs de Bretagne, forteresse médiévale au cœur de Nantes, abrite le musée d'histoire de
+  la ville. Avec ses remparts, sa cour intérieure et ses expositions interactives, il offre un voyage
+  fascinant à travers l'histoire de Nantes et de la région. Les enfants apprécieront particulièrement
   les animations et les ateliers proposés pendant les vacances scolaires.",
   category: "Lieu culturel",
   address: "4 Place Marc Elder, 44000 Nantes",
@@ -106,11 +106,11 @@ chateau_des_ducs = Activity.new(name: "Château des Ducs de Bretagne",
   bike_park_detail: "Stations Bicloo à proximité")
 chateau_des_ducs.photo.attach(io: file, filename: "chateaudesducs.jpg", content_type: "image/jpg")
 chateau_des_ducs.save
-  
+
 file = URI.parse("https://mavieenloireatlantique.fr/wp-content/uploads/2023/02/machines-de-lile-11.jpg").open
 machines_ile = Activity.new(name: "Les Machines de l'île",
-  description: "Les Machines de l'île sont un projet artistique unique, mêlant l'imaginaire de Jules Verne aux mondes 
-  mécaniques de Léonard de Vinci. Le Grand Éléphant, le Carrousel des Mondes Marins et l'Arbre aux Hérons 
+  description: "Les Machines de l'île sont un projet artistique unique, mêlant l'imaginaire de Jules Verne aux mondes
+  mécaniques de Léonard de Vinci. Le Grand Éléphant, le Carrousel des Mondes Marins et l'Arbre aux Hérons
   émerveillent petits et grands. Des ateliers de découverte sont proposés pour les enfants.",
   category: "Lieu culturel",
   address: "Boulevard Léon Bureau, 44200 Nantes",
@@ -128,13 +128,13 @@ machines_ile = Activity.new(name: "Les Machines de l'île",
   bike_park_detail: "Parking vélos gratuit sur site")
 machines_ile.photo.attach(io: file, filename: "machinesile.jpg", content_type: "image/jpg")
 machines_ile.save
-  
+
 
 file = URI.parse("https://metropole.nantes.fr/files/images/culture-patrimoine/equipements/ecran-planetarium-675.jpg").open
 planetarium = Activity.new(name: "Planétarium de Nantes",
-  description: "Le Planétarium de Nantes offre un voyage fascinant à travers l'univers. Grâce à son dôme-écran de 8 
-  mètres de diamètre, les visiteurs peuvent explorer les étoiles, les planètes et les galaxies. 
-  Des séances spéciales pour enfants sont proposées, ainsi que des ateliers d'astronomie pendant les 
+  description: "Le Planétarium de Nantes offre un voyage fascinant à travers l'univers. Grâce à son dôme-écran de 8
+  mètres de diamètre, les visiteurs peuvent explorer les étoiles, les planètes et les galaxies.
+  Des séances spéciales pour enfants sont proposées, ainsi que des ateliers d'astronomie pendant les
   vacances scolaires.",
   category: "Lieu culturel",
   address: "8 Rue des Acadiens, 44100 Nantes",
@@ -155,9 +155,9 @@ planetarium.save
 
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732794744/square_bureau_ydxrrc.jpg").open
 museum_histoire_naturelle = Activity.new(name: "Muséum d'Histoire Naturelle",
-  description: "Le Muséum d'Histoire Naturelle de Nantes propose une fascinante exploration de la biodiversité et de 
-                l'évolution. Avec ses collections de fossiles, de minéraux et d'animaux naturalisés, il offre une 
-                expérience éducative pour toute la famille. Des ateliers et des visites guidées sont régulièrement 
+  description: "Le Muséum d'Histoire Naturelle de Nantes propose une fascinante exploration de la biodiversité et de
+                l'évolution. Avec ses collections de fossiles, de minéraux et d'animaux naturalisés, il offre une
+                expérience éducative pour toute la famille. Des ateliers et des visites guidées sont régulièrement
                 organisés pour les enfants.",
   category: "Lieu culturel",
   address: "12 Rue Voltaire, 44000 Nantes",
@@ -178,9 +178,9 @@ museum_histoire_naturelle.save
 
 file = URI.parse("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtvIQa3L_HfqHryQGuKqi5E42zU9l1Zo3f2Q&s").open
 musee_enfants = Activity.new(name: "Musée des enfants de Nantes",
-  description: "Le Musée des Enfants de Nantes est un lieu unique conçu pour éveiller, stimuler et développer 
-              l'imagination des enfants. Il offre des expositions interactives, des ateliers créatifs et des espaces 
-              d'expérimentation adaptés aux enfants de 3 mois à 12 ans. Le musée vise à démocratiser l'art et la 
+  description: "Le Musée des Enfants de Nantes est un lieu unique conçu pour éveiller, stimuler et développer
+              l'imagination des enfants. Il offre des expositions interactives, des ateliers créatifs et des espaces
+              d'expérimentation adaptés aux enfants de 3 mois à 12 ans. Le musée vise à démocratiser l'art et la
               culture auprès de tous les enfants, tout en renforçant les liens intergénérationnels et familiaux12.",
   category: "Lieu culturel",
   address: "20 All. de la Maison Rouge, 44000 Nantes",
@@ -221,7 +221,7 @@ musee_jules_verne = Activity.new(
   )
 musee_jules_verne.photo.attach(io: file, filename: "musee_jules_verne.jpg", content_type: "image/jpg")
 musee_jules_verne.save!
-    
+
 # Maison des Hommes et des techniques
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732799733/atelier_et_chantier_uys0ar.jpg").open
 maison_hommes_techniques = Activity.new(
@@ -244,7 +244,7 @@ maison_hommes_techniques = Activity.new(
   )
 maison_hommes_techniques.photo.attach(io: file, filename: "maison_hommes_techniques.jpg", content_type: "image/jpg")
 maison_hommes_techniques.save!
-      
+
 # ###############################################
 puts "creating activity parc et jardins"
 
@@ -252,14 +252,14 @@ puts "creating activity parc et jardins"
 
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733236229/fermechantrerie_wtb2mn.jpg").open
 parc_chantrerie = Activity.new(name: "Parc et ferme de la Chantrerie",
-  description: "18 hectares sur la rive gauche de l'Erdre.L’aménagement très paysager longe l’Erdre sur près de 
-  900 mètres. On notera quelques très beaux arbres : hêtres pourpres, platanes, cèdres, épicéas, chênes et 
-  châtaigniers multi centenaires. Les communs de la propriété abritent une ferme d’éveil. Les différents animaux 
-  peuvent être observés dans les pâtures longeant l’allée principale. Rendez-vous à la ferme : A partir du mois 
-  d’avril jusqu’au mois d’octobre, parents et enfants peuvent partir à la rencontre des animaux et des légumes 
-  du potager et participer gratuitement à des animations. Chaque 1er dimanche du mois, la ferme est en visite libre 
-  le matin, avec des ateliers thématiques l’après-midi (programme complet ci-dessous). Le mercredi, les familles 
-  peuvent explorer librement le site et rencontrer l’animateur-fermier, lui poser des questions sur les animaux, 
+  description: "18 hectares sur la rive gauche de l'Erdre.L’aménagement très paysager longe l’Erdre sur près de
+  900 mètres. On notera quelques très beaux arbres : hêtres pourpres, platanes, cèdres, épicéas, chênes et
+  châtaigniers multi centenaires. Les communs de la propriété abritent une ferme d’éveil. Les différents animaux
+  peuvent être observés dans les pâtures longeant l’allée principale. Rendez-vous à la ferme : A partir du mois
+  d’avril jusqu’au mois d’octobre, parents et enfants peuvent partir à la rencontre des animaux et des légumes
+  du potager et participer gratuitement à des animations. Chaque 1er dimanche du mois, la ferme est en visite libre
+  le matin, avec des ateliers thématiques l’après-midi (programme complet ci-dessous). Le mercredi, les familles
+  peuvent explorer librement le site et rencontrer l’animateur-fermier, lui poser des questions sur les animaux,
   obtenir des conseils de jardinage.",
   category: "Parc",
   address: "95 Route de Gachet 44300 Nantes, France",
@@ -297,7 +297,7 @@ jardin_plantes = Activity.new(name: "Jardin des Plantes",
   bike_park_detail: "Arceaux à vélos à l'entrée du jardin")
 jardin_plantes.photo.attach(io: file, filename: "jardinplantes.jpg", content_type: "image/jpg")
 jardin_plantes.save
-      
+
 #  Parc du Grand Blottereau
 file = URI.parse("https://fastly.4sqi.net/img/general/600x600/7gctTY8eF2YH9-yLPLgHFck5eKOKJr7bvxjncTBYwJ4.jpg").open
 grand_blottereau = Activity.new(name: "Parc du Grand Blottereau",
@@ -318,13 +318,13 @@ grand_blottereau = Activity.new(name: "Parc du Grand Blottereau",
   bike_park_detail: "Arceaux à vélos disponibles")
 grand_blottereau.photo.attach(io: file, filename: "grandblottereau.jpg", content_type: "image/jpg")
 grand_blottereau.save
-      
+
 # Parc de la Beaujoire
 file = URI.parse("https://nanteswithlove.fr/wp-content/uploads/2015/07/Parc-de-la-Roseraie-Nantes-61.jpg").open
 parc_beaujoire = Activity.new(name: "Parc de la Beaujoire",
-description: "Le Parc de la Beaujoire est un vaste espace vert de 12 hectares, idéal pour les activités en famille. 
-  Les enfants adoreront les aires de jeux, le parcours sportif, et les grands espaces pour courir et 
-  jouer. Le parc abrite également un jardin des plantes médicinales et aromatiques, parfait pour éveiller 
+description: "Le Parc de la Beaujoire est un vaste espace vert de 12 hectares, idéal pour les activités en famille.
+  Les enfants adoreront les aires de jeux, le parcours sportif, et les grands espaces pour courir et
+  jouer. Le parc abrite également un jardin des plantes médicinales et aromatiques, parfait pour éveiller
   les sens des plus jeunes.",
   category: "Parc",
   address: "Route de Saint-Joseph, 44300 Nantes",
@@ -342,7 +342,7 @@ description: "Le Parc de la Beaujoire est un vaste espace vert de 12 hectares, i
   bike_park_detail: "Arceaux à vélos disponibles")
 parc_beaujoire.photo.attach(io: file, filename: "parcbeaujoire.jpg", content_type: "image/jpg")
 parc_beaujoire.save
-  
+
 # Jardin extraordinaire
 file = URI.parse("https://api-infonantes.nantesmetropole.fr/banque/public/images/lieux/2/1-E5665-24062023-BLL2274.jpg").open
 jardin_extraordinaire = Activity.new(name: "Jardin extraordinaire",
@@ -383,7 +383,7 @@ ile_versailles = Activity.new(name: "Jardin de l'Ile de Versailles",
   bike_park_detail: "Arceaux à vélos disponibles")
 ile_versailles.photo.attach(io: file, filename: "ileversailles.jpg", content_type: "image/jpg")
 ile_versailles.save
-                
+
 file = URI.parse("https://upload.wikimedia.org/wikipedia/commons/0/02/Nantes_-_Parc_Gaudiniere_%281%29.jpg").open
 parc_gaudiniere = Activity.new(name: "Parc de la Gaudinière",
   description: "Le Parc de la Gaudinière est un vaste jardin paysager de 12,5 hectares situé au nord de Nantes. Il offre une variété d'espaces, dont des bois de feuillus, des pelouses ensoleillées, et une rocaille alpine. Les enfants apprécieront les aires de jeux, les grands espaces pour courir, et l'observation de la faune locale comme les écureuils, les oiseaux et les canards. Le parc est particulièrement beau au printemps avec sa floraison de narcisses, crocus et anémones.",
@@ -403,7 +403,7 @@ parc_gaudiniere = Activity.new(name: "Parc de la Gaudinière",
   bike_park_detail: "Arceaux à vélos disponibles")
 parc_gaudiniere.photo.attach(io: file, filename: "parcgaudiniere.jpg", content_type: "image/jpg")
 parc_gaudiniere.save!
-                
+
 file = URI.parse("https://www.nantesweb.net/wp-content/uploads/2019/02/DSC_6241.jpg").open
 parc_proce = Activity.new(name: "Parc de Procé",
   description: "Le Parc de Procé est un grand parc paysager de style anglais au cœur de Nantes. Il offre de vastes pelouses, des arbres centenaires, un étang et des allées ombragées, idéales pour les promenades en famille. Les enfants peuvent profiter des aires de jeux, observer les canards sur l'étang, et participer aux animations nature organisées régulièrement.",
@@ -470,8 +470,8 @@ parc_oblates.save!
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732793917/parc_maurice_swarb_pldqtm.jpg").open
 square_schwob = Activity.new(
   name: "Square Maurice Schwob",
-  description: "Le square Maurice Schwob est un petit jardin public situé dans le centre-ville de Nantes. 
-                Il offre un espace de détente avec des bancs, des pelouses et quelques jeux pour enfants. 
+  description: "Le square Maurice Schwob est un petit jardin public situé dans le centre-ville de Nantes.
+                Il offre un espace de détente avec des bancs, des pelouses et quelques jeux pour enfants.
                 C'est un endroit paisible pour une pause en famille au cœur de la ville.",
   category: "Parc",
   address: "Allée Duquesne, 44000 Nantes",
@@ -530,8 +530,8 @@ parc_capucins = Activity.new(name: "Parc des Capucins",
   car_park: false,
   car_park_detail: "",
   bike_park: true,
-  bike_park_detail: "Stations Bicloo à proximité")      
-      
+  bike_park_detail: "Stations Bicloo à proximité")
+
 # Square Gaston Michel
 square_gaston_michel = Activity.new(name: "Square Gaston Michel",
   description: "Le square Gaston Michel est un petit espace vert situé dans le quartier Doulon-Bottière. Il offre une aire de jeux pour enfants et des bancs ombragés, idéal pour une pause détente en famille.",
@@ -549,7 +549,7 @@ square_gaston_michel = Activity.new(name: "Square Gaston Michel",
   car_park_detail: "",
   bike_park: true,
   bike_park_detail: "Quelques arceaux à vélos disponibles")
-        
+
 # Parc de la Noé Mitrie
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732794465/parc_rqzpgb.jpg").open
 parc_noe_mitrie = Activity.new(name: "Parc de la Noé Mitrie",
@@ -613,7 +613,7 @@ square_louis_bureau = Activity.new(
   car_park_detail: "",
   bike_park: true,
   bike_park_detail: "Stations Bicloo à proximité")
-  
+
 # Cimetière Parc
 file = URI.parse("https://www.jardinspaysdelaloire.fr/media/4484/big/4460_04_22.04.11-jdo-cimeti-ere-parc.jpg.jpg").open
 cimetiere_parc = Activity.new(
@@ -636,7 +636,7 @@ cimetiere_parc = Activity.new(
   )
 cimetiere_parc.photo.attach(io: file, filename: "cimetiere_parc.jpg", content_type: "image/jpg")
 cimetiere_parc.save!
-    
+
 # Jardin des Fonderies
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732799364/fonderie_cj5t3o.jpg").open
 jardin_fonderies = Activity.new(name: "Jardin des Fonderies",
@@ -657,7 +657,7 @@ jardin_fonderies = Activity.new(name: "Jardin des Fonderies",
   bike_park_detail: "Nombreux arceaux à vélos et stations Bicloo")
 jardin_fonderies.photo.attach(io: file, filename: "jardin_fonderies.jpg", content_type: "image/jpg")
 jardin_fonderies.save!
-      
+
 # Jardin des Douves du château
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732799456/jardin-des-douves_eeetip.jpg").open
 jardin_douves_chateau = Activity.new(name: "Jardin des Douves du château",
@@ -679,7 +679,7 @@ jardin_douves_chateau = Activity.new(name: "Jardin des Douves du château",
   )
 jardin_douves_chateau.photo.attach(io: file, filename: "jardin_douves_chateau.jpg", content_type: "image/jpg")
 jardin_douves_chateau.save!
-        
+
 # Square Gabriel Chéreau
 file = URI.parse("https://api-infonantes.nantesmetropole.fr/banque/public/images/lieux/w/3-E4577-web-SQUARE-Gabriel-Chereau.jpg").open
 square_gabriel_chereau = Activity.new(name: "Square Gabriel Chéreau",
@@ -700,7 +700,7 @@ square_gabriel_chereau = Activity.new(name: "Square Gabriel Chéreau",
   bike_park_detail: "Quelques arceaux à vélos disponibles")
 square_gabriel_chereau.photo.attach(io: file, filename: "square_gabriel_chereau.jpg", content_type: "image/jpg")
 square_gabriel_chereau.save!
-    
+
 # Cours Cambronne
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732794022/parc_cours_cambronne_q3jxiv.jpg").open
 cours_cambronne = Activity.new(name: "Cours Cambronne",
@@ -722,15 +722,15 @@ cours_cambronne = Activity.new(name: "Cours Cambronne",
   )
 cours_cambronne.photo.attach(io: file, filename: "cours_cambronne.jpg", content_type: "image/jpg")
 cours_cambronne.save!
-      
+
 # ###############################################
 puts "creating restaurants et cafés"
-      
+
 file = URI.parse("https://www.lestablesdenantes.fr/wp-content/uploads/2024/08/IMG_1004-scaled.jpg").open
 les_gamines = Activity.new(name: "Les Gamines",
-  description: "Les Gamines est un café-restaurant family friendly à Nantes. Il offre un espace de jeux pour les enfants, 
-                une cuisine maison avec des options végétariennes, et organise régulièrement des ateliers et événements 
-                pour toute la famille. L'endroit est conçu pour que les parents puissent se détendre tout en gardant 
+  description: "Les Gamines est un café-restaurant family friendly à Nantes. Il offre un espace de jeux pour les enfants,
+                une cuisine maison avec des options végétariennes, et organise régulièrement des ateliers et événements
+                pour toute la famille. L'endroit est conçu pour que les parents puissent se détendre tout en gardant
                 un œil sur leurs enfants.",
   category: "Café et Resto",
   address: "5 rue Lamoricière, 44100 Nantes",
@@ -748,9 +748,9 @@ les_gamines = Activity.new(name: "Les Gamines",
   bike_park_detail: "Arceaux à vélos disponibles")
 les_gamines.photo.attach(io: file, filename: "les_gamines.jpg", content_type: "image/jpg")
 les_gamines.save!
-              
+
 cafe_marmaille = Activity.new(name: "Le café Marmaille",
-  description: "Le café Marmaille est un lieu convivial à Nantes, adapté aux familles. Il propose 
+  description: "Le café Marmaille est un lieu convivial à Nantes, adapté aux familles. Il propose
                 une restauration légère et des boissons dans un cadre accueillant pour les enfants.",
   category: "Café et Resto",
   address: "8 Rue Jeanne d'Arc, 44000 Nantes",
@@ -770,8 +770,8 @@ cafe_marmaille = Activity.new(name: "Le café Marmaille",
 # La Cantine du Voyage
 file = URI.parse("https://www.antoninfaurel.com/wp-content/uploads/2018/08/cantine_du_voyage_faurel_lejeunedurhin_2.jpg").open
 cantine_voyage = Activity.new(name: "La Cantine du Voyage",
-description: "La Cantine du Voyage est un restaurant éphémère qui s'installe chaque été sur l'île de Nantes. 
-                Dans une ambiance conviviale et décontractée, elle propose une cuisine locale et de saison. 
+description: "La Cantine du Voyage est un restaurant éphémère qui s'installe chaque été sur l'île de Nantes.
+                Dans une ambiance conviviale et décontractée, elle propose une cuisine locale et de saison.
                 Les enfants apprécieront l'espace extérieur avec des jeux et la possibilité de pique-niquer sur l'herbe. C'est un lieu idéal pour un déjeuner en famille lors d'une journée de découverte de l'île.",
   category: "Café et Resto",
   address: "Quai des Antilles, 44200 Nantes",
@@ -793,8 +793,8 @@ cantine_voyage.save
 # Le Bistrot des enfants Nantais
 file = URI.parse("https://www.petitfute.com/medias/professionnel/1491699/premium/originale/640cc26bdb812-bistro-enfant-nantais.png").open
 bistrot_enfants_nantais = Activity.new(name: "Le Bistrot des enfants Nantais",
-description: "Le Bistrot des enfants Nantais est un restaurant familial au cœur de Nantes, réputé pour sa cuisine traditionnelle 
-  française. L'ambiance chaleureuse et le menu enfant varié en font un lieu idéal pour un repas en famille. 
+description: "Le Bistrot des enfants Nantais est un restaurant familial au cœur de Nantes, réputé pour sa cuisine traditionnelle
+  française. L'ambiance chaleureuse et le menu enfant varié en font un lieu idéal pour un repas en famille.
   Les enfants apprécieront les portions généreuses et l'accueil bienveillant du personnel.",
   category: "Café et Resto",
   address: "4 RUE DESAIX, 44000 NANTES, France",
@@ -812,7 +812,7 @@ description: "Le Bistrot des enfants Nantais est un restaurant familial au cœur
   bike_park_detail: "Arceaux à vélos dans la rue")
 bistrot_enfants_nantais.photo.attach(io: file, filename: "bistrotdesenfants.jpg", content_type: "image/jpg")
 bistrot_enfants_nantais.save
-  
+
 # Restaurant 1: Le café des Enfants
 file = URI.parse("https://resize.elle.fr/original/var/plain_site/storage/images/loisirs/sorties/dossiers/cafe-pour-enfants-cafe-poussette/80850947-1-fre-FR/Cafes-pour-enfants-nos-adresses-preferees.jpg").open
 cantine_enfants = Activity.new(name: "Le Café des Enfants",
@@ -833,11 +833,11 @@ cantine_enfants = Activity.new(name: "Le Café des Enfants",
   bike_park_detail: "Arceaux à vélos devant le restaurant")
 cantine_enfants.photo.attach(io: file, filename: "cantineenfants.jpg", content_type: "image/jpg")
 cantine_enfants.save
-                
+
 # Restaurant 2: La poule mouillette
 file = URI.parse("https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/loisirs/sorties/dossiers/cafe-pour-enfants-cafe-poussette/poule-mouillette/80851625-1-fre-FR/Poule-Mouillette.jpg").open
 petit_chef = Activity.new(name: "La poule mouillette",
-  description: "Un restaurant interactif où les enfants peuvent participer à la préparation de leurs repas sous la 
+  description: "Un restaurant interactif où les enfants peuvent participer à la préparation de leurs repas sous la
   supervision de chefs professionnels. Une expérience culinaire ludique et éducative.",
   category: "Café et Resto",
   address: "15 rue Paul Bellamy, 44100 Nantes",
@@ -855,11 +855,11 @@ petit_chef = Activity.new(name: "La poule mouillette",
   bike_park_detail: "Parking vélo sécurisé")
   petit_chef.photo.attach(io: file, filename: "petitchef.jpg", content_type: "image/jpg")
   petit_chef.save
-  
+
 # Restaurant 3: La Crêperie Enchantée
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732800321/creperie_enchantee_bcae8b.jpg").open
 creperie_enchantee = Activity.new(name: "La Crêperie Enchantée",
-  description: "Une crêperie magique avec des crêpes aux formes amusantes et des garnitures colorées. Les enfants 
+  description: "Une crêperie magique avec des crêpes aux formes amusantes et des garnitures colorées. Les enfants
   peuvent créer leurs propres crêpes et participer à des ateliers de décoration.",
   category: "Café et Resto",
   address: "13 Rue des Halles, 44000 Nantes",
@@ -881,7 +881,7 @@ creperie_enchantee.save
 # Restaurant 4: Le Safari Gourmand
 file = URI.parse("https://lh3.googleusercontent.com/p/AF1QipNr1-5ggHg4_cW3Jdb8ZZ2DSXaH3fcdKYN9x3zn=s1360-w1360-h1020").open
 safari_gourmand = Activity.new(name: "Le Safari Gourmand",
-  description: "Un restaurant à thème safari avec des plats inspirés de la cuisine du monde. Les enfants peuvent 
+  description: "Un restaurant à thème safari avec des plats inspirés de la cuisine du monde. Les enfants peuvent
   manger dans des cabanes en forme d'animaux et participer à des chasses au trésor culinaires.",
   category: "Café et Resto",
   address: "25 rue rene Coty, 44980 Ste Luce S/ Loire",
@@ -903,7 +903,7 @@ safari_gourmand.save
 # Restaurant 5: La Pizza des Artistes
 file = URI.parse("https://media.ouest-france.fr/v1/pictures/MjAyMDAxOGI4YmEwMDk2MTAwNWVhMzJmNWQ4Yjc1OGE3ZmQ4YTk?width=630&height=354&focuspoint=47%2C58&cropresize=1&client_id=bpeditorial&sign=d1a32c4b278357e4463291c4400cb679122419cb5a70977f59e8850afa00db65").open
 pizza_artistes = Activity.new(name: "La Pizza des Artistes",
-  description: "Une pizzeria où les enfants peuvent créer leur propre pizza en la décorant comme une œuvre d'art. 
+  description: "Une pizzeria où les enfants peuvent créer leur propre pizza en la décorant comme une œuvre d'art.
                 Des ateliers de peinture sur pizza sont organisés régulièrement.",
   category: "Café et Resto",
   address: "12 bld des Poilus, 44000 Nantes",
@@ -921,11 +921,11 @@ pizza_artistes = Activity.new(name: "La Pizza des Artistes",
   bike_park_detail: "Arceaux à vélos à l'entrée")
 pizza_artistes.photo.attach(io: file, filename: "pizzaartistes.jpg", content_type: "image/jpg")
 pizza_artistes.save
-                
+
 # Restaurant 6: Le Château des Smoothies
 file = URI.parse("https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/loisirs/sorties/dossiers/cafe-pour-enfants-cafe-poussette/zeplegraounde/80851781-1-fre-FR/Zeplegraounde.jpg").open
 chateau_smoothies = Activity.new(name: "Le Château des Smoothies",
-description: "Un restaurant healthy dans un décor de château médiéval. Les enfants peuvent créer leurs propres 
+description: "Un restaurant healthy dans un décor de château médiéval. Les enfants peuvent créer leurs propres
             smoothies et participer à des quêtes nutritionnelles amusantes.",
   category: "Café et Resto",
   address: "3 rue du chateau, 44400 Nantes",
@@ -947,7 +947,7 @@ chateau_smoothies.save
 # Restaurant 7: Le Jardin Secret
 file = URI.parse("https://www.silencecapousse-chezvous.fr/media/images/298/rectangle/w900/1581937270/Enfants-Potager-art.jpg").open
 jardin_secret = Activity.new(name: "Le Jardin Secret",
-description: "Un restaurant bio avec un potager pédagogique. Les enfants peuvent cueillir leurs propres 
+description: "Un restaurant bio avec un potager pédagogique. Les enfants peuvent cueillir leurs propres
               légumes et apprendre à cuisiner des plats simples et sains.",
   category: "Café et Resto",
   address: "18 Rue des Hortensias, 44000 Nantes",
@@ -969,7 +969,7 @@ jardin_secret.save
 # Restaurant 8: Le Vaisseau Spatial
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732792272/restaurant_vaisseau_spatial_rq9xir.jpg").open
 vaisseau_spatial = Activity.new(name: "Le Vaisseau Spatial",
-  description: "Un restaurant futuriste où les plats sont servis par des robots. Les enfants peuvent jouer à des 
+  description: "Un restaurant futuriste où les plats sont servis par des robots. Les enfants peuvent jouer à des
   jeux vidéo éducatifs sur des tablettes pendant que leurs repas sont préparés.",
   category: "Café et Resto",
   address: "15 rue André Tardieu, 44000 Nantes",
@@ -987,11 +987,11 @@ vaisseau_spatial = Activity.new(name: "Le Vaisseau Spatial",
   bike_park_detail: "Parking vélo high-tech sécurisé")
 vaisseau_spatial.photo.attach(io: file, filename: "vaisseauspatial.jpg", content_type: "image/jpg")
 vaisseau_spatial.save
-  
+
 # Restaurant 9: La Ferme Rigolote
 file = URI.parse("https://www.mylittleparis.com/_ipx/_/https://api.mylittleparis.com/uploads/2022/06/24/article-grand-doyenne-2400-1333.jpg").open
 ferme_rigolote = Activity.new(name: "La Ferme Rigolote",
-  description: "Un restaurant-ferme où les enfants peuvent caresser des animaux, participer à la traite des vaches et 
+  description: "Un restaurant-ferme où les enfants peuvent caresser des animaux, participer à la traite des vaches et
   déguster des produits frais de la ferme. Des animations autour de la vie à la ferme sont proposées.",
   category: "Café et Resto",
   address: "Chemin de La Longère, 44470 Carquefou",
@@ -1013,10 +1013,10 @@ ferme_rigolote.save
 # Restaurant 10: Le circus
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733241463/circus_uzfd8b.jpg").open
 circus = Activity.new(name: "Le circus",
-  description: " Entrez sous le chapiteau et profitez du spectacle pour les yeux et les papilles ! 
-  Monsieur Loyal & sa troupe de saltimbanques vous servent 7 jours sur 7 pour déjeuner ou dîner avec 
-  un numéro de cuisine fait maison. Une décoration mélangeant clowns, manèges & acrobaties vous plongent dans 
-  un univers spectaculaire proposant 120 places assises en intérieur et une jolie terrasse pour les représentations 
+  description: " Entrez sous le chapiteau et profitez du spectacle pour les yeux et les papilles !
+  Monsieur Loyal & sa troupe de saltimbanques vous servent 7 jours sur 7 pour déjeuner ou dîner avec
+  un numéro de cuisine fait maison. Une décoration mélangeant clowns, manèges & acrobaties vous plongent dans
+  un univers spectaculaire proposant 120 places assises en intérieur et une jolie terrasse pour les représentations
   aux beaux jours. Un manège est à disposition des petits.
   Bienvenue sur la piste du Circus! ",
   category: "Café et Resto",
@@ -1063,8 +1063,8 @@ file = URI.parse("https://www.bigcitylife.fr/wp-content/uploads/2023/10/image-7.
 magmaa = Activity.new(
   name: "Magmaa : le plein d'activités",
   description: "Magmaa est un espace dédié aux activités familiales à Nantes avec une programmation variée. le foodhall est aussi un espace vraiment kids friendly.
-                Les jeunes enfants (2-10 ans) pourront profiter du kids corner pour bouquiner, jouer et faire connaissance dans un petit espace dédié.  Il propose une variété d'ateliers 
-                créatifs, de jeux éducatifs et d'animations pour les enfants de tous âges. C'est l'endroit idéal 
+                Les jeunes enfants (2-10 ans) pourront profiter du kids corner pour bouquiner, jouer et faire connaissance dans un petit espace dédié.  Il propose une variété d'ateliers
+                créatifs, de jeux éducatifs et d'animations pour les enfants de tous âges. C'est l'endroit idéal
                 pour stimuler l'imagination et la créativité des enfants tout en passant un moment agréable en famille.",
   category: "Café et Resto",
   address: "13 Rue de la Juiverie, 44000 Nantes",
@@ -1236,10 +1236,10 @@ galipy.save!
 
 file = URI.parse("https://nidoludo.fr/wp-content/uploads/2024/07/Capture-decran-2024-07-17-a-15.38.34-1024x387.png").open
 nidoludo = Activity.new(name: "Nidoludo",
-  description: "Nidoludo est un lieu pensé pour les familles avec jeunes enfants au cœur de Nantes. 
-              Il propose une aire de jeux moderne et cosy de 100m2 pour les enfants de 0 à 6 ans, 
-              avec des jeux d'imitation, de musique et de motricité. Les parents peuvent profiter 
-              d'un salon de thé pendant que les enfants s'amusent. Nidoludo offre également une programmation 
+  description: "Nidoludo est un lieu pensé pour les familles avec jeunes enfants au cœur de Nantes.
+              Il propose une aire de jeux moderne et cosy de 100m2 pour les enfants de 0 à 6 ans,
+              avec des jeux d'imitation, de musique et de motricité. Les parents peuvent profiter
+              d'un salon de thé pendant que les enfants s'amusent. Nidoludo offre également une programmation
               d'ateliers variés pour les enfants de 0 à 10 ans, comme l'éveil musical, le yoga, le théâtre et le cirque.",
   category: "Espace de jeux",
   address: "4 Rue de l'Héronnière, 44000 Nantes",
@@ -1263,8 +1263,8 @@ puts "creating mediatheque"
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733235553/mediatheque_carquefou_sg1ahd.jpg").open
 mediatheque_carquefou = Activity.new(
   name: "Médiathèque de Carquefou",
-  description: "La médiathèque de Carquefou est un espace culturel moderne offrant une large collection de livres, 
-  médias et ressources numériques. Elle propose des animations pour tous les âges et des espaces de lecture 
+  description: "La médiathèque de Carquefou est un espace culturel moderne offrant une large collection de livres,
+  médias et ressources numériques. Elle propose des animations pour tous les âges et des espaces de lecture
   confortables. Une ludothèque est également à diposition. Des soirées jeux sont régulièrement proposés",
   category: "Lieu culturel",
   address: "21 Rue de la Mairie, 44470 Carquefou",
@@ -1329,7 +1329,7 @@ bibliotheque_chantenay = Activity.new(
   )
 bibliotheque_chantenay.photo.attach(io: file, filename: "bibliotheque_chantenay.jpg", content_type: "image/jpg")
 bibliotheque_chantenay.save!
-  
+
 # Bibliothèque Erdre-Batignolles
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732793325/biblio_erdre_batignolle_sffluo.jpg").open
 bibliotheque_erdre = Activity.new(
@@ -1352,7 +1352,7 @@ bibliotheque_erdre = Activity.new(
   )
 bibliotheque_erdre.photo.attach(io: file, filename: "bibliotheque_erdre_batignolles.jpg", content_type: "image/jpg")
 bibliotheque_erdre.save!
-    
+
 # Bibliothèque de la Manufacture
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1732793157/biblio_manufacture_ht3hcj.jpg").open
 bibliotheque_manufacture = Activity.new(
@@ -1375,7 +1375,7 @@ bibliotheque_manufacture = Activity.new(
   )
 bibliotheque_manufacture.photo.attach(io: file, filename: "bibliotheque_manufacture.jpg", content_type: "image/jpg")
 bibliotheque_manufacture.save!
-      
+
 # Médiathèque du Conservatoire
 mediatheque_conservatoire = Activity.new(
   name: "Médiathèque du Conservatoire",
@@ -1500,7 +1500,7 @@ aire_jeu_charbonneau.save!
 puts "end creating activities"
 
 # ###############################################
-  
+
 # ################création ratings#################
 
 puts "creating ratings"
@@ -1529,8 +1529,7 @@ manu_rating_1 = Rating.create!(user: manu,
   activity: musee_art_nantes,
   visit_date: Date.today + 2,
   rating: 5,
-  comment: "access avec poussette grâce à l'ascenseur! et table à langer. 
-            Espace de jeux et salon de thé adaptés aux enfants",
+  comment: "L'accès est facile en poussette grâce à l'ascenseur! Il y a à disposition une table à langer ainsi qu'un espace de jeux et un salon de thé adaptés aux enfants",
   stroller: true,
   changing_table: true,
   high_chair: false,
@@ -1560,7 +1559,7 @@ rose_rating_1 = Rating.create!(user: rose,
   activity: musee_art_nantes,
   visit_date: Date.today - 4,
   rating: 5,
-  comment: "access avec poussette grâce à l'ascenseur! et table à langer OK. 
+  comment: "access avec poussette grâce à l'ascenseur! et table à langer OK.
             c'est l'idéal pour faire découvrir l'art aux enfants. Ma fille a adorée l'atelier de peinture",
   stroller: true,
   changing_table: true,
@@ -1571,7 +1570,7 @@ rose_rating_2 = Rating.create!(user: rose,
   activity: circus,
   visit_date: Date.today - 4,
   rating: 5,
-  comment: "access avec poussette et table à langer OK. 
+  comment: "access avec poussette et table à langer OK.
             Très belle décoration sur le theme du cirque. Ma fille a adorée le tour de manège offert",
   stroller: true,
   changing_table: true,
@@ -1593,7 +1592,7 @@ paul_rating_2 = Rating.create!(user: paul,
   activity: musee_art_nantes,
   visit_date: Date.today - 12,
   rating: 5,
-  comment: "Table à langer à dispo très pratique pour changer bébé. Petite pose gourmande au 
+  comment: "Table à langer à dispo très pratique pour changer bébé. Petite pose gourmande au
             Salon de thé adaptés aux enfants. toute la famille a appréciée",
   stroller: true,
   changing_table: true,
