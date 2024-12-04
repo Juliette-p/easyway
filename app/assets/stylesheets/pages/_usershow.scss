@@ -1,3 +1,7 @@
+.users.show {
+  background-color: $yellow;
+}
+
 .user-show-content {
   width: 100%;
 }
@@ -23,7 +27,7 @@
 
 .profile_link_arrow {
   color: black;
-  font-size: 20px;
+  font-size: 22px;
   align-items: center;
   padding: 0px;
   margin: 0px;
@@ -32,13 +36,14 @@
 .user-txt-info {
   color: black;
   margin: none;
-  font-size: 10px;
+  font-size: 15px;
+
 }
 
 #btn-user-edit {
   margin-bottom: 30px;
   color: rgb(73, 73, 73);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 // .bp-user-modif {

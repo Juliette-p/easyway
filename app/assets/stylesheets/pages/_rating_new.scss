@@ -36,7 +36,7 @@
 }
 
 #rating-date {
-  label {
+  .label {
     font-size: 12px;
   }
 
@@ -47,6 +47,10 @@
 
   .rating-date-input:focus {
     border: 1px solid $yellow;
+  }
+
+  .form-control {
+    background-color: $lightyellow;
   }
 }
 
@@ -67,6 +71,10 @@
 
   .rating-comment:focus {
     border: 1px solid $yellow;
+  }
+
+  .form-control {
+    background-color: $lightyellow;
   }
 }
 

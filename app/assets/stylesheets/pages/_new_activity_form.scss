@@ -1,3 +1,7 @@
+.activities.new {
+  background-color: $yellow;
+}
+
 .card-new-activity {
   display: flex;
   flex-direction: row;
@@ -5,6 +9,7 @@
   margin-inline: 0;
   width: 100%;
   padding: 30px;
+
   // row justify-content-center
 
   .yellowbtn {
@@ -21,8 +26,8 @@
     border-radius: 20px;
     margin: 0px;
     font-size: 12px;
-
-    .form-control:focus {
+    
+    .focus {
       border: 1px solid $yellow;
     }
   }
