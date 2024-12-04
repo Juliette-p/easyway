@@ -1,4 +1,4 @@
-![logotype](app/assets/images/logo.png)
+![logotype](app/assets/images/logo.png =200x200)
 # Easyway
 Easyway est une application pour aider les familles à trouver des lieux de sortie adaptés aux bébés et aux enfants en bas âge.
 
