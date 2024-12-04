@@ -2,6 +2,26 @@
   background-color: $yellow;
 }
 
+#activity-new-title {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  img {
+    height: 30px;
+    width: 30px;
+    margin: 0px 10px 0px 0px;
+  }
+
+  h1 {
+    color: $white;
+    margin: 0px;
+    padding: 0px;
+  }
+
+}
+
 .card-new-activity {
   display: flex;
   flex-direction: row;
@@ -27,7 +47,7 @@
     margin: 0px;
     font-size: 12px;
     background-color: $lightyellow;
-    
+
     .focus {
       border: 1px solid $yellow;
     }
