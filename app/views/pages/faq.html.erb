@@ -32,6 +32,7 @@
 <%# </div> %>
 
 <%# bouton "go back" %>
+<div class="faq-container" data-controller="fleche-faq">
 <% if current_user %>
   <%= link_to user_path(current_user) do %>
     <%= image_tag "go_back_arrow.png", alt: "Retour", class:"go-back-btn" %>
@@ -45,8 +46,14 @@
 <h1>La FAQ Easyway</h1>
 
 <div class="QAbox_faq">
-  <button class="basic-card box-q" data-bs-toggle="collapse" data-bs-target="#demo-2" style="text-align: left;">Qu'est-ce Easyway ?</button>
-  <div id="demo-2" class="collapse basic-card box-a">
+  <button class="basic-card box-q" data-bs-toggle="collapse" data-bs-target="#demo-2" 
+  style="text-align: left;"
+  data-action="click->fleche-faq#animq2">
+  Easyway en quelques mots:
+  <div data-fleche-faq-target="flecheBas2" class="d-none"><i class="fa-solid fa-circle-chevron-down" style="color: #3D5555;"></i></div>
+  <div data-fleche-faq-target="flecheCote2"><i class="fa-solid fa-circle-chevron-right" style="color: #3D5555;"></i></div>
+  </button>
+  <div id="demo-2" class="collapse basic-card box-a" data-fleche-faq-target="reponse2">
     <p>Easyway est une application pour trouver des lieux de sortie adaptés aux familles avec enfants
     en bas âges, qui répondent à leur besoin d'accessibilité en poussette et de services.</p>
     <div class="icones-row">
@@ -55,11 +62,21 @@
       <%= image_tag('changing_table_ok.png', class: "taille-icone") %>
       <%= image_tag('kids_friendly_ok.png', class: "taille-icone") %>
     </div>
+    <div id="paraph-2">
+      <p>Cette application se veut participative. En tant qu'utilisateurs de l'application, vous êtes invités
+      à partager de nouvelles activités kid's friendly et/ou à ajouter des commentaires après avoir testé celles proposées
+      afin de permettre à tous de bénéficier de ces informations</p>
+    </div>
   </div>
 </div>
 
 <div class="QAbox_faq">
-  <button class="basic-card box-q" data-bs-toggle="collapse" data-bs-target="#demo-3" style="text-align: left;">Que signifient les icônes ?</button>
+  <button class="basic-card box-q" data-bs-toggle="collapse" data-bs-target="#demo-3" 
+  style="text-align: left;" data-action="click->fleche-faq#animq3">
+  Que signifient les icônes ?
+  <div data-fleche-faq-target="flecheBas3" class="d-none"><i class="fa-solid fa-circle-chevron-down" style="color: #3D5555;"></i></div>
+  <div data-fleche-faq-target="flecheCote3"><i class="fa-solid fa-circle-chevron-right" style="color: #3D5555;"></i></div>
+  </button>
   <div id="demo-3" class="collapse basic-card box-a">
     <p>Afin de répondre à vos envies, chaque lieu proposé est classée par catégorie :</p>
     <ul>
@@ -99,3 +116,4 @@
   answer: "....reponse......",
   index: "3"
 %>
+</div>
