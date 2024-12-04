@@ -1,17 +1,26 @@
-<%# bouton "go back" %>
-<%= link_to activities_path do %>
-  <%= image_tag "go_back_arrow.png", alt: "Retour", class:"go-back-btn" %>
-<% end %>
+<div id="favourite-index-banner">
+  <%# bouton "go back" %>
+  <%= link_to activities_path do %>
+    <%= image_tag "go_back_arrow_white.png", alt: "Retour", class:"go-back-btn" %>
+  <% end %>
 
-<h1>Mes favoris</h1>
 
-<%# search tab %>
-<%= render "activities/search_card" %>
+  <div id="favourite-index-title">
+    <%= image_tag "nav_favourite_empty_white.png", alt: "Favoris" %>
+    <h1>Mes favoris</h1>
+  </div>
+
+
+  <%# search tab %>
+  <%= render "activities/search_card" %>
+</div>
 
 <br>
 
+<div id="favourite-index-cards">
 <%# liste des activités %>
 <% @activities.each do |activity|%>
   <%# affichage de la card activity %>
   <%= render "activities/activity_card", activity: activity %>
 <% end %>
+</div>
