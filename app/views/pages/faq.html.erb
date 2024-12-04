@@ -31,89 +31,91 @@
   <%# <p>espace de jeux à disposition des enfants</p> %>
 <%# </div> %>
 
-<%# bouton "go back" %>
-<div class="faq-container" data-controller="fleche-faq">
-<% if current_user %>
-  <%= link_to user_path(current_user) do %>
-    <%= image_tag "go_back_arrow.png", alt: "Retour", class:"go-back-btn" %>
-  <% end %>
-<% else %>
-  <%= link_to root_path do %>
-    <%= image_tag "go_back_arrow.png", alt: "Retour", class:"go-back-btn" %>
-  <% end %>
-<% end %>
-
-<h1>La FAQ Easyway</h1>
-
-<div class="QAbox_faq">
-  <button class="basic-card box-q" data-bs-toggle="collapse" data-bs-target="#demo-2" 
-  style="text-align: left;"
-  data-action="click->fleche-faq#animq2">
-  Easyway en quelques mots:
-  <div data-fleche-faq-target="flecheBas2" class="d-none"><i class="fa-solid fa-circle-chevron-down" style="color: #3D5555;"></i></div>
-  <div data-fleche-faq-target="flecheCote2"><i class="fa-solid fa-circle-chevron-right" style="color: #3D5555;"></i></div>
-  </button>
-  <div id="demo-2" class="collapse basic-card box-a" data-fleche-faq-target="reponse2">
-    <p>Easyway est une application pour trouver des lieux de sortie adaptés aux familles avec enfants
-    en bas âges, qui répondent à leur besoin d'accessibilité en poussette et de services.</p>
-    <div class="icones-row">
-      <%= image_tag('stroller_ok.png', class: "taille-icone") %>
-      <%= image_tag('high_chair_ok.png', class: "taille-icone") %>
-      <%= image_tag('changing_table_ok.png', class: "taille-icone") %>
-      <%= image_tag('kids_friendly_ok.png', class: "taille-icone") %>
-    </div>
-    <div id="paraph-2">
-      <p>Cette application se veut participative. En tant qu'utilisateurs de l'application, vous êtes invités
-      à partager de nouvelles activités kid's friendly et/ou à ajouter des commentaires après avoir testé celles proposées
-      afin de permettre à tous de bénéficier de ces informations</p>
-    </div>
-  </div>
-</div>
-
-<div class="QAbox_faq">
-  <button class="basic-card box-q" data-bs-toggle="collapse" data-bs-target="#demo-3" 
-  style="text-align: left;" data-action="click->fleche-faq#animq3">
-  Que signifient les icônes ?
-  <div data-fleche-faq-target="flecheBas3" class="d-none"><i class="fa-solid fa-circle-chevron-down" style="color: #3D5555;"></i></div>
-  <div data-fleche-faq-target="flecheCote3"><i class="fa-solid fa-circle-chevron-right" style="color: #3D5555;"></i></div>
-  </button>
-  <div id="demo-3" class="collapse basic-card box-a">
-    <p>Afin de répondre à vos envies, chaque lieu proposé est classée par catégorie :</p>
-    <ul>
-      <li>Lieux culturels,</li>
-      <li>Cafés et Restaurants,</li>
-      <li>Parcs,</li>
-      <li>Espaces de jeux.</li>
-    </ul>
-    <p>Nous avons attribué à chaque lieu des icônes afin de vous permettre d'organiser votre sortie.</p>
-    <p>L'icône colorée signifie que le service est présent sur le lieu de sortie.</p>
-    <p>L'icône grisée signifie que le service n'est pas présent sur le lieu de sortie.</p>
-    <div class="icone">
-      <%= image_tag('stroller_ok.png', height:30, width: 30) %>
-      <p>Accessible en poussette</p>
-    </div>
-
-    <div class="icone">
-      <%= image_tag('high_chair_ok.png', height:30, width: 30) %>
-      <p>Chaise haute à disposition</p>
-    </div>
-
-    <div class="icone">
-      <%= image_tag('changing_table_ok.png', height:30, width: 30) %>
-      <p>Table à langer à disposition</p>
-    </div>
-
-    <div class="icone">
-      <%= image_tag('kids_friendly_ok.png', height:30, width: 30) %>
-      <p>Espace de jeux à disposition</p>
-    </div>
-
-  </div>
-</div>
-
 <%# <%= render "pages/QAbox_faq",
   question: "Comment faire une recherche sur l'appli ?",
   answer: "....reponse......",
   index: "3"
 %>
+
+
+<%# bouton "go back" %>
+<div data-controller="fleche-faq"> <%# class="faq-container"%>
+  <% if current_user %>
+    <%= link_to user_path(current_user) do %>
+      <%= image_tag "go_back_arrow.png", alt: "Retour", class:"go-back-btn" %>
+    <% end %>
+  <% else %>
+    <%= link_to root_path do %>
+      <%= image_tag "go_back_arrow.png", alt: "Retour", class:"go-back-btn" %>
+    <% end %>
+  <% end %>
+
+  <h1>La FAQ Easyway</h1>
+
+  <div class="QAbox_faq">
+    <button class="basic-card box-q" data-bs-toggle="collapse" data-bs-target="#demo-2"
+      style="text-align: left;"
+      data-action="click->fleche-faq#animq2" data-fleche-faq-target="btn2">
+      <p>Easyway en quelques mots :</p>
+      <i data-fleche-faq-target="flecheCote2" class="fa-solid fa-circle-chevron-right"></i>
+      <i data-fleche-faq-target="flecheBas2" class="fa-solid fa-circle-chevron-down d-none"></i>
+    </button>
+    <div id="demo-2" class="collapse basic-card box-a" data-fleche-faq-target="reponse2">
+      <p>Easyway est une application pour trouver des lieux de sortie adaptés aux familles avec enfants
+      en bas âges, qui répondent à leur besoin d'accessibilité en poussette et de services.</p>
+      <div class="icones-row">
+        <%= image_tag('stroller_ok.png', class: "taille-icone") %>
+        <%= image_tag('high_chair_ok.png', class: "taille-icone") %>
+        <%= image_tag('changing_table_ok.png', class: "taille-icone") %>
+        <%= image_tag('kids_friendly_ok.png', class: "taille-icone") %>
+      </div>
+      <div id="paraph-2">
+        <p>Cette application se veut participative. En tant qu'utilisateurs de l'application, vous êtes invités
+        à partager de nouvelles activités kid's friendly et/ou à ajouter des commentaires après avoir testé celles proposées
+        afin de permettre à tous de bénéficier de ces informations</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="QAbox_faq">
+    <button class="basic-card box-q" data-bs-toggle="collapse" data-bs-target="#demo-3"
+    style="text-align: left;" data-action="click->fleche-faq#animq3" data-fleche-faq-target="btn3">
+      <p>Que signifient les icônes ?</p>
+      <i data-fleche-faq-target="flecheCote3" class="fa-solid fa-circle-chevron-right"></i>
+      <i data-fleche-faq-target="flecheBas3" class="d-none fa-solid fa-circle-chevron-down"></i>
+    </button>
+    <div id="demo-3" class="collapse basic-card box-a">
+      <p>Afin de répondre à vos envies, chaque lieu proposé est classée par catégorie :</p>
+      <ul>
+        <li>Lieux culturels,</li>
+        <li>Cafés et Restaurants,</li>
+        <li>Parcs,</li>
+        <li>Espaces de jeux.</li>
+      </ul>
+      <p>Nous avons attribué à chaque lieu des icônes afin de vous permettre d'organiser votre sortie.</p>
+      <p>L'icône colorée signifie que le service est présent sur le lieu de sortie.</p>
+      <p>L'icône grisée signifie que le service n'est pas présent sur le lieu de sortie.</p>
+      <div class="icone">
+        <%= image_tag('stroller_ok.png', height:30, width: 30) %>
+        <p>Accessible en poussette</p>
+      </div>
+
+      <div class="icone">
+        <%= image_tag('high_chair_ok.png', height:30, width: 30) %>
+        <p>Chaise haute à disposition</p>
+      </div>
+
+      <div class="icone">
+        <%= image_tag('changing_table_ok.png', height:30, width: 30) %>
+        <p>Table à langer à disposition</p>
+      </div>
+
+      <div class="icone">
+        <%= image_tag('kids_friendly_ok.png', height:30, width: 30) %>
+        <p>Espace de jeux à disposition</p>
+      </div>
+
+    </div>
+  </div>
+
 </div>
