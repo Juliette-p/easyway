@@ -6,6 +6,26 @@
   width: 100%;
 }
 
+#user-show-title {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  img {
+    height: 30px;
+    width: 30px;
+    margin: 0px 10px 0px 0px;
+  }
+
+  h1 {
+    color: $white;
+    margin: 0px;
+    padding: 0px;
+  }
+
+}
+
 .user-profile {
   display: flex;
   flex-direction: column;

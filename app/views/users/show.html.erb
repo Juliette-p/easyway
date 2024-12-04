@@ -1,10 +1,15 @@
 <%# bouton "go back" %>
 <%= link_to activities_path do %>
-  <%= image_tag "go_back_arrow.png", alt: "Retour", class:"go-back-btn" %>
+  <%= image_tag "go_back_arrow_white.png", alt: "Retour", class:"go-back-btn" %>
 <% end %>
 
 <div class="user-show-content">
-  <h1>Mon profil</h1>
+
+  <div id="user-show-title">
+    <%= image_tag "nav_profile_empty_white.png", alt: "Profil"%>
+    <h1>Mon profil</h1>
+  </div>
+
   <div class="basic-card user-profile">
     <% if current_user.photo.attached? %>
       <%= cl_image_tag current_user.photo.key, crop: :fill, alt: "profil-picture", class: "avatar user-profile-picture" %>
