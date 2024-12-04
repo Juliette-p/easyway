@@ -5,7 +5,7 @@ export default class extends Controller {
 
   connect() {
     this.updateNote()
-    console.log("Hello from controller");
+    // console.log("Hello from controller");
   }
 
   updateNote() {

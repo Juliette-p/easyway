@@ -4,7 +4,7 @@ export default class extends Controller {
   static targets = ["AgendaView", "BackgroundAgenda", "ActivityShowView", "calendar"]
 
   connect() {
-    console.log("connect agenda ok");
+    // console.log("connect agenda ok");
     // console.log(this.fieldBackgroundTarget.style);
     // console.log(this.AgendaViewTarget.style);
     // console.log(this.ActivityShowViewTarget.style);
@@ -14,7 +14,7 @@ export default class extends Controller {
   }
 
   hide_agendaView() {
-    console.log("hide_agendaView fields_for ok");
+    // console.log("hide_agendaView fields_for ok");
     this.AgendaViewTarget.classList.toggle("d-none");
     this.BackgroundAgendaTarget.classList.toggle("d-none");
     // console.log(this.calendarTarget.innerHTML);
@@ -32,7 +32,7 @@ export default class extends Controller {
   }
 
   invitation() {
-    console.log("agenda confirm ok")
+    // console.log("agenda confirm ok")
     // alert("Une invitation vous a été envoyée par mail.");
     // Swal.fire("Une invitation vous a été envoyée par mail.");
     Swal.fire({

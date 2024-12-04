@@ -4,7 +4,7 @@
 
 .empty-rating-card {
   display: flex;
-  height: 170px;
+  height: 160px;
   margin-top: 10px;
   padding-block: 10px;
   align-items: center;
@@ -16,7 +16,8 @@
   // flex-direction: column;
   // justify-content: center;
   align-items: center;
-  // height: 170px;
+  min-height: 168px;
+  height: 100%;
   margin-top: 10px;
   padding-block: 10px;
   // gap: 15px;
@@ -24,12 +25,17 @@
 
 .carousel-item {
   color: black;
-  padding-inline: 0px;
+  padding-inline: 35px;
+  // padding: 0px 35px 0px 35px;
+  // height: 160px;
 
   p {
     color: black;
     font-size: 12px;
-    margin-block: 5px;
+    // margin-block: 5px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    // margin-bottom: 5px;
   }
 }
 
@@ -40,9 +46,23 @@
   font-size: 12px;
   gap: 5px;
   align-items: center;
-  // margin-block: 5px;
+  margin-block: 10px;
 
   p {
     margin: 0;
+  }
+}
+
+.user-infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+
+  img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
   }
 }
