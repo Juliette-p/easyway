@@ -31,13 +31,13 @@
     <%= render "shared/flashes" %>
 
     <%# contenu des pages à afficher %>
+    <div class="<%= controller_name %> <%= action_name %>">
     <div class="container-body">
       <%= yield %>
     </div>
-
+    </div>
     <%# footer : barre de navigation %>
     <%= render "shared/footer" %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
   </body>
 </html>
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
