@@ -20,20 +20,20 @@ export default class extends Controller {
     });
 
     //mise à jour de la liste
-    let i = 1;
     let liContent = '';
     const myUlList = document.getElementById("results");
-    // console.log(`ullist: ${myUlList}`);
-    data.forEach((word) => {
-      // console.log(word.name);
-      if (i <= 5) {
-        liContent += `<p data-action="click->autocomplete-search#copy${i}" data-autocomplete-search-target="li${i}">${word.name}</p>`;
+    data.slice(0,4).forEach((activity, i) => {
+      if (i == 0) {
+        const address = activity.address.split(' ');
+        console.log(address[address.length -1]);
+          liContent += `<p data-action="click->autocomplete-search#copy${i + 1}" data-autocomplete-search-target="li${i + 1}">${address[address.length - 1]}</p>`;
+          liContent += `<p data-action="click->autocomplete-search#copy${i + 2}" data-autocomplete-search-target="li${i + 2}">${activity.name}</p>`;
+      } else {
+        liContent += `<p data-action="click->autocomplete-search#copy${i + 2}" data-autocomplete-search-target="li${i + 2}">${activity.name}</p>`;
       }
-      i += 1;
-      // console.log(`lilist: ${liContent}`);
     });
     myUlList.insertAdjacentHTML('beforeend', liContent);
-  };
+    };
 
   // Méthode autocomplete
   autocomplete() {
@@ -48,36 +48,41 @@ export default class extends Controller {
         .then(data => this.displayAutocomplete(data.activities));
     } else {
       this.autocompletionResultTarget.style = "display: none;"
-    }
+    };
   };
 
   // Méthode copy de la proposition 1 de l'autocomplétion dans l'input 'search'
   copy1() {
-    console.log("copy1");
+    // console.log("copy1");
     this.searchTextTarget.value = this.li1Target.innerText;
+    this.autocompletionResultTarget.style = "display: none;"
   }
 
   // Méthode copy de la proposition 2 de l'autocomplétion dans l'input 'search'
   copy2() {
-    console.log("copy2");
-    this.searchTextTarget.value = this.li2Target.value;
+    // console.log("copy2");
+    this.searchTextTarget.value = this.li2Target.innerText;
+    this.autocompletionResultTarget.style = "display: none;"
   }
 
   // Méthode copy de la proposition 3 de l'autocomplétion dans l'input 'search'
   copy3() {
-    console.log("copy3");
-    this.searchTextTarget.value = this.li3Target.value;
+    // console.log("copy3");
+    this.searchTextTarget.value = this.li3Target.innerText;
+    this.autocompletionResultTarget.style = "display: none;"
   }
 
   // Méthode copy de la proposition 4 de l'autocomplétion dans l'input 'search'
   copy4() {
-    console.log("copy4");
-    this.searchTextTarget.value = this.li4Target.value;
+    // console.log("copy4");
+    this.searchTextTarget.value = this.li4Target.innerText;
+    this.autocompletionResultTarget.style = "display: none;"
   }
 
   // Méthode copy de la proposition 5 de l'autocomplétion dans l'input 'search'
   copy5() {
-    console.log("copy5");
-    this.searchTextTarget.value = this.li5Target.value;
+    // console.log("copy5");
+    this.searchTextTarget.value = this.li5Target.innerText;
+    this.autocompletionResultTarget.style = "display: none;"
   }
 }
