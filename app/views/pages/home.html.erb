@@ -1,39 +1,41 @@
-<div class="basic-card banner">
+<div class="banner">
     <div id="banner-img">
-      <%= image_tag "logo.png", alt: "logo Easyway", height: 60 %>
-      <%= image_tag "easyway_baseline.png", alt: "Baseline Easyway", id: "baseline_easyway", height: 55 %>
+      <%= image_tag "logo_white.png", alt: "logo Easyway", height: 60 %>
+      <%= image_tag "baseline_white.png", alt: "Baseline Easyway", id: "baseline_easyway", height: 55 %>
     </div>
     <h3>L'APPLI BABY & KIDS FRIENDLY !</h3>
     <div id="banner-subtext">
-      <p>Trouver des lieux baby & kids friendly</p>
+      <p>Trouver des activités baby & kids friendly</p>
       <p>n'a jamais été aussi facile</p>
     </div>
     <%= link_to "Trouver une activité", activities_path, class: "yellowbtn"  %>
 </div>
 
-<% if current_user %>
+<div id="home-cards">
+  <% if current_user %>
+    <div class="basic-card home-card">
+      <div class="home-card-line">
+        <p>Mes activités favorites</p>
+        <i class="fa-solid fa-heart" style="color: #FF8351;"></i>
+      </div>
+      <% if Favourite.where(user: current_user) %>
+        <%= render "home_card_carousel", activities: @fav_activities, category: "favourites" %>
+      <% else %>
+        <p>Vous n'avez pas encore enregistré de favoris.</p>
+      <% end %>
+    </div>
+  <% end %>
+
   <div class="basic-card home-card">
     <div class="home-card-line">
-      <p>Mes activités favorites</p>
-      <i class="fa-solid fa-heart" style="color: #FF8351;"></i>
+      <p>Les activités les mieux notées</p>
+      <i class="fa-solid fa-star" style="color: #FFCC67;"></i>
     </div>
-    <% if Favourite.where(user: current_user) %>
-      <%= render "home_card_carousel", activities: @fav_activities, category: "favourites" %>
-    <% else %>
-      <p>Vous n'avez pas encore enregistré de favoris.</p>
-    <% end %>
+    <%= render "home_card_carousel", activities: @activities, category: "activities"  %>
   </div>
-<% end %>
 
-<div class="basic-card home-card">
-  <div class="home-card-line">
-    <p>Les activités les mieux notées</p>
-    <i class="fa-solid fa-star" style="color: #FFCC67;"></i>
+  <div class="basic-card btn-faq">
+    <%= link_to "Découvrir Easyway - FAQ", faq_path, class: "btn-faq-link-txt" %>
+    <%= image_tag "faq_empty.png", alt: "FAQ Icon", height: 22%>
   </div>
-  <%= render "home_card_carousel", activities: @activities, category: "activities"  %>
-</div>
-
-<div class="basic-card btn-faq">
-  <%= link_to "Découvrir Easyway - FAQ", faq_path, class: "btn-faq-link-txt" %>
-  <%= image_tag "faq_empty.png", alt: "FAQ Icon", height: 22%>
 </div>
