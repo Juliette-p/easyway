@@ -16,4 +16,4 @@ Easyway est une application pour aider les familles à trouver des lieux de sort
 - HTML / CSS
 
 # Contexte
-Cette application a été développé dans le cadre de la formation "Concepteur développeur Web" Le Wagon en 2 semaines par une équipe de 4 personnes.
+Cette application a été développé en 2 semaines par une équipe de 4 personnes, dans le cadre de la formation "Concepteur développeur Web" de l'établissement de formation "Le Wagon".
