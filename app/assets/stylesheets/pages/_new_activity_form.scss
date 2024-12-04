@@ -74,141 +74,148 @@
     display:none;
   }
 
-  #checkbox1 + label{
-    background-image: asset-url('stroller_nok_30px.png');
+  #checkbox1{
+    background-image: asset-url('stroller_nok.png');
     object-fit: cover;
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 50%;
+    transition: filter 0.5s ease, transform 0.5s ease;
+  }
+
+  #checkbox1:checked {
+    background-image: asset-url('stroller_ok.png');
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
   }
 
-  #checkbox1:checked + label {
-    background-image: asset-url('stroller_ok_30px.png');
+  #checkbox2 {
+    background-image: asset-url('changing_table_nok.png');
     object-fit: cover;
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 50%;
+    transition: filter 0.5s ease, transform 0.5s ease;
+  }
+
+  #checkbox2:checked {
+    background-image: asset-url('changing_table_ok.png');
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
   }
 
-  #checkbox2 + label{
-    background-image: asset-url('changing_table_nok_30px.png');
+  #checkbox3 {
+    background-image: asset-url('high_chair_nok.png');
     object-fit: cover;
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 50%;
+    transition: filter 0.5s ease, transform 0.5s ease;
+  }
+
+  #checkbox3:checked {
+    background-image: asset-url('high_chair_ok.png');
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
   }
 
-  #checkbox2:checked + label{
-    background-image: asset-url('changing_table_ok_30px.png');
+  #checkbox4 {
+    background-image: asset-url('kids_friendly_nok.png');
     object-fit: cover;
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 50%;
+    transition: filter 0.5s ease, transform 0.5s ease;
+  }
+
+  #checkbox4:checked {
+    background-image: asset-url('kids_friendly_ok.png');
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
   }
 
-  #checkbox3 + label{
-    background-image: asset-url('high_chair_nok_30px.png');
-    object-fit: cover;
-    height: 30px;
-    width: 30px;
-    display:inline-block;
-    padding: 0 0 0 0px;
-    border-radius: 50%;
-  }
-
-  #checkbox3:checked + label{
-    background-image: asset-url('high_chair_ok_30px.png');
-    object-fit: cover;
-    height: 30px;
-    width: 30px;
-    display:inline-block;
-    padding: 0 0 0 0px;
-    border-radius: 50%;
-  }
-
-  #checkbox4 + label{
-    background-image: asset-url('kids_friendly_nok_30px.png');
-    object-fit: cover;
-    height: 30px;
-    width: 30px;
-    display:inline-block;
-    padding: 0 0 0 0px;
-    border-radius: 50%;
-  }
-
-  #checkbox4:checked + label{
-    background-image: asset-url('kids_friendly_ok_30px.png');
-    object-fit: cover;
-    height: 30px;
-    width: 30px;
-    display:inline-block;
-    padding: 0 0 0 0px;
-    border-radius: 50%;
-  }
-
-  #checkbox5 + label{
+  #checkbox5 {
     background-image: asset-url('bus_nok.png');
     object-fit: cover;
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    transition: filter 0.5s ease, transform 0.5s ease;
   }
 
-  #checkbox5:checked + label{
+  #checkbox5:checked {
     background-image: asset-url('bus_ok.png');
     object-fit: cover;
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
   }
 
-  #checkbox6 + label{
+  #checkbox6 {
     background-image: asset-url('car_nok.png');
     object-fit: cover;
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    transition: filter 0.5s ease, transform 0.5s ease;
   }
 
-  #checkbox6:checked + label{
+  #checkbox6:checked {
     background-image: asset-url('car_ok.png');
     object-fit: cover;
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
   }
 
-  #checkbox7 + label{
+  #checkbox7 {
     background-image: asset-url('velo_nok.png');
     object-fit: cover;
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    transition: filter 0.5s ease, transform 0.5s ease;
   }
 
-  #checkbox7:checked + label{
+  #checkbox7:checked {
     background-image: asset-url('velo_ok.png');
     object-fit: cover;
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
