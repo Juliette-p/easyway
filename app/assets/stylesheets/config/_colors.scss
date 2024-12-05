@@ -11,7 +11,8 @@ $white: white;
 $lightyellow: rgb(252, 242, 195);
 
 
-$lightgreen: #C3E7F0;
+// $lightgreen: #C3E7F0;
+$lightgreen: rgba(171, 217, 209, 0.7);
 
 // Icon colors - pas utile normalement
 $orange: #FF8351;
@@ -21,3 +22,5 @@ $blue: #6AD6F3;
 // Cards border & shadow
 $shadow-gray: #0e000015;
 $light-gray: #F4F4F4;
+
+$light-grey-icones: #CCCACA;
