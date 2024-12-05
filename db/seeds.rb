@@ -1012,7 +1012,7 @@ ferme_rigolote.save
 
 # Restaurant 10: Le circus
 file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733241463/circus_uzfd8b.jpg").open
-circus = Activity.new(name: "Le circus",
+circus = Activity.new(name: "Le Circus",
   description: " Entrez sous le chapiteau et profitez du spectacle pour les yeux et les papilles !
   Monsieur Loyal & sa troupe de saltimbanques vous servent 7 jours sur 7 pour déjeuner ou dîner avec
   un numéro de cuisine fait maison. Une décoration mélangeant clowns, manèges & acrobaties vous plongent dans
