@@ -1,5 +1,6 @@
 .activities.new {
-  background-color: $yellow;
+  // background-color: $darkgreen;
+  background-color: rgba(61, 85, 85, 0.9);
 }
 
 #activity-new-title {
@@ -15,7 +16,7 @@
   }
 
   h1 {
-    color: $darkgreen;
+    color: $white;
     margin: 0px;
     padding: 0px;
   }
