@@ -7,34 +7,16 @@
   <div id="activity-new-title">
     <h1>Ajouter une activité</h1>
   </div>
-</div>
-<%# <%= simple_form_for(@activity) do |f| %>
-  <%# <%= f.input :name, label: "Nom du lieu", placeholder: "Ajouter un nom..." %>
-  <%# <%= f.input :address, label: "Adresse", placeholder: "Ajouter une adresse..." %>
-  <%# <%= f.input :category, collection: Activity::ACTIVITY_CATEGORY, prompt: "Sélectionner une catégorie" %>
-  <%# <%= f.input :url, label: "Site web", placeholder: "Ajouter un lien vers un site web..." %>
-  <%# <%= f.input :stroller, label: "Accès poussette facile" %>
-  <%# <%= f.input :changing_table, label: "Table à langer disponible" %>
-  <%# <%= f.input :high_chair, label: "Chaise haute disponible" %>
-  <%# <%= f.input :kids_friendly, label: "Activité ou espace kids friendly disponibles" %>
-  <%# <%= f.input :public_transport, label: "Accessible en transport en commun" %>
-  <%# <%= f.input :public_transport_detail, label: "Détails sur les accès en transport en commun", placeholder: "Ajouter un commentaire..." %>
-  <%# <%= f.input :car_park, label: "Accessible en voiture (parkings disponibles aux alentours)" %>
-  <%# <%= f.input :car_park_detail, label: "Détails sur les parkings disponibles aux alentours)", placeholder: "Ajouter un commentaire..." %>
-  <%# <%= f.input :bike_park, label: "Accessible en vélo (parkings vélo disponibles aux alentours)" %>
-  <%# <%= f.input :photo, label: "Ajouter une photo" %>
-  <%# <%= f.submit %>
-<%# end %>
-
 <div class="basic-card card-new-activity">
   <div class="sub-card-new-activity col-sm-8" >
     <%= form_with model: @activity, class: "d-flex flex-column", data: { controller: "fields-for" } do |f| %>
+
       <%# champs texte pour enregistrer un nom %>
       <div class="new-activity-tab-field new-activity-top-tab-field">
         <%= f.text_field :name,
           # params[:name],
           class: "form-control",
-          placeholder: "Nom..."
+          placeholder: "Crêperie enchantée..."
         %>
       </div>
 
@@ -43,7 +25,7 @@
         <%= f.text_field :address,
           # params[:address],
           class: "form-control",
-          placeholder: "Adresse..."
+          placeholder: "7 rue enchantée..."
         %>
       </div>
 
@@ -52,16 +34,16 @@
         <%= f.select :category,
           options_for_select(Activity::ACTIVITY_CATEGORY, params[:category]),
           class: 'form-control',
-          prompt: "Sélectionnez une catégorie..."
+          prompt: 'Sélectionner une activité...'
         %>
       </div>
-
+      
       <%# champs texte pour enregistrer une description %>
       <div class="new-activity-tab-field-description new-activity-top-tab-field" data-controller="character-count-activity" data-character-count-activity-nb-value="<%= Activity::DESCRIPTION_MAX %>">
         <%= f.text_area :description,
           # params[:description],
           class: "form-control",
-          placeholder: "Ajoutez une brève description...",
+          placeholder: "Une crêperie magique avec des crêpes aux formes amusantes et des garnitures colorées. Les enfants peuvent créer leurs propres crêpes et participer à des ateliers de décoration...",
           data: { target: "character-count-activity.text", action: "keyup->character-count-activity#updateCounter"}
         %>
         <p data-character-count-activity-target="counter"></p>
@@ -125,6 +107,8 @@
         </div>
       </div>
 
+      <h5>Caractéristiques :</h5>
+
       <div class="checkbox-row">
         <%# champs checkbox (booléen) pour sélectionner le filtre accès transport en commun %>
         <div class="new-activity-tab-field">
@@ -177,7 +161,7 @@
         <%= f.text_field :public_transport_detail,
           # params[:public_transport_detail],
           class: "form-control",
-          placeholder: "Infos transports...",
+          placeholder: "Bus: Ligne 42, arrêt 'Contes de Fées'...",
           data: {target: "fields-for.field5"},
           style: "display: none"
         %>
@@ -188,7 +172,7 @@
           <%= f.text_field :car_park_detail,
             # params[:car_park_detail],
             class: "form-control",
-            placeholder: "Infos voiture...",
+            placeholder: "Parking payant à proximité...",
             data: {target: "fields-for.field6"},
             style: "display: none"
           %>
@@ -199,51 +183,99 @@
         <%= f.text_field :bike_park_detail,
           # params[:bike_park_detail],
           class: "form-control",
-          placeholder: "Infos vélo...",
+          placeholder: "Arceaux à vélos devant le restaurant...",
           data: {target: "fields-for.field7"},
           style: "display: none"
         %>
       </div>
 
+      <div class="checkbox-row">
+        <%# champs checkbox (booléen) pour sélectionner le filtre accès transport en commun %>
+        <div class="new-activity-tab-field">
+          <%= f.check_box :url,
+            # "1",
+            # params[:url],
+            class: "form-check-input",
+            id: "checkboxUrl",
+            data: {action: "click->fields-for#hide_checkboxUrl", target: "fields-for.checkboxUrl"}
+          %>
+          <%= label_tag :url,
+            "",
+            for: "checkboxUrl"
+          %>
+        </div>
+
+        <%# champs checkbox (booléen) pour sélectionner le filtre accès voiture %>
+        <div class="new-activity-tab-field">
+          <%= f.check_box :phone,
+            # "1",
+            # params[:phone],
+            class: "form-check-input",
+            id: "checkboxPhone",
+            data: {action: "click->fields-for#hide_checkboxPhone", target: "fields-for.checkboxPhone"}
+          %>
+          <%= label_tag :phone,
+            "",
+            for: "checkboxPhone"
+          %>
+        </div>
+
+        <%# champs checkbox (booléen) pour sélectionner le filtre accès vélo %>
+        <div class="new-activity-tab-field">
+          <%= f.check_box :photo,
+            # "1",
+            # # params[:photo],
+            class: "form-check-input",
+            id: "checkboxPhoto",
+            data: {action: "click->fields-for#hide_checkboxPhoto", target: "fields-for.checkboxPhoto"}
+          %>
+          <%= label_tag :photo,
+            "",
+            for: "checkboxPhoto"
+          %>
+        </div>
+      </div>
+
+
       <%# champs checkbox (booléen) pour ajouter un lien vers un site web %>
-      <div class="new-activity-tab-field">
+      <%# <div class="new-activity-tab-field">
         <input type="checkbox" class="toggleUrl" id="AddUrl" name="AddUrl" data-action="click->fields-for#hide_checkboxUrl" data-fields-for-target="checkboxUrl"/>
         <label for="AddUrl">Site web</label>
-      </div>
+      </div> %>
 
       <%# champs texte pour enregistrer un lien vers un site web %>
       <div class="new-activity-tab-field">
         <%= f.text_field :url,
           # params[:url],
           class: "form-control",
-          placeholder: "Ajouter un site web...",
+          placeholder: "www...",
           data: {target: "fields-for.fieldUrl"},
           style: "display: none"
         %>
       </div>
 
       <%# champs checkbox (booléen) pour ajouter un téléphone %>
-        <div class="new-activity-tab-field">
+        <%# <div class="new-activity-tab-field">
           <input type="checkbox" class="togglePhone" id="AddPhone" name="AddPhone" data-action="click->fields-for#hide_checkboxPhone" data-fields-for-target="checkboxPhone"/>
           <label for="AddPhone">Téléphone</label>
-        </div>
+        </div> %>
 
       <%# champs texte pour enregistrer un numéro de téléphone %>
       <div class="new-activity-tab-field">
         <%= f.text_field :phone_number,
           # params[:phone_number],
           class: "form-control",
-          placeholder: "Ajouter un numéro de téléphone...",
+          placeholder: "XX XX XX XX XX...",
           data: {target: "fields-for.fieldPhone"},
           style: "display: none"
         %>
       </div>
 
       <%# champs checkbox (booléen) pour ajouter un téléphone %>
-        <div class="new-activity-tab-field">
+        <%# <div class="new-activity-tab-field">
           <input type="checkbox" class="togglePhoto" id="AddPhoto" name="AddPhoto" data-action="click->fields-for#hide_checkboxPhoto" data-fields-for-target="checkboxPhoto"/>
           <label for="AddPhoto">Photo</label>
-        </div>
+        </div> %>
 
       <%# champs texte pour enregistrer un numéro de téléphone %>
       <div class="new-activity-tab-field">
@@ -256,7 +288,7 @@
       </div>
 
       <%# bouton de validation %>
-      <%= f.submit "Ajouter cette activité", class: "yellowbtn" %>
+      <%= f.submit "Ajouter !", class: "yellowbtn" %>
     <% end %>
   </div>
 </div>

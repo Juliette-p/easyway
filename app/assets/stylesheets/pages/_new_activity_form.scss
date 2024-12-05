@@ -49,32 +49,51 @@
 .sub-card-new-activity {
   width: 100%;
 
+  h5 {
+    color: $verydarkgreen;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-top: 1px solid $verydarkgreen;
+    padding-top: 10px;
+  }
+
   .form-control {
     border-radius: 20px;
     margin: 0px;
     font-size: 12px;
-    background-color: $lightyellow;
+    background-color: $lightgreen;
+    color: black;
 
     .focus {
       border: 1px solid $yellow;
     }
+
   }
+
+  .form-control::placeholder {
+    // color: $verydarkgreen;
+  }
+
 
   #activity_category {
     border: 1px solid $shadow-gray;
     border-radius: 20px;
     background-color: $white;
-    color: black;
+    // color: black;
     width: 100%;
     height: 28px;
     padding-left: 10px;
     font-size: 12px;
+    font-style: italic;
+    background-color: $lightgreen;
 
     option {
       font-family: nunito;
       font-size: 12px;
+      background-color: $white;
+      font-style: normal;
     }
-
   }
 
   .form-check-input {
@@ -89,6 +108,7 @@
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    border: 1px solid white;
     transition: filter 0.5s ease, transform 0.5s ease;
   }
 
@@ -100,6 +120,7 @@
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    border: 1px solid white;
   }
 
   #checkbox2 {
@@ -110,6 +131,7 @@
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    border: 1px solid white;
     transition: filter 0.5s ease, transform 0.5s ease;
   }
 
@@ -121,6 +143,7 @@
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    border: 1px solid white;
   }
 
   #checkbox3 {
@@ -131,6 +154,7 @@
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    border: 1px solid white;
     transition: filter 0.5s ease, transform 0.5s ease;
   }
 
@@ -142,6 +166,7 @@
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    border: 1px solid white;
   }
 
   #checkbox4 {
@@ -152,6 +177,7 @@
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    border: 1px solid white;
     transition: filter 0.5s ease, transform 0.5s ease;
   }
 
@@ -163,16 +189,19 @@
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    border: 1px solid white;
   }
 
   #checkbox5 {
+    // background-color: $light-grey-icones;
     background-image: asset-url('bus_nok.png');
     object-fit: cover;
     height: 50px;
     width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
-    border-radius: 50%;
+    border-radius: 5px;
+    border: 1px solid white;
     transition: filter 0.5s ease, transform 0.5s ease;
   }
 
@@ -183,7 +212,8 @@
     width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
-    border-radius: 50%;
+    border-radius: 5px;
+    border: 1px solid white;
   }
 
   #checkbox6 {
@@ -193,7 +223,8 @@
     width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
-    border-radius: 50%;
+    border-radius: 5px;
+    border: 1px solid white;
     transition: filter 0.5s ease, transform 0.5s ease;
   }
 
@@ -204,7 +235,8 @@
     width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
-    border-radius: 50%;
+    border-radius: 5px;
+    border: 1px solid white;
   }
 
   #checkbox7 {
@@ -214,7 +246,8 @@
     width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
-    border-radius: 50%;
+    border-radius: 5px;
+    border: 1px solid white;
     transition: filter 0.5s ease, transform 0.5s ease;
   }
 
@@ -225,7 +258,80 @@
     width: 50px;
     display:inline-block;
     padding: 0 0 0 0px;
-    border-radius: 50%;
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+
+  #checkboxUrl {
+    // background-color: $light-grey-icones;
+    background-image: asset-url('website_nok.png');
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: filter 0.5s ease, transform 0.5s ease;
+  }
+
+  #checkboxUrl:checked {
+    background-image: asset-url('website_ok.png');
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+
+  #checkboxPhone {
+    // background-color: $light-grey-icones;
+    background-image: asset-url('phone_nok.png');
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: filter 0.5s ease, transform 0.5s ease;
+  }
+
+  #checkboxPhone:checked {
+    background-image: asset-url('phone_ok.png');
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+
+  #checkboxPhoto {
+    // background-color: $light-grey-icones;
+    background-image: asset-url('picture_nok.png');
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: filter 0.5s ease, transform 0.5s ease;
+  }
+
+  #checkboxPhoto:checked {
+    background-image: asset-url('picture_ok.png');
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border-radius: 5px;
+    border: 1px solid white;
   }
 }
 
@@ -233,14 +339,23 @@
   margin: 5px 0px;
 }
 
+.custom-select {
+  font-style: italic;
+}
+
 .new-activity-top-tab-field {
   margin: 10px 0px;
 }
 
 .new-activity-tab-field-description {
-  padding-bottom: 20px;
+  margin-block: 10px;
+
   .form-control {
     height: 100px;
+  }
+
+  p {
+    margin: 0px 0px 0px 10px;
   }
 }
 
@@ -252,167 +367,170 @@
   gap: 10px;
 }
 
-// WEBSITE toggle : pour la checkbox ajouter un site web
-.toggleUrl {
-  position: absolute;
-  transform: scale(0);
-}
-
-.toggleUrl + label {
-  position: relative;
-  display: inline-block;
-  padding-left: 40px;
-  font-size: 15px;
-}
-
-.toggleUrl + label::before {
-  content: '';
-  display: block;
-  position: absolute;
-  cursor: pointer;
-  width: 36px;
-  height: 20px;
-  top: 0;
-  left: 0;
-  background-color: #EAEAEA;
-  border-radius: 50rem;
-}
-
-.toggleUrl:checked + label::before {
-  background-color: #3D5555;
-}
-
-.toggleUrl + label::after {
-  content: '';
-  display: block;
-  position: absolute;
-  cursor: pointer;
-  width: 16px;
-  height: 16px;
-  top: 2px;
-  left: 2px;
-  background-color: white;
-  border-radius: 50%;
-  transition: left 0.2s ease;
-}
-
-.toggleUrl:checked + label::after {
-  left: 18px;
-}
-
-#activity_url {
-  height: 35px;
-  margin-bottom: 15px;
-  font-size: 12px;
-}
+// #activity_photo {
+//   height: 35px;
+//   margin-bottom: 15px;
+//   font-size: 12px;
+// }
 
 
 
-// TELEPHONE toggle : pour la checkbox ajouter un téléphone
-.togglePhone {
-  position: absolute;
-  transform: scale(0);
-}
 
-.togglePhone + label {
-  position: relative;
-  display: inline-block;
-  padding-left: 40px;
-  font-size: 15px;
-}
+// // WEBSITE toggle : pour la checkbox ajouter un site web
+// .toggleUrl {
+  //   position: absolute;
+  //   transform: scale(0);
+  // }
 
-.togglePhone + label::before {
-  content: '';
-  display: block;
-  position: absolute;
-  cursor: pointer;
-  width: 36px;
-  height: 20px;
-  top: 0;
-  left: 0;
-  background-color: #EAEAEA;
-  border-radius: 50rem;
-}
+  // .toggleUrl + label {
+    //   position: relative;
+    //   display: inline-block;
+    //   padding-left: 40px;
+    //   font-size: 15px;
+    // }
 
-.togglePhone:checked + label::before {
-  background-color: #3D5555;
-}
+    // .toggleUrl + label::before {
+      //   content: '';
+      //   display: block;
+      //   position: absolute;
+      //   cursor: pointer;
+      //   width: 36px;
+      //   height: 20px;
+      //   top: 0;
+      //   left: 0;
+//   background-color: #EAEAEA;
+//   border-radius: 50rem;
+// }
 
-.togglePhone + label::after {
-  content: '';
-  display: block;
-  position: absolute;
-  cursor: pointer;
-  width: 16px;
-  height: 16px;
-  top: 2px;
-  left: 2px;
-  background-color: white;
-  border-radius: 50%;
-  transition: left 0.2s ease;
-}
+// .toggleUrl:checked + label::before {
+//   background-color: #3D5555;
+// }
 
-.togglePhone:checked + label::after {
-  left: 18px;
-}
+// .toggleUrl + label::after {
+//   content: '';
+//   display: block;
+//   position: absolute;
+//   cursor: pointer;
+//   width: 16px;
+//   height: 16px;
+//   top: 2px;
+//   left: 2px;
+//   background-color: white;
+//   border-radius: 50%;
+//   transition: left 0.2s ease;
+// }
 
-#activity_phone_number {
-  height: 35px;
-  margin-bottom: 15px;
-  font-size: 12px;
-}
+// .toggleUrl:checked + label::after {
+//   left: 18px;
+// }
+
+// #activity_url {
+//   height: 35px;
+//   margin-bottom: 15px;
+//   font-size: 12px;
+// }
 
 
-// PHOTO toggle : pour la checkbox ajouter une photo
-.togglePhoto {
-  position: absolute;
-  transform: scale(0);
-}
 
-.togglePhoto + label {
-  position: relative;
-  display: inline-block;
-  padding-left: 40px;
-  font-size: 15px;
-}
+// // TELEPHONE toggle : pour la checkbox ajouter un téléphone
+// .togglePhone {
+//   position: absolute;
+//   transform: scale(0);
+// }
 
-.togglePhoto + label::before {
-  content: '';
-  display: block;
-  position: absolute;
-  cursor: pointer;
-  width: 36px;
-  height: 20px;
-  top: 0;
-  left: 0;
-  background-color: #EAEAEA;
-  border-radius: 50rem;
-}
+// .togglePhone + label {
+//   position: relative;
+//   display: inline-block;
+//   padding-left: 40px;
+//   font-size: 15px;
+// }
 
-.togglePhoto:checked + label::before {
-  background-color: #3D5555;
-}
+// .togglePhone + label::before {
+//   content: '';
+//   display: block;
+//   position: absolute;
+//   cursor: pointer;
+//   width: 36px;
+//   height: 20px;
+//   top: 0;
+//   left: 0;
+//   background-color: #EAEAEA;
+//   border-radius: 50rem;
+// }
 
-.togglePhoto + label::after {
-  content: '';
-  display: block;
-  position: absolute;
-  cursor: pointer;
-  width: 16px;
-  height: 16px;
-  top: 2px;
-  left: 2px;
-  background-color: white;
-  border-radius: 50%;
-  transition: left 0.2s ease;
-}
+// .togglePhone:checked + label::before {
+//   background-color: #3D5555;
+// }
 
-.togglePhoto:checked + label::after {
-  left: 18px;
-}
+// .togglePhone + label::after {
+//   content: '';
+//   display: block;
+//   position: absolute;
+//   cursor: pointer;
+//   width: 16px;
+//   height: 16px;
+//   top: 2px;
+//   left: 2px;
+//   background-color: white;
+//   border-radius: 50%;
+//   transition: left 0.2s ease;
+// }
 
-#activity_photo {
-  height: 35px;
-  margin-bottom: 15px;
-  font-size: 12px;
-}
+// .togglePhone:checked + label::after {
+//   left: 18px;
+// }
+
+// #activity_phone_number {
+//   height: 35px;
+//   margin-bottom: 15px;
+//   font-size: 12px;
+// }
+
+
+// // PHOTO toggle : pour la checkbox ajouter une photo
+// .togglePhoto {
+//   position: absolute;
+//   transform: scale(0);
+// }
+
+// .togglePhoto + label {
+//   position: relative;
+//   display: inline-block;
+//   padding-left: 40px;
+//   font-size: 15px;
+// }
+
+// .togglePhoto + label::before {
+//   content: '';
+//   display: block;
+//   position: absolute;
+//   cursor: pointer;
+//   width: 36px;
+//   height: 20px;
+//   top: 0;
+//   left: 0;
+//   background-color: #EAEAEA;
+//   border-radius: 50rem;
+// }
+
+// .togglePhoto:checked + label::before {
+//   background-color: #3D5555;
+// }
+
+// .togglePhoto + label::after {
+//   content: '';
+//   display: block;
+//   position: absolute;
+//   cursor: pointer;
+//   width: 16px;
+//   height: 16px;
+//   top: 2px;
+//   left: 2px;
+//   background-color: white;
+//   border-radius: 50%;
+//   transition: left 0.2s ease;
+// }
+
+// .togglePhoto:checked + label::after {
+//   left: 18px;
+// }

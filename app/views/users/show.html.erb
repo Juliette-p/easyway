@@ -1,4 +1,5 @@
 <%# bouton "go back" %>
+
 <div id="align-fleche-user">
   <%= link_to activities_path do %>
     <%= image_tag "go_back_arrow.png", alt: "Retour", class:"go-back-btn" %>
@@ -25,6 +26,6 @@
 
     <%= link_to "Changer mes identifiants", edit_user_registration_path, id: "btn-user-edit" %>
 
-    <%= link_to "Déconnexion", destroy_user_session_path, data: { turbo_method: :delete }, class: "darkgreenbtn" %>
+    <%= link_to "Déconnexion", destroy_user_session_path, data: { turbo_method: :delete }, class: "yellowbtn" %>
   </div>
 </div>

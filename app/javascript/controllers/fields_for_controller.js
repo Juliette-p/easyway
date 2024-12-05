@@ -10,26 +10,6 @@ export default class extends Controller {
     // console.log(this.fieldTarget.checked);
   }
 
-  // url site web
-  hide_checkboxUrl() {
-    // console.log("hide_checkboxUrl fields_for ok");
-    if (this.checkboxUrlTarget.checked) {
-      this.fieldUrlTarget.style = "display: initial;"
-    } else {
-      this.fieldUrlTarget.style = "display: none;"
-    }
-  }
-
-  // téléphone
-  hide_checkboxPhone() {
-    // console.log("hide_checkboxPhone fields_for ok");
-    if (this.checkboxPhoneTarget.checked) {
-      this.fieldPhoneTarget.style = "display: initial;"
-    } else {
-      this.fieldPhoneTarget.style = "display: none;"
-    }
-  }
-
   // acces transports en commun
   hide_checkbox5() {
     // console.log("hide_checkbox5 fields_for ok");
@@ -63,14 +43,34 @@ export default class extends Controller {
     }
   }
 
-    // acces vélo
-    hide_checkboxPhoto() {
-      // console.log("hide_Photo fields_for ok");
-      // console.log(this.PhotoTarget.checked);
-      if (this.checkboxPhotoTarget.checked) {
-        this.fieldPhotoTarget.style = "display: initial;"
-      } else {
-        this.fieldPhotoTarget.style = "display: none;"
-      }
+  // url site web
+  hide_checkboxUrl() {
+    // console.log("hide_checkboxUrl fields_for ok");
+    if (this.checkboxUrlTarget.checked) {
+      this.fieldUrlTarget.style = "display: initial;"
+    } else {
+      this.fieldUrlTarget.style = "display: none;"
     }
+  }
+
+  // téléphone
+  hide_checkboxPhone() {
+    // console.log("hide_checkboxPhone fields_for ok");
+    if (this.checkboxPhoneTarget.checked) {
+      this.fieldPhoneTarget.style = "display: initial;"
+    } else {
+      this.fieldPhoneTarget.style = "display: none;"
+    }
+  }
+
+  // photo
+  hide_checkboxPhoto() {
+    // console.log("hide_Photo fields_for ok");
+    // console.log(this.PhotoTarget.checked);
+    if (this.checkboxPhotoTarget.checked) {
+      this.fieldPhotoTarget.style = "display: initial;"
+    } else {
+      this.fieldPhotoTarget.style = "display: none;"
+    }
+  }
 }

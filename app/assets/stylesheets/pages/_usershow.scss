@@ -5,31 +5,18 @@
 }
 
 .users.show {
-  background-color: $yellow;
+  background-color: $darkgreen;
+  height: 100%;
 }
 
 .user-show-content {
   width: 100%;
-}
-
-#user-show-title {
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  img {
-    height: 30px;
-    width: 30px;
-    margin: 0px 10px 0px 0px;
-  }
 
   h1 {
-    color: $darkgreen;
-    margin: 0px;
-    padding: 0px;
+    color: $white;
+    // margin: 0px;
+    // padding: 0px;
   }
-
 }
 
 .user-profile {
@@ -38,7 +25,7 @@
   vertical-align: middle;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 50px 0px 500px 0px;
   padding: 25px;
 }
 
