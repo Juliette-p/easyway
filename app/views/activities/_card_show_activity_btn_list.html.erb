@@ -23,8 +23,7 @@
   <% end %>
 
   <%# icone "ajouter au calendrier" %>
-  <%# <%= link_to activity_path(@activity), class: "card-activity-btn", data: { action: "click->agenda#hide_agendaView" } do %>
-  <div class="card-activity-btn" class="card-activity-btn" data-action="click->agenda#hide_agendaView">
+  <div class="card-activity-btn" data-action="click->agenda#openForm">
     <i class="icone fa-regular fa-calendar-plus" style="color: #000000;"></i>
   </div>
   <%# <% end %>

@@ -13,23 +13,23 @@ export default class extends Controller {
     // class="flatpickr-day selected"
   }
 
-  hide_agendaView() {
-    // console.log("hide_agendaView fields_for ok");
-    this.AgendaViewTarget.classList.toggle("d-none");
-    this.BackgroundAgendaTarget.classList.toggle("d-none");
-    // console.log(this.calendarTarget.innerHTML);
-    // console.log(this.calendarTarget.childs);
+  // hide_agendaView() {
+  //   // console.log("hide_agendaView fields_for ok");
+  //   this.AgendaViewTarget.classList.toggle("d-none");
+  //   this.BackgroundAgendaTarget.classList.toggle("d-none");
+  //   // console.log(this.calendarTarget.innerHTML);
+  //   // console.log(this.calendarTarget.childs);
 
-    // A reprendre : enlever le scroll de la vue show en arrière plan
-    // if (this.BackgroundAgendaTarget.classList == "d-none"){
-    //   this.ActivityShowViewTarget.style = "position: fixed;";
-    //   this.ActivityShowViewTarget.style = "overflow-y: hidden;";
+  //   // A reprendre : enlever le scroll de la vue show en arrière plan
+  //   // if (this.BackgroundAgendaTarget.classList == "d-none"){
+  //   //   this.ActivityShowViewTarget.style = "position: fixed;";
+  //   //   this.ActivityShowViewTarget.style = "overflow-y: hidden;";
 
-    // } else {
-    //   this.ActivityShowViewTarget.style = "position: relative;";
+  //   // } else {
+  //   //   this.ActivityShowViewTarget.style = "position: relative;";
 
-    // }
-  }
+  //   // }
+  // }
 
   invitation() {
     // console.log("agenda confirm ok")
@@ -42,5 +42,13 @@ export default class extends Controller {
       confirmButtonColor: "#3D5555",
       width: "80%",
     });
+  }
+
+  openForm() {
+    this.AgendaViewTarget.style.display = "block";
+  }
+
+  closeForm() {
+    this.AgendaViewTarget.style.display = "none";
   }
 }
