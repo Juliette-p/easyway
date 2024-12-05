@@ -7,6 +7,8 @@
   <div id="activity-new-title">
     <h1>Ajouter une activité</h1>
   </div>
+</div>
+
 <div class="basic-card card-new-activity">
   <div class="sub-card-new-activity col-sm-8" >
     <%= form_with model: @activity, class: "d-flex flex-column", data: { controller: "fields-for" } do |f| %>
@@ -37,7 +39,7 @@
           prompt: 'Sélectionner une activité...'
         %>
       </div>
-      
+
       <%# champs texte pour enregistrer une description %>
       <div class="new-activity-tab-field-description new-activity-top-tab-field" data-controller="character-count-activity" data-character-count-activity-nb-value="<%= Activity::DESCRIPTION_MAX %>">
         <%= f.text_area :description,
@@ -254,12 +256,6 @@
         %>
       </div>
 
-      <%# champs checkbox (booléen) pour ajouter un téléphone %>
-        <%# <div class="new-activity-tab-field">
-          <input type="checkbox" class="togglePhone" id="AddPhone" name="AddPhone" data-action="click->fields-for#hide_checkboxPhone" data-fields-for-target="checkboxPhone"/>
-          <label for="AddPhone">Téléphone</label>
-        </div> %>
-
       <%# champs texte pour enregistrer un numéro de téléphone %>
       <div class="new-activity-tab-field">
         <%= f.text_field :phone_number,
@@ -270,12 +266,6 @@
           style: "display: none"
         %>
       </div>
-
-      <%# champs checkbox (booléen) pour ajouter un téléphone %>
-        <%# <div class="new-activity-tab-field">
-          <input type="checkbox" class="togglePhoto" id="AddPhoto" name="AddPhoto" data-action="click->fields-for#hide_checkboxPhoto" data-fields-for-target="checkboxPhoto"/>
-          <label for="AddPhoto">Photo</label>
-        </div> %>
 
       <%# champs texte pour enregistrer un numéro de téléphone %>
       <div class="new-activity-tab-field">
@@ -290,5 +280,5 @@
       <%# bouton de validation %>
       <%= f.submit "Ajouter !", class: "yellowbtn" %>
     <% end %>
-  </div>
+
 </div>

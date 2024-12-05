@@ -2,6 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  h1 {
+    color: $white;
+    // margin: 0px;
+    // padding: 0px;
+  }
 }
 
 .users.show {
@@ -12,11 +17,7 @@
 .user-show-content {
   width: 100%;
 
-  h1 {
-    color: $white;
-    // margin: 0px;
-    // padding: 0px;
-  }
+
 }
 
 .user-profile {
@@ -25,7 +26,7 @@
   vertical-align: middle;
   justify-content: center;
   align-items: center;
-  margin: 50px 0px 200px 0px;
+  margin: 50px 0px 300px 0px;
   padding: 25px;
 }
 
