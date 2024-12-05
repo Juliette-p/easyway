@@ -176,7 +176,7 @@ museum_histoire_naturelle = Activity.new(name: "Muséum d'Histoire Naturelle",
 museum_histoire_naturelle.photo.attach(io: file, filename: "museumhistoirenaturelle.jpg", content_type: "image/jpg")
 museum_histoire_naturelle.save
 
-file = URI.parse("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtvIQa3L_HfqHryQGuKqi5E42zU9l1Zo3f2Q&s").open
+file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733390782/musee_enfants_nantes_gvknak.png").open
 musee_enfants = Activity.new(name: "Musée des enfants de Nantes",
   description: "Le Musée des Enfants de Nantes est un lieu unique conçu pour éveiller, stimuler et développer
               l'imagination des enfants. Il offre des expositions interactives, des ateliers créatifs et des espaces
@@ -196,7 +196,7 @@ musee_enfants = Activity.new(name: "Musée des enfants de Nantes",
   car_park_detail: "Parking à proximité",
   bike_park: true,
   bike_park_detail: "Arceaux à vélos disponibles")
-musee_enfants.photo.attach(io: file, filename: "musee_enfants.jpg", content_type: "image/jpg")
+musee_enfants.photo.attach(io: file, filename: "musee_enfants.png", content_type: "image/png")
 musee_enfants.save!
 
 # Musée Jules Verne
@@ -1234,7 +1234,7 @@ galipy = Activity.new(name: "Galipy",
 galipy.photo.attach(io: file, filename: "galipy.jpg", content_type: "image/jpg")
 galipy.save!
 
-file = URI.parse("https://nidoludo.fr/wp-content/uploads/2024/07/Capture-decran-2024-07-17-a-15.38.34-1024x387.png").open
+file = URI.parse("https://res.cloudinary.com/dnm2n1iid/image/upload/v1733388934/nidoludo_rhx6la.png").open
 nidoludo = Activity.new(name: "Nidoludo",
   description: "Nidoludo est un lieu pensé pour les familles avec jeunes enfants au cœur de Nantes.
               Il propose une aire de jeux moderne et cosy de 100m2 pour les enfants de 0 à 6 ans,
@@ -1559,8 +1559,8 @@ rose_rating_1 = Rating.create!(user: rose,
   activity: musee_art_nantes,
   visit_date: Date.today - 4,
   rating: 5,
-  comment: "access avec poussette grâce à l'ascenseur! et table à langer OK.
-            c'est l'idéal pour faire découvrir l'art aux enfants. Ma fille a adorée l'atelier de peinture",
+  comment: "Accès avec poussette grâce à l'ascenseur! et table à langer OK.
+            c'est l'idéal pour faire découvrir l'art aux enfants. Ma fille a adoré l'atelier de peinture",
   stroller: true,
   changing_table: true,
   high_chair: false,
@@ -1570,8 +1570,8 @@ rose_rating_2 = Rating.create!(user: rose,
   activity: circus,
   visit_date: Date.today - 4,
   rating: 5,
-  comment: "access avec poussette et table à langer OK.
-            Très belle décoration sur le theme du cirque. Ma fille a adorée le tour de manège offert",
+  comment: "Accès avec poussette et table à langer OK.
+            Très belle décoration sur le thème du cirque. Mon fils a adoré le tour de manège offert",
   stroller: true,
   changing_table: true,
   high_chair: false,
@@ -1593,7 +1593,7 @@ paul_rating_2 = Rating.create!(user: paul,
   visit_date: Date.today - 12,
   rating: 5,
   comment: "Table à langer à dispo très pratique pour changer bébé. Petite pose gourmande au
-            Salon de thé adaptés aux enfants. toute la famille a appréciée",
+            Salon de thé adapté aux enfants. Toute la famille a apprécié",
   stroller: true,
   changing_table: true,
   high_chair: false,
@@ -1603,7 +1603,7 @@ paul_rating_2 = Rating.create!(user: stephanie,
   activity: aire_jeu_charbonneau,
   visit_date: Date.today - 10,
   rating: 4,
-  comment: "aire de jeu très agréable, permet à mon enfant de 6ans de grimper et de se défouler. ",
+  comment: "Aire de jeu très agréable, permet à mon enfant de 6ans de grimper et de se défouler. ",
   stroller: true,
   changing_table: true,
   high_chair: false,
@@ -1623,7 +1623,7 @@ stephanie_rating_2 = Rating.create!(user: stephanie,
   activity: aire_jeu_charbonneau,
   visit_date: Date.today - 10,
   rating: 4,
-  comment: "aire de jeu nouvellement créée, mes enfants de 4 ans et 2 nas ont adorés les modules musicaux. ",
+  comment: "Aire de jeux nouvellement créée, mes enfants de 4 ans et 2 ans ont adoré les modules musicaux. ",
   stroller: true,
   changing_table: true,
   high_chair: false,

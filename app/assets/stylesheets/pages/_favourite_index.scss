@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 310px;
+  height: 290px;
 }
 
 #favourite-index-title {
@@ -27,5 +27,11 @@
 }
 
 #favourite-index-cards {
-  margin-top: 280px;
+  margin-top: 240px;
+}
+
+#align-fleche-fav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
