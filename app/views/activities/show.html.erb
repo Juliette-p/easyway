@@ -1,14 +1,21 @@
 <div class="activity-show-container" data-controller="agenda">
 
+
+  <div class="activity-background-img"
+  style="background-image: url(<%= @activity.photo.attached? ? cl_image_path(@activity.photo.key) : asset_path('image_par_defaut.png') %>)">
   <%# bouton "go back" %>
   <%= link_to activities_path do %>
-    <%= image_tag "go_back_arrow.png", alt: "Retour", class:"go-back-btn" %>
+    <%= image_tag "go_back_arrow_white.png", alt: "Retour", class:"go-back-btn" %>
   <% end %>
 
-    <div class="activity-show-photo">
+    <%# <div class="activity-show-photo">
       <%= @activity.photo.attached? ? cl_image_tag(@activity.photo.key) : image_tag('image_par_defaut.png') %>
-    </div>
+    <%# </div> %>
+  </div>
 
+
+
+  <div id="activity-show-content">
     <%# carte présentation de l'activité : nom, icones, ... %>
     <%= render "activities/card_show_activity_name", activity: @activity %>
 
@@ -20,7 +27,8 @@
 
     <%# carte détails sur l'accessibilité de l'activité %>
     <%= render "activities/card_show_activity_accessibility", activity: @activity %>
-
+  </div>
+  
     <%# liste des commentaires %>
     <% if @activity.ratings.size >= 1 %>
       <%= render "ratings/ratings_card_carousel", ratings: @activity.ratings %>
