@@ -62,3 +62,15 @@
     object-fit: cover;
   }
 }
+
+#comment {
+  .show-more {
+    color: $darkgreen;
+    font-style: bold;
+  }
+
+  .show-less {
+    color: $darkgreen;
+    font-style: bold;
+  }
+}
