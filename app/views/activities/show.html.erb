@@ -28,7 +28,7 @@
     <%# carte détails sur l'accessibilité de l'activité %>
     <%= render "activities/card_show_activity_accessibility", activity: @activity %>
   </div>
-  
+
     <%# liste des commentaires %>
     <% if @activity.ratings.size >= 1 %>
       <%= render "ratings/ratings_card_carousel", ratings: @activity.ratings %>
@@ -58,11 +58,11 @@
 
   <!-- The form -->
   <div class="form-popup" id="myForm" data-agenda-target="AgendaView">
-    <p id="btn-agenda-close" data-action="click->agenda#closeForm"><i class="fa-solid fa-square-xmark" style="color: #3d5555; font-size: 22px;"></i></p>
+    <p id="btn-agenda-close" data-action="click->agenda#closeForm"><i class="fa-solid fa-square-xmark" style="color: #3D5555; font-size: 22px;"></i></p>
     <div class="agenda-card-title">
       <i class="fa-regular fa-calendar-days" style="color: #3D5555; font-size: 24px;"></i>
       <div class="agenda-card-subtitle">
-        <p><strong>Planifier ma sortie</strong></p>
+        <p style="font-size: 16px;"><strong>Planifier ma sortie</strong></p>
         <p>Ajouter l'activité à mon agenda personnel</p>
       </div>
     </div>
