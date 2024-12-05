@@ -1,3 +1,9 @@
+#align-fleche-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .users.show {
   background-color: $yellow;
 }

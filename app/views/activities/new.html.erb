@@ -1,12 +1,13 @@
 <%# bouton "go back" %>
-<%= link_to activities_path do %>
-  <%= image_tag "go_back_arrow_white.png", alt: "Retour", class:"go-back-btn" %>
-<% end %>
+<div id="align-fleche-activity">
+  <%= link_to activities_path do %>
+    <%= image_tag "go_back_arrow_white.png", alt: "Retour", class:"go-back-btn" %>
+  <% end %>
 
-<div id="activity-new-title">
-    <%= image_tag "nav_add_empty_white.png", alt: "Profil"%>
+  <div id="activity-new-title">
     <h1>Ajouter une activité</h1>
   </div>
+</div>
 <%# <%= simple_form_for(@activity) do |f| %>
   <%# <%= f.input :name, label: "Nom du lieu", placeholder: "Ajouter un nom..." %>
   <%# <%= f.input :address, label: "Adresse", placeholder: "Ajouter une adresse..." %>
