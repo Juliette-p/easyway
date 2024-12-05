@@ -1,15 +1,15 @@
 <div id="favourite-index-banner">
+  <div id= "align-fleche-fav">
   <%# bouton "go back" %>
   <%= link_to activities_path do %>
     <%= image_tag "go_back_arrow_white.png", alt: "Retour", class:"go-back-btn" %>
   <% end %>
 
-
-  <div id="favourite-index-title">
-    <%= image_tag "nav_favourite_empty_white.png", alt: "Favoris" %>
+    <div id="favourite-index-title">
+    
     <h1>Mes favoris</h1>
   </div>
-
+  </div>
 
   <%# search tab %>
   <%= render "activities/search_card" %>
