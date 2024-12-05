@@ -5,8 +5,8 @@
     <%= image_tag "nav_activities_empty_white.png", alt: "Rechercher"%>
     <h1>Trouver une activité</h1>
   </div>
+</div>
 
-  
   <%# search tab %>
   <%= render "activities/search_card" %>
   <%# BP de géolocalisation de l'utilisateur %>
@@ -14,7 +14,6 @@
   <%# <button type="button" data-action="click->map#geolocate" data-map-target="geolocateButton">
     Géolocaliser
   </button> %>
-</div>
 
 <%# map %>
 <div id="map-container"
