@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 2px;
 }
 
 .sub-card-search {
@@ -26,7 +27,13 @@
     color: black;
     margin: 0px;
     margin-bottom: 3px;
-    height: 30px;
+    height: 40px;
+  }
+
+  .form-control::placeholder { /* Most modern browsers support this now. */
+    // font-style: italic;
+    color: $black;
+    opacity: 1; // firefox
   }
 
   .form-check-input {
@@ -44,6 +51,7 @@
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    border: 1px solid $darkgreen;
     transition: filter 0.5s ease, transform 0.5s ease;
   }
 
@@ -55,6 +63,7 @@
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    border: 1px solid $darkgreen;
   }
 
   #checkbox2 {
@@ -65,6 +74,7 @@
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    border: 1px solid $darkgreen;
     transition: filter 0.5s ease, transform 0.5s ease;
   }
 
@@ -76,6 +86,7 @@
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    border: 1px solid $darkgreen;
   }
 
   #checkbox3 {
@@ -86,6 +97,7 @@
     display: inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    border: 1px solid $darkgreen;
     transition: filter 0.5s ease, transform 0.5s ease;
   }
 
@@ -97,6 +109,7 @@
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    border: 1px solid $darkgreen;
   }
 
   #checkbox4 {
@@ -107,6 +120,7 @@
     display:inline-block;
     padding: 0 0 0 0px;
     border-radius: 50%;
+    border: 1px solid $darkgreen;
     transition: filter 0.5s ease, transform 0.5s ease;
   }
 
@@ -119,16 +133,19 @@
     padding: 0 0 0 0px;
     border: 1px solid white;
     border-radius: 50%;
+    border: 1px solid $darkgreen;
   }
 }
 
-.form-control::placeholder { /* Most modern browsers support this now. */
-  color: $black;
-  opacity: 1; // firefox
-}
+// .form-control::placeholder { /* Most modern browsers support this now. */
+//   color: $black;
+//   // opacity: 1; // firefox
+//   font-style: italic;
+// }
 
 .search-tab-field {
   margin-block: 3px;
+
 }
 
 .checkbox-row {

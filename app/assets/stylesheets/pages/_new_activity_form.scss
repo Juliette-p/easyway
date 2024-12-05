@@ -66,7 +66,6 @@
   }
 
   .form-control::placeholder {
-    font-style: italic;
     // color: $verydarkgreen;
   }
 
@@ -75,19 +74,20 @@
     border: 1px solid $shadow-gray;
     border-radius: 20px;
     background-color: $white;
-    color: black;
+    // color: black;
     width: 100%;
     height: 28px;
     padding-left: 10px;
     font-size: 12px;
+    font-style: italic;
     background-color: $lightgreen;
 
     option {
       font-family: nunito;
       font-size: 12px;
       background-color: $white;
+      font-style: normal;
     }
-
   }
 
   .form-check-input {
@@ -333,12 +333,16 @@
   margin: 5px 0px;
 }
 
+.custom-select {
+  font-style: italic;
+}
+
 .new-activity-top-tab-field {
   margin: 10px 0px;
 }
 
 .new-activity-tab-field-description {
-  padding-bottom: 10px;
+  margin-block: 10px;
 
   .form-control {
     height: 100px;
@@ -357,7 +361,6 @@
   gap: 10px;
 }
 
-
 // #activity_photo {
 //   height: 35px;
 //   margin-bottom: 15px;
@@ -369,26 +372,26 @@
 
 // // WEBSITE toggle : pour la checkbox ajouter un site web
 // .toggleUrl {
-//   position: absolute;
-//   transform: scale(0);
-// }
+  //   position: absolute;
+  //   transform: scale(0);
+  // }
 
-// .toggleUrl + label {
-//   position: relative;
-//   display: inline-block;
-//   padding-left: 40px;
-//   font-size: 15px;
-// }
+  // .toggleUrl + label {
+    //   position: relative;
+    //   display: inline-block;
+    //   padding-left: 40px;
+    //   font-size: 15px;
+    // }
 
-// .toggleUrl + label::before {
-//   content: '';
-//   display: block;
-//   position: absolute;
-//   cursor: pointer;
-//   width: 36px;
-//   height: 20px;
-//   top: 0;
-//   left: 0;
+    // .toggleUrl + label::before {
+      //   content: '';
+      //   display: block;
+      //   position: absolute;
+      //   cursor: pointer;
+      //   width: 36px;
+      //   height: 20px;
+      //   top: 0;
+      //   left: 0;
 //   background-color: #EAEAEA;
 //   border-radius: 50rem;
 // }
