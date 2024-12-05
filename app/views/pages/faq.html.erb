@@ -42,11 +42,11 @@
 <div data-controller="fleche-faq"> <%# class="faq-container"%>
   <% if current_user %>
     <%= link_to user_path(current_user) do %>
-      <%= image_tag "go_back_arrow.png", alt: "Retour", class:"go-back-btn" %>
+      <%= image_tag "go_back_arrow_white.png", alt: "Retour", class:"go-back-btn" %>
     <% end %>
   <% else %>
     <%= link_to root_path do %>
-      <%= image_tag "go_back_arrow.png", alt: "Retour", class:"go-back-btn" %>
+      <%= image_tag "go_back_arrow_white.png", alt: "Retour", class:"go-back-btn" %>
     <% end %>
   <% end %>
 
@@ -77,7 +77,7 @@
     </div>
   </div>
 
-  <div class="QAbox_faq">
+  <div class="QAbox_faq" id="last-QAbox">
     <button class="basic-card box-q" data-bs-toggle="collapse" data-bs-target="#demo-3"
     style="text-align: left;" data-action="click->fleche-faq#animq3" data-fleche-faq-target="btn3">
       <p>Que signifient les icônes ?</p>
