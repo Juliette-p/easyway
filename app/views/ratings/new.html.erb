@@ -38,11 +38,11 @@
 
         <%= f.input :high_chair, type: "checkbox", input_html: { class: "rating-highchair" } %>
 
-        <%= f.input :kids_friendly, type: "checkbox", input_html: { class: "rating-kidsfriendy" } %>
+        <%= f.input :kids_friendly, type: "checkbox", input_html: { class: "rating-kidsfriendly" } %>
       </div>
 
       <div id="rating-comment-div">
-        <%= f.input :comment, placeholder: "Partagez votre expérience :)", input_html: { "data-target": "character-count-rating.text", "data-action": "keyup->character-count-rating#updateCounter", class: "rating-comment" } %>
+        <%= f.input :comment, placeholder: "Partagez votre expérience :)", input_html: { "data-target": "character-count-rating.text", "data-action": "keyup->character-count-rating#updateCounter", class: "rating-comment", id: "comment-test" } %>
         <p data-character-count-rating-target="counter"></p>
       </div>
       <div id="rating-form-btn">

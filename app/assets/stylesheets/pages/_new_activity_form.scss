@@ -74,7 +74,7 @@
     border: 1px solid $shadow-gray;
     border-radius: 20px;
     background-color: $white;
-    // color: black;
+    color: #565448;
     width: 100%;
     height: 28px;
     padding-left: 10px;
@@ -331,10 +331,6 @@
 
 .new-activity-tab-field {
   margin: 5px 0px;
-}
-
-.custom-select {
-  font-style: italic;
 }
 
 .new-activity-top-tab-field {
