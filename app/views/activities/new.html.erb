@@ -1,13 +1,12 @@
 <%# bouton "go back" %>
-<%= link_to activities_path do %>
-  <%= image_tag "go_back_arrow_white.png", alt: "Retour", class:"go-back-btn" %>
-<% end %>
+<div id="align-fleche-activity">
+  <%= link_to activities_path do %>
+    <%= image_tag "go_back_arrow_white.png", alt: "Retour", class:"go-back-btn" %>
+  <% end %>
 
-<div id="activity-new-title">
-    <%= image_tag "nav_add_empty_white.png", alt: "Profil"%>
+  <div id="activity-new-title">
     <h1>Ajouter une activité</h1>
   </div>
-
 <div class="basic-card card-new-activity">
   <div class="sub-card-new-activity col-sm-8" >
     <%= form_with model: @activity, class: "d-flex flex-column", data: { controller: "fields-for" } do |f| %>

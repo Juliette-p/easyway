@@ -1,3 +1,9 @@
+#align-fleche-activity {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .activities.new {
   background-color: $darkgreen;
   // background-color: rgba(61, 85, 85, 0.9);

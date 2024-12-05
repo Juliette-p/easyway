@@ -1,3 +1,9 @@
+#align-fleche-rating{
+display: flex;
+justify-content: space-between;
+align-items: baseline;
+}
+
 .ratings.new {
   background-color: $darkgreen;
   // background-color: rgba(61, 85, 85, 0.9);
