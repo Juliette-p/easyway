@@ -10,9 +10,9 @@ export default class extends Controller {
     this.flecheCote2Target.classList.toggle("d-none")
 
     if (this.flecheBas2Target.classList.contains("d-none")) {
-      this.btn2Target.style.background = "rgba(255, 204, 81, 1.0)";
+      this.btn2Target.style.background = "rgba(255, 131, 81, 1.0)";
     } else {
-      this.btn2Target.style.background = "rgba(255, 204, 81, 0.5)";
+      this.btn2Target.style.background = "rgba(255, 131, 81, 0.7)";
     }
   }
 
@@ -21,9 +21,9 @@ export default class extends Controller {
     this.flecheCote3Target.classList.toggle("d-none")
 
     if (this.flecheBas3Target.classList.contains("d-none")) {
-      this.btn3Target.style.background = "rgba(255, 204, 81, 1.0)";
+      this.btn3Target.style.background = "rgba(255, 131, 81, 1.0)";
     } else {
-      this.btn3Target.style.background = "rgba(255, 204, 81, 0.5)";
+      this.btn3Target.style.background = "rgba(255, 131, 81, 0.7)";
     }
   }
 }
