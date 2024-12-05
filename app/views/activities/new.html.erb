@@ -194,14 +194,14 @@
       <div class="checkbox-row">
         <%# champs checkbox (booléen) pour sélectionner le filtre accès transport en commun %>
         <div class="new-activity-tab-field">
-          <%= f.check_box :url,
+          <%= f.check_box "url_box",
             # "1",
             # params[:url],
             class: "form-check-input",
             id: "checkboxUrl",
             data: {action: "click->fields-for#hide_checkboxUrl", target: "fields-for.checkboxUrl"}
           %>
-          <%= label_tag :url,
+          <%= label_tag "url_box",
             "",
             for: "checkboxUrl"
           %>
@@ -209,14 +209,14 @@
 
         <%# champs checkbox (booléen) pour sélectionner le filtre accès voiture %>
         <div class="new-activity-tab-field">
-          <%= f.check_box :phone,
+          <%= f.check_box "phone_number_box",
             # "1",
             # params[:phone],
             class: "form-check-input",
             id: "checkboxPhone",
             data: {action: "click->fields-for#hide_checkboxPhone", target: "fields-for.checkboxPhone"}
           %>
-          <%= label_tag :phone,
+          <%= label_tag "phone_number_box",
             "",
             for: "checkboxPhone"
           %>
@@ -224,14 +224,14 @@
 
         <%# champs checkbox (booléen) pour sélectionner le filtre accès vélo %>
         <div class="new-activity-tab-field">
-          <%= f.check_box :photo,
+          <%= f.check_box "photo_box",
             # "1",
             # # params[:photo],
             class: "form-check-input",
             id: "checkboxPhoto",
             data: {action: "click->fields-for#hide_checkboxPhoto", target: "fields-for.checkboxPhoto"}
           %>
-          <%= label_tag :photo,
+          <%= label_tag "photo_box",
             "",
             for: "checkboxPhoto"
           %>
