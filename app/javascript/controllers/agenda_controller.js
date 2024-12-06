@@ -45,7 +45,7 @@ export default class extends Controller {
   }
 
   openForm() {
-    this.AgendaViewTarget.style.display = "block";
+    this.AgendaViewTarget.style.display = "flex";
   }
 
   closeForm() {
